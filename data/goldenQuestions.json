@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": "add-tenant-coi",
+    "question": " How do I add a tenant COI?",
+    "baselineResponse": "To add a tenant COI, open the Tenant COI List and click New COI. Select the tenant, choose the lease, enter a title, upload the document, set expiry notifications, and save the COI. You can also add or edit policies and compliance rules from the COI details screen.",
+    "requiredConcepts": [
+      "click New COI from the Tenant COI List",
+      "search for the tenant by entering at least three characters",
+      "enter a COI title",
+      "attachments are limited to 4 MB",
+      "choose the applicable lease",
+      "add or edit policies"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-task",
+    "question": "How do I create a task?",
+    "baselineResponse": "Go to Setup > Preventive Maintenance > Tasks, click Add Task from the Task Library, enter the property, create the task name, choose the applicable trade, set the interval, add estimated time and instructions, then click Create or Create and View.",
+    "requiredConcepts": [
+      "go to Setup > Preventive Maintenance > Tasks",
+      "click Add Task from the Task Library",
+      "select the property where the task will take place",
+      "create a task name",
+      "select the applicable trade",
+      "use More Options to select a specific time interval",
+      "enter the estimated completion time and general instructions",
+      "click Create or Create and View"
+    ],
+    "passingScore": 3
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "question": " How do I add a tenant COI?",
+  "expectedAnswer": "To add a tenant COI, open the Tenant COI List and click New COI. Select the tenant, choose the lease, enter a title, upload the document, set expiry notifications, and save the COI. You can also add or edit policies and compliance rules from the COI details screen.",
+  "actualAnswer": "How to add a tenant COI\n\nTo add a tenant COI in MRI Angus, go to Tenant Certificates under Certificates of Insurance, then click New COI.\n\nSelect the tenant. You can type at least 3 characters to search and choose from the matches.\nChoose the lease from the drop-down list.\nEnter a COI title.\nUpload the COI document using the browse button. The attachment size limit is 4 MB.\nIf needed, clear Attach Document to COI Expiry Notification so the document is not included with expiry notices.\nIn Expiry Notifications, choose whether to notify Employees and/or the Tenant, and set the reminder dates if required. The default reminder dates are 30 and 15 days before expiry.\nChoose a signature option:\nEmployee Signature and select the employee from the drop-down, or\nCustom Signature and enter the contact details manually.\nClick Create COI.\n\nAfter you create it, the COI Details screen opens, where you can update general information, contacts, policies, compliance rules, and document attachments.\n\nNote: If the tenant does not appear in the list, their tenant details must have Is COI Required selected first.\n\nIf you want, I can also walk you through adding policies or updating compliance rules on the COI Details screen.\n\n\n\n\nSources:\nAdding a Tenant COI\nTenant Certificates\nTenants Missing COI",
+  "score": 6,
+  "passingScore": 3,
+  "passed": true,
+  "criteria": {
+    "matchedConcepts": 6,
+    "requiredConcepts": 6
+  },
+  "review": "Passed: matched 6 of 6 required concepts.",
+  "missingConcepts": [],
+  "evidence": [
+    "click New COI from the Tenant COI List",
+    "search for the tenant by entering at least three characters",
+    "enter a COI title",
+    "attachments are limited to 4 MB",
+    "choose the applicable lease",
+    "add or edit policies"
+  ]
+}
