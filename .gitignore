@@ -9,4 +9,5 @@ node_modules/
 /playwright/.auth/
 /sessionData.json/
 allure-results/
-allure-results/
+allure-results/ 
+sessionData/
