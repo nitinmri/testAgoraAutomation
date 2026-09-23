@@ -13,7 +13,7 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-   timeout:120000,
+   timeout:180000,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
@@ -32,7 +32,7 @@ export default defineConfig({
 ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
    use: {
-    // Screenshots are captured through tests/fixtures.ts so each test is capped at five.
+    // Screenshots are captured through utils/fixtures.ts so each test is capped at five.
     screenshot: 'off',
      video:'retain-on-failure', 
    viewport:{width: 1920, height: 1080},

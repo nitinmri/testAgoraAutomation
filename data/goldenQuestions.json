@@ -2,30 +2,30 @@
   {
     "id": "add-tenant-coi",
     "question": " How do I add a tenant COI?",
-    "baselineResponse": "To add a tenant COI, open the Tenant COI List and click New COI. Select the tenant, choose the lease, enter a title, upload the document, set expiry notifications, and save the COI. You can also add or edit policies and compliance rules from the COI details screen.",
+    "baselineResponse": "To start, click New COI from the Tenant COI List. On the New Tenant COI page: Select a Tenant. You can search for the tenant by entering at least three characters of the Tenant's name and selecting from a list of possible matches provided. Choose the applicable lease from the drop-down list. Enter a COI title. Add a COI document to upload by clicking the browse button ( ) and selecting the file on your computer in the browse interface. Attachments have a size limit of 4 MB. If you do not want this document to be attached to expiry notifications, remove the checkmark beside Attach Document to COI Expiry Notification. In the Expiry Notifications section, place or remove checkmarks beside Inform Employees and Inform Tenant as applicable. For each of the above options, you can select two dates prior to expiry to send notifications; the default settings are 30 and 15 days. If you do not want a second set of expiry notifications to be send, leave the second box empty. In the ...days before expiry until section, click the calendar icon () and use the menu provided to enter a hard date after which expiry notifications will no longer be sent; you can leave this section empty if you do not want to stop sending automatic notifications. You can select between an employee signature (as indicated by the Signature field in assigned employee's details) or a custom contact. If you choose Employee Signature then you must select an employee from the Employee drop-down list. Please note that all employees who have been assigned access to Tenant COI will appear. This will include people who require access to the module but are not necessarily intended to be a COI contact. As the signature field on this screen is automatically populated with the information from the Signature field in the employee's details screen, a good way to distinguish between employees that are intended to be a COI contact and those that are not, is to leave the Signature field blank if the employee should not be used as a contact. If you choose Custom Signature then you must enter custom contact information into the Signature field. Click Create COI to create the COI. The COI Details screen is displayed. From here, you can edit and update all aspects of the COI, such as compliance rules, policy types, document attachments, general information and employee contact information. To add a policy, click Add Policy. Add the following information in the window that opens: Policy Type Effective Date Expiry Date (default is 1 year after Effective date, this can be overridden) Minimum Amount (the minimum amount required for the policy to be compliant. You can select an amount from the dropdown or type in a specific amount.) Listed Amount (the actual amount provided by the policy. You can select an amount from the dropdown or type in a specific amount.) Select one of the following compliancy options: Compliant Not Compliant Waived Notes If you are adding multiple policies at once, click Save & Add Another; otherwise, click Save. You can continue adding policies as described above; you can also edit or delete policies you have added by selecting the Policy and clicking Edit or Delete, as applicable. In the Compliance Rules section, click on the Status column beside the compliance rule that you want to update. By default, all compliance rules are set to Not Compliant in a new COI. Select one of the following options: Compliant if the rule is compliant. Not Compliant if the rule is not complaint. Unknown (by selecting the blank option in the drop-down menu) if you do not have sufficient information to mark the rule as Compliant or Not Compliant. Waived if applicable. On the left side of the screen, use the edit links as necessary to update any of the following general information sections: General Information: Allows you to edit the Title and Available Properties. Employee Contact: Select either an Employee Signature from the drop-down list provided, or select Custom Signature and enter custom information in the field provided. To configure Additional Insured, please refer to About the Additional Insured Tab and associated topics in that section.",
     "requiredConcepts": [
       "click New COI from the Tenant COI List",
+      "select a tenant",
       "search for the tenant by entering at least three characters",
-      "enter a COI title",
-      "attachments are limited to 4 MB",
       "choose the applicable lease",
+      "enter a COI title",
+      "upload a COI document",
+      "attachments are limited to 4 MB",
+      "create the COI",
       "add or edit policies"
     ],
     "passingScore": 3
   },
   {
-    "id": "create-task",
-    "question": "How do I create a task?",
-    "baselineResponse": "Go to Setup > Preventive Maintenance > Tasks, click Add Task from the Task Library, enter the property, create the task name, choose the applicable trade, set the interval, add estimated time and instructions, then click Create or Create and View.",
+    "id": "closed-work-orders-report",
+    "question": "What report should I use to find closed work orders for a period of time?",
+    "baselineResponse": "-The Closed TR Work Order(s) report shows all work orders generated from tenant requests where the date closed is within the date range and the status is Closed. Closed means that a work order has been assigned and all services provided have been entered into that work order.  This report can also be run as a PDF or Excel (xls or xlsx).",
     "requiredConcepts": [
-      "go to Setup > Preventive Maintenance > Tasks",
-      "click Add Task from the Task Library",
-      "select the property where the task will take place",
-      "create a task name",
-      "select the applicable trade",
-      "use More Options to select a specific time interval",
-      "enter the estimated completion time and general instructions",
-      "click Create or Create and View"
+      "use the Closed TR Work Order(s) report",
+      "filter by a date range containing the date closed",
+      "the work order status is Closed",
+      "the work order was generated from a tenant request",
+      "run the report as PDF or Excel"
     ],
     "passingScore": 3
   }

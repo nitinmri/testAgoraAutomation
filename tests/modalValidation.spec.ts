@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures'
+import { test, expect } from '../utils/fixtures'
 import { generalElements } from '../pages/generalElements'
 import { restoreOrLogin } from '../utils/sessionManager';
 

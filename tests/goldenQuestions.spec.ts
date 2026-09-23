@@ -1,4 +1,4 @@
-import { test, expect } from './fixtures';
+import { test, expect } from '../utils/fixtures';
 import { generalElements } from '../pages/generalElements';
 import { goldenQuestions } from '../data/goldenQuestions';
 import { evaluateAnswer } from '../utils/answerEvaluator';
@@ -24,6 +24,7 @@ test.describe('Ask Agora golden questions', () => {
       console.log(`Expected response: ${goldenQuestion.expectedAnswer}`);
       console.log(`Received response: ${actualAnswer}`);
       console.log(`Score: ${evaluation.score}/${Object.keys(evaluation.criteria).length}`);
+      console.log('Token usage:', evaluation.usage);
       await testInfo.attach('answer-evaluation.json', {
         body: JSON.stringify(
           {
@@ -37,6 +38,7 @@ test.describe('Ask Agora golden questions', () => {
             review: evaluation.review,
             missingConcepts: evaluation.missingConcepts,
             evidence: evaluation.evidence,
+            tokenUsage: evaluation.usage ?? null,
           },
           null,
           2,
