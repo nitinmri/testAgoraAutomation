@@ -11,3 +11,4 @@ node_modules/
 allure-results/
 allure-results/ 
 sessionData/
+test-results/

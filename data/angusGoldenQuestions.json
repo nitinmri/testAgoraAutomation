@@ -1,0 +1,934 @@
+
+[
+   {
+    "id": "add-tenant-coi",
+    "question": "How do I add a tenant COI?",
+    "baselineResponse": "To start, click New COI from the Tenant COI List. On the New Tenant COI page: Select a Tenant. You can search for the tenant by entering at least three characters of the Tenant's name and selecting from a list of possible matches provided. Choose the applicable lease from the drop-down list. Enter a COI title. Add a COI document to upload by clicking the browse button and selecting the file on your computer in the browse interface. Attachments have a size limit of 4 MB. If you do not want this document to be attached to expiry notifications, remove the checkmark beside Attach Document to COI Expiry Notification. In the Expiry Notifications section, place or remove checkmarks beside Inform Employees and Inform Tenant as applicable. For each of the above options, you can select two dates prior to expiry to send notifications; the default settings are 30 and 15 days. If you do not want a second set of expiry notifications to be send, leave the second box empty. In the ...days before expiry until section, click the calendar icon and use the menu provided to enter a hard date after which expiry notifications will no longer be sent; you can leave this section empty if you do not want to stop sending automatic notifications. You can select between an employee signature or a custom contact. If you choose Employee Signature then you must select an employee from the Employee drop-down list. If you choose Custom Signature then you must enter custom contact information into the Signature field. Click Create COI to create the COI. The COI Details screen is displayed. From here, you can edit and update all aspects of the COI, such as compliance rules, policy types, document attachments, general information and employee contact information.",
+    "requiredConcepts": [
+      "New COI",
+      "Tenant COI List",
+      "Tenant",
+      "lease",
+      "COI title",
+      "COI document",
+      "4 MB",
+      "Attach Document to COI Expiry Notification",
+      "Expiry Notifications",
+      "Inform Employees",
+      "Inform Tenant",
+      "30 days",
+      "15 days",
+      "Employee Signature",
+      "Custom Signature",
+      "Employee",
+      "Signature field",
+      "Create COI",
+      "COI Details",
+      "compliance rules",
+      "policy types"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-schedule-for-preventive-maintenance-item-equipment",
+    "question": "How do I add a schedule for a preventative maintenance item/piece of equipment?",
+    "baselineResponse": "The following click path is how a user would access the Equipment List to add a schedule Setup > Preventive Maintenance > Equipment > Select the piece of equipment > Add schedule Under the Schedules tab, click Add Schedule. An Add Schedule window will open. In the first section, enter the following information: The estimated time to complete the task The priority Who the work order will be assigned to (this is not a required field) In the next section, enter the following scheduling information: The work order Type (fixed or floating) The date and time that the next work order should be scheduled for The frequency (Daily, Weekly, Monthly, Quarterly, Semiannually, Annually, More Options You can use More Options to select a custom frequency, such as every 4 years, every 8 days, etc. If you select a frequency that is one month or longer, the On dropdown is displayed, allowing you to select the day or week of the month (e.g. 15th day of the month, 2nd Wednesday of the month, etc.) Click Save when you are finished.",
+    "requiredConcepts": [
+      "Setup > Preventive Maintenance > Equipment",
+      "Add Schedule",
+      "Schedules tab",
+      "estimated time",
+      "priority",
+      "work order assigned",
+      "work order Type",
+      "fixed",
+      "floating",
+      "frequency",
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Quarterly",
+      "Semiannually",
+      "Annually",
+      "More Options",
+      "On dropdown",
+      "Save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "deactivate-building-or-property",
+    "question": "How do I deactivate a building or property?",
+    "baselineResponse": "Please contact your Account Executive. Please note that it takes 30 days from the request to deactivate for it to be processed.",
+    "requiredConcepts": [
+      "Account Executive",
+      "30 days",
+      "deactivate",
+      "processed"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-building-or-property",
+    "question": "How do I add a building or property?",
+    "baselineResponse": "Please contact your Account Executive. After the sales process is complete (you might need to sign a Statement of Work, depending on your contract) it will be referred to our Global Professional Services team to implement the property.",
+    "requiredConcepts": [
+      "Account Executive",
+      "sales process",
+      "Statement of Work",
+      "Global Professional Services",
+      "implement the property"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "question-on-mri-invoice",
+    "question": "I have a question on my MRI invoice?",
+    "baselineResponse": "Please go to mrisoftware.com/billing. Once you enter your information it will take up to 3 business days for a response, usually faster.",
+    "requiredConcepts": [
+      "mrisoftware.com/billing",
+      "enter your information",
+      "3 business days",
+      "response"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-floor",
+    "question": "How do I add a floor?",
+    "baselineResponse": "Setup>Floors & Suites>Add Floor Use the Quick Add Floor(s) section at the bottom of the screen to add new floors. To add more than one floor, click Add Many. In the Floor field, enter the name of the floor. This can be either a floor number, or a named location, such as \"basement\". If this floor is a common area, click the Common Area checkbox. A common area is a floor, location or suite that is used by many or all tenants. Click Add Floor(s). Note: A common floor is a floor that is designated for use by more than one tenant and is not billable to any tenant. If your tenants submit requests using a Service Portal, common floors appear in the drop-down menu so tenants may make a request for this space (e.g. Atrium).",
+    "requiredConcepts": [
+      "Setup > Floors & Suites > Add Floor",
+      "Quick Add Floor(s)",
+      "Add Many",
+      "Floor field",
+      "Common Area",
+      "checkbox",
+      "Add Floor(s)",
+      "common floor",
+      "not billable",
+      "Service Portal",
+      "drop-down menu",
+      "Atrium"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-schedule",
+    "question": "How do I add a schedule?",
+    "baselineResponse": "The following click path is how a user would access the Equipment List to add a schedule Setup > Preventive Maintenance > Equipment > Select the piece of equipment > Add schedule Under the Schedules tab, click Add Schedule. An Add Schedule window will open. In the first section, enter the following information: The estimated time to complete the task The priority Who the work order will be assigned to (this is not a required field) In the next section, enter the following scheduling information: The work order Type (fixed or floating) The date and time that the next work order should be scheduled for The frequency (Daily, Weekly, Monthly, Quarterly, Semiannually, Annually, More Options You can use More Options to select a custom frequency, such as every 4 years, every 8 days, etc. If you select a frequency that is one month or longer, the On dropdown is displayed, allowing you to select the day or week of the month (e.g. 15th day of the month, 2nd Wednesday of the month, etc.) Click Save when you are finished.",
+    "requiredConcepts": [
+      "Setup > Preventive Maintenance > Equipment",
+      "Add Schedule",
+      "Schedules tab",
+      "estimated time",
+      "priority",
+      "work order assigned",
+      "work order Type",
+      "fixed",
+      "floating",
+      "frequency",
+      "More Options",
+      "On dropdown",
+      "Save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "deactivate-equipment",
+    "question": "How do I deactivate equipment?",
+    "baselineResponse": "1 The following click path is how a user would access the Equipment List Setup > Preventive Maintenance > Equipment > Select the piece of equipment 2 Locate the equipment you want to deactivate on the Equipment list. Once you have located it, click on the equipment's name to view the equipment's details. 3 From the Equipment Details screen, click Deactivate, located at the top-right corner. In the confirmation window that opens, click Yes to complete deactivation of the equipment. Please note that the equipment's schedules will also be deactivated; however, any work orders already issued by these schedules will have to be manually completed or cancelled.",
+    "requiredConcepts": [
+      "Setup > Preventive Maintenance > Equipment",
+      "Equipment List",
+      "Equipment Details",
+      "Deactivate",
+      "top-right corner",
+      "confirmation window",
+      "Yes",
+      "equipment schedules",
+      "manually completed",
+      "cancelled"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-equipment",
+    "question": "How do I add equipment?",
+    "baselineResponse": "1.The following click path is how a user would add a new piece of equipment. Setup > Preventive Maintenance > Equipment > New Equipment In the first section of the New Equipment window, you can provide the following information: name, system, make, model, asset/tag number, serial number and warranty expiry. The Equipment Name and System fields are required fields; additional information can be provided at a later date. In the next section, enter the location where the equipment resides: Property, Building, Floor and Suite. The Property, Building and Floor fields are required fields. Suite location (if relevant) can be provided at a later date. In the last section, enter any important notes concerning the equipment in the Details field, then click Create to add the equipment. The Details field is not a required field.",
+    "requiredConcepts": [
+      "Setup > Preventive Maintenance > Equipment > New Equipment",
+      "Equipment Name",
+      "System",
+      "make",
+      "model",
+      "asset/tag number",
+      "serial number",
+      "warranty expiry",
+      "Property",
+      "Building",
+      "Floor",
+      "Suite",
+      "Details field",
+      "Create"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "save-or-schedule-report",
+    "question": "How do I save or schedule a report?",
+    "baselineResponse": "Your saved report configurations can be scheduled for automated delivery by email. You can also specify a list of recipients for the report. After loading or saving a report configuration, click Create Delivery. If you already have a delivery schedule set up and want to edit it, this button will instead be called Edit Delivery. In the window that opens, select the following Delivery Options: Format: PDF or Excel; some reports will only have one format available. Frequency: you can select Daily, Weekly, or Monthly. Depending on the report type, some frequencies will not be available. Day of Delivery: the available options depend on the Frequency that was selected. If Monthly was selected, the day of the month that the report will be delivered on. If Weekly was selected, the day of the week that the report will be delivered on. This option is not displayed if Daily was selected. Period: the options here vary depending on whether the Daily, Weekly, or Monthly delivery method was selected: Daily: no additional options are available. Weekly: Day of Delivery (e.g. Monday) Monthly: Previous Calendar Month or Previous Month Ending on Day x Review your selections by reading the Schedule Summary. This is a description of the delivery options you selected, stating what the next delivery date would be, and the period of time that the report will cover. This allows you to more clearly see if the selections you have made will produce the desired result. If the description does not match your expectations, modify your Delivery Options until it does.",
+    "requiredConcepts": [
+      "Create Delivery",
+      "Edit Delivery",
+      "Delivery Options",
+      "Format",
+      "PDF",
+      "Excel",
+      "Frequency",
+      "Daily",
+      "Weekly",
+      "Monthly",
+      "Day of Delivery",
+      "Period",
+      "Previous Calendar Month",
+      "Previous Month Ending on Day x",
+      "Schedule Summary",
+      "next delivery date"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "reservation-list-report",
+    "question": "What report has a list of my reservations?",
+    "baselineResponse": "The reservation list report shows all approved reservations for the selected property where the date of the reservation is between the dates selected in the Date To and Date From parameters. Checking the Show Details box displays more information about the reservation, including special notes and any additional resources.",
+    "requiredConcepts": [
+      "reservation list report",
+      "approved reservations",
+      "selected property",
+      "Date To",
+      "Date From",
+      "Show Details",
+      "special notes",
+      "additional resources"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "survey-summary-report",
+    "question": "Is there a report that has all the survey information?",
+    "baselineResponse": "The Survey Summary report will show a summary of the responses for each question of the selected Survey where the Survey was generated within the date range specified.",
+    "requiredConcepts": [
+      "Survey Summary report",
+      "summary of responses",
+      "selected Survey",
+      "each question",
+      "date range specified"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "manage-message-list",
+    "question": "How do I manage the message list?",
+    "baselineResponse": "The Messages List displays all unread messages sent to MRI Angus, typically by tenants, employees, or vendors using the company email address and messages sent using MRI Angus Mobile. For a more complete description of the various message types and how they are generated, see About Messages. This list contains three tabs that can be used to organize your messages: Messages, Automatic Replies, and Junk Mail.",
+    "requiredConcepts": [
+      "Messages List",
+      "unread messages",
+      "MRI Angus Mobile",
+      "Messages",
+      "Automatic Replies",
+      "Junk Mail",
+      "Remove From List",
+      "Create Work Order",
+      "Move to Automatic Replies",
+      "Move to Junk Mail",
+      "Tenant Request",
+      "General Messages",
+      "COI",
+      "spam filter",
+      "automatically deleted after 60 days"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-employee",
+    "question": "How do I add an employee?",
+    "baselineResponse": "For a new employee to be able to access MRI Angus, they will need to verify their primary email address and activate an Okta account. From the Employees list, click Create Employee. In the Create Employee popup, enter the employee information including First and Last name, Role, Primary Email, Primary Phone and Assigned Properties. Employees must have at least one property assigned to them. Click Save to save the employee's records. If an email address was entered, you can send an email that allows the employee to set up their username and password. If an employee has not verified their primary email, they will not be able to sign into MRI Angus.",
+    "requiredConcepts": [
+      "verify primary email",
+      "Okta account",
+      "Employees list",
+      "Create Employee",
+      "Role",
+      "Primary Email",
+      "Primary Phone",
+      "Assigned Properties",
+      "at least one property assigned",
+      "Save",
+      "username and password",
+      "Employee Details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "reserve-shared-resource-conference-room-freight-elevator",
+    "question": "How do I reserve a shared resource/conference room/freight elevator?",
+    "baselineResponse": "Click Menu, then Reservation Calendar under Reservations. Click New Reservation. Search for or select a tenant contact, choose the resource to reserve, select an available time, review the resource information, and complete the reservation through the Your Booking window. Reservations can be Single Booking or Recurring Booking. Save the reservation and, if approval is required, review the reservation details screen.",
+    "requiredConcepts": [
+      "Reservation Calendar",
+      "Reservations",
+      "New Reservation",
+      "tenant contact",
+      "resource",
+      "Resource Information",
+      "available time slot",
+      "Previous",
+      "Next",
+      "Today",
+      "Resource Availability Warning",
+      "Your Booking",
+      "Single Booking",
+      "Recurring Booking",
+      "Save",
+      "reservation approval"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-vendor-coi",
+    "question": "How do I add a Vendor COI?",
+    "baselineResponse": "To start, click New COI from the Vendor COI list. On the New Vendor COI screen enter a Vendor name, COI Title, upload a COI document, assign applicable properties, configure expiry notifications, choose notification recipients and employee or custom signatures, then click Create COI. From the COI Details screen you can manage policies, compliance rules, vendor contacts, employee contacts and additional insured settings.",
+    "requiredConcepts": [
+      "New COI",
+      "Vendor COI",
+      "Vendor name",
+      "COI Title",
+      "COI document",
+      "Assigned Properties",
+      "Expiry Notifications",
+      "Inform Employees",
+      "Inform Vendor",
+      "Notify Primary Vendor Contact",
+      "Notify Alternate Vendor Contact",
+      "Employee Signature",
+      "Custom Signature",
+      "Create COI",
+      "COI Details",
+      "Add Policy",
+      "Compliance Rules",
+      "Compliant",
+      "Not Compliant",
+      "Waived",
+      "Additional Insured"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "use-visits-list",
+    "question": "How do I use the Visits List?",
+    "baselineResponse": "This list displays all visitors that have Expected, Arrived and Groups Lists. Access the list through Menu > Visits (new) under Visitor Security. The list supports filtering, advanced search, visitor check-in, check-out, badge printing, and visitor group management. Users can open visit details by selecting the visitor's name.",
+    "requiredConcepts": [
+      "Menu",
+      "Visits (new)",
+      "Visitor Security",
+      "Expected",
+      "Checked In",
+      "Advanced Search",
+      "Visitor Name",
+      "Visitor Company",
+      "Tenant",
+      "Date of Visit",
+      "New Visit",
+      "Check In",
+      "Check Out",
+      "Print Badges",
+      "Visitor Groups",
+      "Visit Details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "restricted-visitors",
+    "question": "How does Angus handle Restricted Visitors?",
+    "baselineResponse": "Visitors that potentially match a name on the restricted visitors list are displayed in red text. Open the visit, review the possible matches, and decide whether to allow or deny access. Select Allow Access or Deny Access, enter notes regarding the decision, and confirm the action.",
+    "requiredConcepts": [
+      "restricted visitors",
+      "red text",
+      "possible matches",
+      "Previous",
+      "Next",
+      "Allow Access",
+      "Deny Access",
+      "notes",
+      "cleared for access",
+      "denied access"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "resource-center",
+    "question": "What is the Resource Center?",
+    "baselineResponse": "The Resource Center allows you to manage a collection of online documents that can be used internally, externally, or both. The maximum file size for each document is 10 MB and there is a 100 MB storage limit per property. Documents can be archived. Internal documents can be restricted by property and role. External documents can be made available through the Service Portal.",
+    "requiredConcepts": [
+      "Resource Center",
+      "online documents",
+      "10 MB",
+      "100 MB storage limit",
+      "archived",
+      "Internal Documentation",
+      "External Documentation",
+      "restricted by property",
+      "restricted by role",
+      "Security Guard",
+      "Service Portal"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "engineer-work-hours-report",
+    "question": "Is there a report that shows the work hours for engineers?",
+    "baselineResponse": "The engineering effectiveness report categorizes all hours worked over the last 2 calendar weeks. PM hours are summarized as work due, completed, cancelled, overdue, completed current, and completed backlogged. A week is defined as Monday to Sunday.",
+    "requiredConcepts": [
+      "engineering effectiveness report",
+      "2 calendar weeks",
+      "PM hours",
+      "work due",
+      "completed",
+      "cancelled",
+      "overdue",
+      "completed current",
+      "completed backlogged",
+      "Monday to Sunday"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "hours-worked-week-or-month",
+    "question": "Is there a report that shows how many hours were worked for a week or a month?",
+    "baselineResponse": "Property labor hours by Month/Week summarizes all hours worked during each month/week for the selected calendar year. Both TR and PM hours worked are displayed regardless of the due date or the status of the work orders. The data is grouped first by property then detailed by resource. A drill down is provided on the property to view the details of the work done for that property.",
+    "requiredConcepts": [
+      "Property labor hours by Month",
+      "Property labor hours by Week",
+      "selected calendar year",
+      "TR hours",
+      "PM hours",
+      "work order status",
+      "grouped by property",
+      "detailed by resource",
+      "drill down",
+      "property details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "contact-list",
+    "question": "Where can I find a list of contacts?",
+    "baselineResponse": "The Contact List report shows a list of tenant contacts and their E-mail address and phone number. The report is grouped by Property, Building, then Floor. You can also view by going to Settings/Employees.",
+    "requiredConcepts": [
+      "Contact List report",
+      "tenant contacts",
+      "E-mail address",
+      "phone number",
+      "Property",
+      "Building",
+      "Floor",
+      "Settings/Employees"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "employee-list",
+    "question": "Where can I find a list of employees?",
+    "baselineResponse": "The Employee List report shows a list of employees including their title, primary email address, phone number, role, availability, and menu configurations. Clicking on the employee's name will display expanded details such as emergency contact information, permissions, property assignment, and subscription information. Tested 6th JULY 2026 in Ask Agora",
+    "requiredConcepts": [
+      "Employee List report",
+      "title",
+      "primary email address",
+      "phone number",
+      "role",
+      "availability",
+      "menu configurations",
+      "emergency contact information",
+      "permissions",
+      "property assignment",
+      "subscription information"
+    ],
+    "passingScore": 3
+  },
+{
+    "id": "survey-summary-report",
+    "question": "Is there a report that has all the survey information?",
+    "baselineResponse": "The Survey Summary report will show a summary of the responses for each question of the selected Survey where the Survey was generated within the date range specified.",
+    "requiredConcepts": [
+      "Survey Summary report",
+      "summary of responses",
+      "selected Survey",
+      "each question",
+      "date range specified"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "manage-message-list",
+    "question": "How do I manage the message list?",
+    "baselineResponse": "The Messages List displays all unread messages sent to MRI Angus, typically by tenants, employees, or vendors using the company email address and messages sent using MRI Angus Mobile. For a more complete description of the various message types and how they are generated, see About Messages. This list contains three tabs that can be used to organize your messages: Messages, Automatic Replies, and Junk Mail.",
+    "requiredConcepts": [
+      "Messages List",
+      "unread messages",
+      "MRI Angus Mobile",
+      "Messages",
+      "Automatic Replies",
+      "Junk Mail",
+      "Remove From List",
+      "Create Work Order",
+      "Move to Automatic Replies",
+      "Move to Junk Mail",
+      "Tenant Request",
+      "General Messages",
+      "COI",
+      "spam filter",
+      "automatically deleted after 60 days"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-employee",
+    "question": "How do I add an employee?",
+    "baselineResponse": "For a new employee to be able to access MRI Angus, they will need to verify their primary email address and activate an Okta account. From the Employees list, click Create Employee. In the Create Employee popup, enter the employee information including First and Last name, Role, Primary Email, Primary Phone and Assigned Properties. Employees must have at least one property assigned to them. Click Save to save the employee's records. If an email address was entered, you can send an email that allows the employee to set up their username and password. If an employee has not verified their primary email, they will not be able to sign into MRI Angus.",
+    "requiredConcepts": [
+      "verify primary email",
+      "Okta account",
+      "Employees list",
+      "Create Employee",
+      "Role",
+      "Primary Email",
+      "Primary Phone",
+      "Assigned Properties",
+      "at least one property assigned",
+      "Save",
+      "username and password",
+      "Employee Details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "reserve-shared-resource-conference-room-freight-elevator",
+    "question": "How do I reserve a shared resource/conference room/freight elevator?",
+    "baselineResponse": "Click Menu, then Reservation Calendar under Reservations. Click New Reservation. Search for or select a tenant contact, choose the resource to reserve, select an available time, review the resource information, and complete the reservation through the Your Booking window. Reservations can be Single Booking or Recurring Booking. Save the reservation and, if approval is required, review the reservation details screen.",
+    "requiredConcepts": [
+      "Reservation Calendar",
+      "Reservations",
+      "New Reservation",
+      "tenant contact",
+      "resource",
+      "Resource Information",
+      "available time slot",
+      "Previous",
+      "Next",
+      "Today",
+      "Resource Availability Warning",
+      "Your Booking",
+      "Single Booking",
+      "Recurring Booking",
+      "Save",
+      "reservation approval"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-vendor-coi",
+    "question": "How do I add a Vendor COI?",
+    "baselineResponse": "To start, click New COI from the Vendor COI list. On the New Vendor COI screen enter a Vendor name, COI Title, upload a COI document, assign applicable properties, configure expiry notifications, choose notification recipients and employee or custom signatures, then click Create COI. From the COI Details screen you can manage policies, compliance rules, vendor contacts, employee contacts and additional insured settings.",
+    "requiredConcepts": [
+      "New COI",
+      "Vendor COI",
+      "Vendor name",
+      "COI Title",
+      "COI document",
+      "Assigned Properties",
+      "Expiry Notifications",
+      "Inform Employees",
+      "Inform Vendor",
+      "Notify Primary Vendor Contact",
+      "Notify Alternate Vendor Contact",
+      "Employee Signature",
+      "Custom Signature",
+      "Create COI",
+      "COI Details",
+      "Add Policy",
+      "Compliance Rules",
+      "Compliant",
+      "Not Compliant",
+      "Waived",
+      "Additional Insured"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "use-visits-list",
+    "question": "How do I use the Visits List?",
+    "baselineResponse": "This list displays all visitors that have Expected, Arrived and Groups Lists. Access the list through Menu > Visits (new) under Visitor Security. The list supports filtering, advanced search, visitor check-in, check-out, badge printing, and visitor group management. Users can open visit details by selecting the visitor's name.",
+    "requiredConcepts": [
+      "Menu",
+      "Visits (new)",
+      "Visitor Security",
+      "Expected",
+      "Checked In",
+      "Advanced Search",
+      "Visitor Name",
+      "Visitor Company",
+      "Tenant",
+      "Date of Visit",
+      "New Visit",
+      "Check In",
+      "Check Out",
+      "Print Badges",
+      "Visitor Groups",
+      "Visit Details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "restricted-visitors",
+    "question": "How does Angus handle Restricted Visitors?",
+    "baselineResponse": "Visitors that potentially match a name on the restricted visitors list are displayed in red text. Open the visit, review the possible matches, and decide whether to allow or deny access. Select Allow Access or Deny Access, enter notes regarding the decision, and confirm the action.",
+    "requiredConcepts": [
+      "restricted visitors",
+      "red text",
+      "possible matches",
+      "Previous",
+      "Next",
+      "Allow Access",
+      "Deny Access",
+      "notes",
+      "cleared for access",
+      "denied access"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "resource-center",
+    "question": "What is the Resource Center?",
+    "baselineResponse": "The Resource Center allows you to manage a collection of online documents that can be used internally, externally, or both. The maximum file size for each document is 10 MB and there is a 100 MB storage limit per property. Documents can be archived. Internal documents can be restricted by property and role. External documents can be made available through the Service Portal.",
+    "requiredConcepts": [
+      "Resource Center",
+      "online documents",
+      "10 MB",
+      "100 MB storage limit",
+      "archived",
+      "Internal Documentation",
+      "External Documentation",
+      "restricted by property",
+      "restricted by role",
+      "Security Guard",
+      "Service Portal"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "engineer-work-hours-report",
+    "question": "Is there a report that shows the work hours for engineers?",
+    "baselineResponse": "The engineering effectiveness report categorizes all hours worked over the last 2 calendar weeks. PM hours are summarized as work due, completed, cancelled, overdue, completed current, and completed backlogged. A week is defined as Monday to Sunday.",
+    "requiredConcepts": [
+      "engineering effectiveness report",
+      "2 calendar weeks",
+      "PM hours",
+      "work due",
+      "completed",
+      "cancelled",
+      "overdue",
+      "completed current",
+      "completed backlogged",
+      "Monday to Sunday"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "hours-worked-week-or-month",
+    "question": "Is there a report that shows how many hours were worked for a week or a month?",
+    "baselineResponse": "Property labor hours by Month/Week summarizes all hours worked during each month/week for the selected calendar year. Both TR and PM hours worked are displayed regardless of the due date or the status of the work orders. The data is grouped first by property then detailed by resource. A drill down is provided on the property to view the details of the work done for that property.",
+    "requiredConcepts": [
+      "Property labor hours by Month",
+      "Property labor hours by Week",
+      "selected calendar year",
+      "TR hours",
+      "PM hours",
+      "work order status",
+      "grouped by property",
+      "detailed by resource",
+      "drill down",
+      "property details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "contact-list",
+    "question": "Where can I find a list of contacts?",
+    "baselineResponse": "The Contact List report shows a list of tenant contacts and their E-mail address and phone number. The report is grouped by Property, Building, then Floor. You can also view by going to Settings/Employees.",
+    "requiredConcepts": [
+      "Contact List report",
+      "tenant contacts",
+      "E-mail address",
+      "phone number",
+      "Property",
+      "Building",
+      "Floor",
+      "Settings/Employees"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "employee-list",
+    "question": "Where can I find a list of employees?",
+    "baselineResponse": "The Employee List report shows a list of employees including their title, primary email address, phone number, role, availability, and menu configurations. Clicking on the employee's name will display expanded details such as emergency contact information, permissions, property assignment, and subscription information. Tested 6th JULY 2026 in Ask Agora",
+    "requiredConcepts": [
+      "Employee List report",
+      "title",
+      "primary email address",
+      "phone number",
+      "role",
+      "availability",
+      "menu configurations",
+      "emergency contact information",
+      "permissions",
+      "property assignment",
+      "subscription information"
+    ],
+    "passingScore": 3
+  },
+ {
+    "id": "closed-tr-work-orders-report",
+    "question": "What report should I use to find closed work orders for a period of time?",
+    "baselineResponse": "-The Closed TR Work Order(s) report shows all work orders generated from tenant requests where the date closed is within the date range and the status is Closed. Closed means that a work order has been assigned and all services provided have been entered into that work order. This report can also be run as a PDF or Excel (xls or xlsx).",
+    "requiredConcepts": [
+      "Closed TR Work Order(s)",
+      "tenant requests",
+      "date closed",
+      "date range",
+      "status is Closed",
+      "work order assigned",
+      "services provided",
+      "PDF",
+      "Excel",
+      "xls",
+      "xlsx"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "recurring-tr-work-orders-report",
+    "question": "Is there a report showing recurring work orders?",
+    "baselineResponse": "The recurring TR Work Orders report shows all work orders generated from Tenant Requests with a recurring schedule where the Date Due is within the date range. A drill down is provided on the ID to view all details of the work order. An additional drill down is provided on the Schedule ID to view the details of the Schedule. This report can also be run as a PDF or Excel (xls or xlsx).",
+    "requiredConcepts": [
+      "recurring TR Work Orders",
+      "Tenant Requests",
+      "recurring schedule",
+      "Date Due",
+      "ID",
+      "drill down",
+      "Schedule ID",
+      "Schedule",
+      "PDF",
+      "Excel",
+      "xls",
+      "xlsx"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "request-types-list-report",
+    "question": "Is there somewhere I can find a list of work order types by portfolio or property?",
+    "baselineResponse": "The Request Types List report request types currently assigned to properties, as well as those available company-wide. This report can also be run as a PDF or Excel (xls or xlsx).",
+    "requiredConcepts": [
+      "Request Types List",
+      "request types",
+      "assigned to properties",
+      "company-wide",
+      "PDF",
+      "Excel",
+      "xls",
+      "xlsx"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "tr-work-orders-report",
+    "question": "Where can I find a list of tenant request work orders?",
+    "baselineResponse": "The TR Work Orders report shows all work orders generated from tenant requests where the selected date is within the date range. It also includes any tenant requests that have not yet been created as work orders. Checking the Show Details box displays more information about the work order including tenant contact information. Checking the Show Services box will display any services provided and billing details. Checking the Show Older Than box displays only new, open, and delayed work orders that are overdue by the number of days entered in the box next to it. A drill down is provided on the ID to view all details of the work order. This report can also be run as a PDF or Excel (xls or xlsx).",
+    "requiredConcepts": [
+      "TR Work Orders",
+      "tenant requests",
+      "selected date",
+      "date range",
+      "Show Details",
+      "tenant contact information",
+      "Show Services",
+      "billing details",
+      "Show Older Than",
+      "new work orders",
+      "open work orders",
+      "delayed work orders",
+      "overdue",
+      "ID",
+      "drill down",
+      "PDF",
+      "Excel"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "equipment-history-report",
+    "question": "Where can I find the history for a piece of equipment?",
+    "baselineResponse": "The Equipment History report shows updates to an equipment’s estimated useful life, equipment condition, and assessment comments fields. This report can also be run as a PDF or Excel (xls or xlsx).",
+    "requiredConcepts": [
+      "Equipment History",
+      "estimated useful life",
+      "equipment condition",
+      "assessment comments",
+      "PDF",
+      "Excel",
+      "xls",
+      "xlsx"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "escalation-settings-and-inspection-workflow",
+    "question": "How do I create alerts when a request goes past due? Or How do I set the criteria for escalations?",
+    "baselineResponse": "The Escalations Settings screen is accessed by clicking Setup > Tenant Request > Escalations. In the Escalation Settings screen, click the Property field and select the desired property. In the Escalation Settings section, for each desired request type, enter the times for each desired level of escalation. Escalation time accumulates only during the property's coverage hours. Escalation times are re-calculated whenever the work order is updated. When you are finished, click Update at the bottom of the escalation settings page. Explain the Inspection Workflow. The generic workflow for conducting an inspection is listed below. This workflow assumes all requisite setup activities have been completed (inspection templates, schedules, and employee access levels/permissions). An inspection schedule generates an inspection, which is displayed on the Outstanding list. If the inspection is unassigned, an employee manually assigns and dispatches the inspection. The assigned employee conducts the inspection. The inspection results can be filled in using MRI Angus Mobile for iOS and Android™ devices, or on a desktop browser in MRI Angus. Completed inspections can be reviewed and updated from the Completed list. Any inspection tasks that are marked as requiring correction are displayed in the Requires Correction list. An employee reviews the tasks requiring correction and makes the final determination as to whether a corrective work order is issued. Work orders generated by inspection tasks are counted as proactive Tenant Request (TR) work orders, are displayed in the TR module as a regular work order, and follow the usual workflow for this type of work order. Once work orders associated with an inspection are marked as Completed, the associated task is automatically removed from the Requires Correction list and is displayed in the Corrected list.",
+    "requiredConcepts": [
+      "Setup > Tenant Request > Escalations",
+      "Escalation Settings",
+      "Property",
+      "request type",
+      "level of escalation",
+      "coverage hours",
+      "work order updated",
+      "Update",
+      "inspection schedule",
+      "Outstanding list",
+      "assigns and dispatches",
+      "MRI Angus Mobile",
+      "Completed list",
+      "Requires Correction",
+      "corrective work order",
+      "Tenant Request (TR)",
+      "Corrected list"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-location-or-suite",
+    "question": "How do I add a location or suite?",
+    "baselineResponse": "Click path to Add a Floor or Suite: Setup > Floor & Suites > Location/Suites. Use the Property drop-down list to select the desired property. Use the Building drop-down list if more than one building resides on the property. The Show drop-down list can be used to indicate Active, Inactive, or All Floors. In the Floors section, locate the desired floor and click Location/Suites. Use the Quick Add Locations/Suites section to add suites. If many suites are to be added at one time, click Add Many. Enter the Location/Suite name. Select Show in TR, Show in PM, Common Area, or Copy to All Floors as applicable, then click Add Location/Suites.",
+    "requiredConcepts": [
+      "Setup > Floor & Suites > Location/Suites",
+      "Property",
+      "Building",
+      "Show",
+      "Active",
+      "Inactive",
+      "All Floors",
+      "Location/Suites",
+      "Quick Add Locations/Suites",
+      "Add Many",
+      "Location/Suite",
+      "Show in TR",
+      "Show in PM",
+      "Common Area",
+      "Copy to All Floors",
+      "Add Location/Suites"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-task",
+    "question": "How do I create a task?",
+    "baselineResponse": "The following click path is how a user would access add a task Setup > Preventive Maintenance > Tasks. From the Task Library list, click Add Task. Provide the following information in the Add Task window: The Property where the task will be taking place, the task name, and the trade. Clicking More Options allows selection of a more specific time interval. Enter the estimated time and general instructions. Click Create to create the task, or Create and View to create the task and then view the Task Details screen.",
+    "requiredConcepts": [
+      "Setup > Preventive Maintenance > Tasks",
+      "Task Library",
+      "Add Task",
+      "Property",
+      "task name",
+      "trade",
+      "More Options",
+      "time interval",
+      "estimated time",
+      "general instructions",
+      "Create",
+      "Create and View",
+      "Task Details"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "engineer-work-hours-report",
+    "question": "Is there a report that shows the work hours for engineers?",
+    "baselineResponse": "Yes — there are a few reports that can show engineer work hours in MRI Angus. The most directly relevant one is Engineering Effectiveness, which categorizes all hours worked over the last 2 calendar weeks. It’s listed under All Work Orders > Labor Utilization. Other related reports you may find useful are: Resource Labor Hours - shows all hours worked within a date range and can be grouped by resource, with drill-down to work order details. Resource Labor Hours by Month and Resource Labor Hours by Week - summarize hours worked by resource over monthly or weekly periods. Summary by Employee - groups work orders by employee and includes estimated time and time taken.",
+    "requiredConcepts": [
+      "Engineering Effectiveness",
+      "2 calendar weeks",
+      "All Work Orders > Labor Utilization",
+      "Resource Labor Hours",
+      "date range",
+      "grouped by resource",
+      "drill-down",
+      "work order details",
+      "Resource Labor Hours by Month",
+      "Resource Labor Hours by Week",
+      "Summary by Employee",
+      "estimated time",
+      "time taken"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "hours-worked-week-or-month",
+    "question": "Is there a report that shows how many hours were worked for a week or a month?",
+    "baselineResponse": "Yes. Angus has several reports that show hours worked by week or by month: Property Labor Hours by Week, Property Labor Hours by Month, Resource Labor Hours by Week, Resource Labor Hours by Month, Tenant Labor Hours by Week, and Tenant Labor Hours by Month. These reports include both TR and PM hours worked, regardless of due date or work order status.",
+    "requiredConcepts": [
+      "Property Labor Hours by Week",
+      "Property Labor Hours by Month",
+      "Resource Labor Hours by Week",
+      "Resource Labor Hours by Month",
+      "Tenant Labor Hours by Week",
+      "Tenant Labor Hours by Month",
+      "TR hours",
+      "PM hours",
+      "due date",
+      "work order status"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "contacts-list",
+    "question": "Where can I find a list of contacts?",
+    "baselineResponse": "You can find the Contacts list by clicking the Setup icon and selecting Contacts under General. The Contacts list displays all tenant contacts entered in the system, and each contact is associated with a specific tenant. If you want, I can also explain how to search, filter, or add a new contact.",
+    "requiredConcepts": [
+      "Setup",
+      "Contacts",
+      "General",
+      "Contacts list",
+      "tenant contacts",
+      "specific tenant"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "employees-list",
+    "question": "Where can I find a list of employees?",
+    "baselineResponse": "You can find the Employees list from the Setup menu in MRI Angus. Access to the list depends on your permissions: you must have access to General Setup and your Employee Role must allow viewing employee profiles. Once open, the Employees list shows all users set up in MRI Angus, and you can filter it by property or search by name.",
+    "requiredConcepts": [
+      "Employees",
+      "Setup menu",
+      "General Setup",
+      "Employee Role",
+      "employee profiles",
+      "users",
+      "filter by property",
+      "search by name"
+    ],
+    "passingScore": 3
+  }
+]

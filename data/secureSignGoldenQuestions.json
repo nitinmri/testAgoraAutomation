@@ -1,0 +1,37 @@
+﻿[
+  {
+    "id": "secure-sign-login-issue",
+    "question": "Why can’t I sign in to Secure Sign?",
+    "baselineResponse": "There are two common causes: your Secure Sign user does not have access, or your credentials are not being accepted.",
+    "requiredConcepts": [
+      "secure sign user access",
+      "credentials not accepted",
+      "sign in issue"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "reset-secure-sign-password",
+    "question": "How do I reset my Secure Sign password?",
+    "baselineResponse": "Enter your email address on the Secure Sign sign-in page and select Sign In. Then follow the reset process for the authentication method presented:",
+    "requiredConcepts": [
+      "email address",
+      "secure sign sign in page",
+      "reset process",
+      "authentication method"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "password-reset-activation-email-not-received",
+    "question": "Why didn’t I receive my password reset or activation email?",
+    "baselineResponse": "The message may be sent by Secure Sign, MRI Software Okta, or your organization’s external identity provider, depending on how your account is configured.",
+    "requiredConcepts": [
+      "secure sign",
+      "mri software okta",
+      "external identity provider",
+      "account configuration"
+    ],
+    "passingScore": 3
+  }
+]

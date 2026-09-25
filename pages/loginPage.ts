@@ -18,7 +18,8 @@ readonly signInWithEmailField ='input[id="email"]';
   readonly autoPush='input[name="autoPush"]'
 readonly rememberMe='input[name="rememberDevice"]'
 readonly sendPushButon='input[value="Send Push"]'
-
+readonly signInEmailIDfieldTwo='input[name="email"]';
+readonly signInButtonTwo='button[id="loginPopupContinue"]'
   constructor(page: Page) {
     this.page = page;
 
@@ -29,8 +30,9 @@ readonly sendPushButon='input[value="Send Push"]'
   // await this.page.fill(this.clientID, loginCredentials.clientID);
   // await this.page.click(this.signinButton);
   //await this.page.click(this.mriSaaSoktaPreviewOptionButton);
-  await this.page.fill(this.signInWithEmailField, loginCreds.userName);
-  await this.page.click(this.signinButton);
+  await this.page.locator(this.signInWithEmailField).or(this.page.locator(this.signInEmailIDfieldTwo)).first().fill(loginCreds.userName)
+  await this.page.locator(this.signinButton).or(this.page.locator(this.signInButtonTwo)).first().click()
+//  await this.page.click(this.signinButton);
   await this.page.fill(this.emailField, loginCreds.userName);
   await this.page.fill(this.passwordField, loginCreds.password);
   await this.page.click(this.signInButtonForOkta);

@@ -1,17 +1,17 @@
 import { test, expect } from '../utils/fixtures';
 import { generalElements } from '../pages/generalElements';
-import { goldenQuestions } from '../data/goldenQuestions';
+import { getGoldenQuestions } from '../data/goldenQuestions';
 import { evaluateAnswer } from '../utils/answerEvaluator';
 import { restoreOrLogin } from '../utils/sessionManager';
 
-test.describe('Ask Agora golden questions', () => {
+test.describe('Ask Agora golden questions for Secure Sign', () => {
   test.beforeEach(async ({ page, takeScreenshot }) => {
     await restoreOrLogin(page);
     await takeScreenshot('authenticated');
   });
 
-  for (const goldenQuestion of goldenQuestions) {
-    test(`validates ${goldenQuestion.id}`, async ({ page, takeScreenshot }, testInfo) => {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('secureSign').entries()) {
+    test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const askAgora = new generalElements(page);
       await askAgora.openAskAgora();
       await takeScreenshot('ask-agora-open');

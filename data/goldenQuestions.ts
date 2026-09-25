@@ -1,4 +1,5 @@
-import goldenQuestionRecords from './goldenQuestions.json';
+import angusGoldenQuestionRecords from './angusGoldenQuestions.json';
+import secureSignGoldenQuestionRecords from './secureSignGoldenQuestions.json';
 
 export type GoldenQuestion = {
   id: string;
@@ -10,11 +11,20 @@ export type GoldenQuestion = {
 
 type GoldenQuestionRecord = Omit<GoldenQuestion, 'expectedAnswer'> & {
   baselineResponse: string;
-}
+};
 
-export const goldenQuestions: GoldenQuestion[] = (
-  goldenQuestionRecords as GoldenQuestionRecord[]
-).map(({ baselineResponse, ...question }) => ({
+const mapGoldenQuestions = (records: GoldenQuestionRecord[]): GoldenQuestion[] => records.map(({
+  baselineResponse,
+  ...question
+}) => ({
   ...question,
   expectedAnswer: baselineResponse,
 }));
+
+export const getGoldenQuestions = (product: 'angus' | 'secureSign'): GoldenQuestion[] => {
+  const records = product === 'angus'
+    ? angusGoldenQuestionRecords
+    : secureSignGoldenQuestionRecords;
+
+  return mapGoldenQuestions(records as GoldenQuestionRecord[]);
+};

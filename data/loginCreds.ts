@@ -10,12 +10,13 @@ const getRequiredEnv = (key: string) => {
   }
   return value;
 }
-const env = (process.env.AGORA_ENV || 'angus').toLowerCase() as 'angus' | 'pmx' | 'horizon' | 'engageAtWork' ;
+const env = (process.env.AGORA_ENV || 'securesign').toLowerCase() as 'angus' | 'pmx' | 'horizon' | 'engageatwork' | 'securesign';
 const urls = {
   angus: 'https://qa5.angus-systems.com/web?accountSwitch=true&mri_client_id=MRIQWEB&client=MRIQWEB&env_id=ANGUS-QA5',
   pmx:'https://mrix6-trunk.qasaas.mrisoftware.net',
   horizon: 'https://hzpdsys001.proleaseenterprise.mrisoftware.com/PDSYS01A/MainWindow/Create?client_id=MRIQWEB&env_id=HORIZON-DEV-0001',
-  engageAtWork:'https://engage-atwork-back-office-qa.mriengage.com/admin'
+  engageatwork:'https://engage-atwork-back-office-qa.mriengage.com/admin',
+  securesign:'https://qasecuresign.ff.mrisoftware.net/secure?widget=packetList'
 };
 
 export const loginCreds = {

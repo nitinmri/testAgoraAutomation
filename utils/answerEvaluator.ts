@@ -141,7 +141,6 @@ ${payload.passingScore}
 
   const response = await client.chat.completions.create({
     model: getEvaluationModel(),
-    max_completion_tokens: 600,
     messages: [
       { role: 'system', content: SYSTEM_PROMPT },
       { role: 'user', content: prompt },
@@ -204,7 +203,20 @@ ${payload.passingScore}
     throw new Error('OpenAI returned an empty answer evaluation response.');
   }
 
-  const parsed = JSON.parse(responseText) as AIValidationResult;
+  const finishReason = response.choices[0]?.finish_reason;
+  if (finishReason === 'length') {
+    throw new Error('OpenAI truncated the answer evaluation response before returning complete JSON.');
+  }
+
+  let parsed: AIValidationResult;
+  try {
+    parsed = JSON.parse(responseText) as AIValidationResult;
+  } catch (error) {
+    throw new Error(
+      `OpenAI returned invalid JSON for answer evaluation (finish reason: ${finishReason ?? 'unknown'}): ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+
   return {
     ...parsed,
     usage: response.usage

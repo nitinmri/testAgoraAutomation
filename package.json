@@ -5,10 +5,13 @@
   "scripts": {
     "clear_allure": "npx rimraf allure-report allure-results",
     "clear_cookies": "npx rimraf sessionData.json",
-    "angus": "cross-env AGORA_ENV=angus npx playwright test tests --project=chromium",
+    "clear_testResults": "npx rimraf test-results",
+    "angus": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
     "pmx": "cross-env AGORA_ENV=pmx npx playwright test tests --project=chromium",
     "horizon": "cross-env AGORA_ENV=horizon npx playwright test tests --project=chromium",
-    "engageAtWork": "cross-env AGORA_ENV=engageAtWork npx playwright test tests --project=chromium"
+    "engageAtWork": "cross-env AGORA_ENV=engageAtWork npx playwright test tests --project=chromium",
+    "secureSign": "npm run clear_cookies && npm run clear_allure && clear_testResults &&  cross-env AGORA_ENV=secureSign npx playwright test tests/secureSignEvaludation.spec.ts --project=chromium"
+    
   },
   "keywords": [],
   "author": "",

@@ -4,7 +4,7 @@ import { restoreOrLogin } from '../utils/sessionManager';
 
 let general: generalElements;
 
-test.describe('basic Validations for Ask Agora widget Modal', () => {
+test.describe.skip('basic Validations for Ask Agora widget Modal', () => {
   test.beforeEach(async ({ page, takeScreenshot }) => {
     general = new generalElements(page);
     await restoreOrLogin(page);

@@ -28,6 +28,7 @@ export default defineConfig({
   ['list'],
   ['allure-playwright'],
   ['html', { open: 'always' }],
+  ['./utils/csvReporter.ts'],
   // ['./e2e/utils/teamsnotifier.ts'], // Temporarily disabled
 ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -36,7 +37,7 @@ export default defineConfig({
     screenshot: 'off',
      video:'retain-on-failure', 
    viewport:{width: 1920, height: 1080},
- headless: false, // Set to false if you want to see the browser UI during tests
+ headless: true, // Set to false if you want to see the browser UI during tests
  ignoreHTTPSErrors: true, // for self-signed certs
  // proxy: { server: 'http://proxy.com:3128' }, // if needed
 
