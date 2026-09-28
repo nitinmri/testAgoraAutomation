@@ -1,4 +1,5 @@
-﻿[
+﻿
+[
   {
     "id": "secure-sign-login-issue",
     "question": "Why can’t I sign in to Secure Sign?",
@@ -31,6 +32,511 @@
       "mri software okta",
       "external identity provider",
       "account configuration"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "sso-access-denied-authtoken-error",
+    "question": "What should I do if I receive an SSO, Access Denied, or AuthToken error?",
+    "baselineResponse": "These errors usually indicate a problem with the connection between your Secure Sign user and the linked SSO account. This generally requires administrator or Support assistance rather than a password reset alone.",
+    "requiredConcepts": [
+      "sso account",
+      "connection problem",
+      "administrator assistance",
+      "support assistance"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-secure-sign-template",
+    "question": "How do I create a new Secure Sign template?",
+    "baselineResponse": "From the left navigation, select Document Templates, then select the blue Upload Document Template button in the upper-right corner. Choose the folder where the template should be stored, select a Word or PDF document from your computer, and confirm the template name. The name defaults to the uploaded file name, but you can change it before uploading.",
+    "requiredConcepts": [
+      "document templates",
+      "upload document template",
+      "select folder",
+      "word or pdf document",
+      "template name"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "edit-existing-secure-sign-template",
+    "question": "How do I edit an existing Secure Sign template?",
+    "baselineResponse": "From the left navigation, select Document Templates and locate the template you want to change. Select the template name to open it in the Template Editor in a new browser tab. You can then add, remove, move, or configure fields and save your changes.",
+    "requiredConcepts": [
+      "document templates",
+      "template editor",
+      "configure fields",
+      "save changes"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "replace-template-document",
+    "question": "How do I replace the document used by an existing template?",
+    "baselineResponse": "Go to Document Templates and locate the template. Under the Actions column, select the three-dot menu and choose Replace Template PDF. Despite the label, the replacement can be a Word document or a PDF. Select and upload the new file.",
+    "requiredConcepts": [
+      "document templates",
+      "replace template pdf",
+      "word document",
+      "pdf",
+      "upload new file"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "publish-share-secure-sign-template",
+    "question": "How do I publish or share a Secure Sign template?",
+    "baselineResponse": "Publishing is available to Branch Admins and Company Admins. Go to Document Templates, locate the template, select the three-dot menu under Actions, and choose Publish.",
+    "requiredConcepts": [
+      "branch admins",
+      "company admins",
+      "document templates",
+      "publish"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-use-shared-field",
+    "question": "How do I create and use a shared field?",
+    "baselineResponse": "Open the template in the Template Editor and drag a Shared Field onto the document. Give the field a name, such as Property ID, and choose either Text or Date as its type. For integrations, values are often passed as text. The PMX Residential Management integration uses text values for shared fields.",
+    "requiredConcepts": [
+      "template editor",
+      "shared field",
+      "property id",
+      "text or date",
+      "integration values",
+      "pmx residential management"
+    ],
+    "passingScore": 3
+  },{
+    "id": "signer-cannot-see-field",
+    "question": "Why can’t a signer see a field I added?",
+    "baselineResponse": "The most likely reason is that the field was assigned to a different participant. In the Template or Document Editor, select the field and select the wrench icon to open its properties. Review the Field Owner and assign the field to the participant who should complete it.",
+    "requiredConcepts": [
+      "field assigned to different participant",
+      "template editor",
+      "document editor",
+      "field owner",
+      "field properties",
+      "participant assignment"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "make-field-required",
+    "question": "How do I make a field required?",
+    "baselineResponse": "Open the template or document in the editor and select the field. Select the wrench icon to open the field details, then enable the Required setting and save your changes. The assigned participant will be required to complete that field before advancing through the signing experience.",
+    "requiredConcepts": [
+      "field details",
+      "wrench icon",
+      "required setting",
+      "save changes",
+      "participant must complete field"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-signature-initials-checkbox-radio-field",
+    "question": "How do I add a signature, initials, checkbox, or radio-button field?",
+    "baselineResponse": "Open the template or document in the editor. In the participant selector above the field list, choose the person who should complete the field. Then select the desired field type and drag it onto the appropriate location in the document.",
+    "requiredConcepts": [
+      "participant selector",
+      "field list",
+      "field type",
+      "drag and drop",
+      "signature field",
+      "checkbox field",
+      "radio-button field"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "signer-did-not-receive-packet-email",
+    "question": "Why didn’t a signer receive the Secure Sign packet email?",
+    "baselineResponse": "Ask the signer to check their Inbox, then Junk or Spam, Clutter, and Deleted Items. You can also verify what Secure Sign sent:",
+    "requiredConcepts": [
+      "inbox",
+      "junk or spam",
+      "clutter",
+      "deleted items",
+      "verify secure sign email"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "not-receiving-signing-approval-completion-notifications",
+    "question": "Why am I not receiving signing, approval, or completion notifications?",
+    "baselineResponse": "First confirm that the packet is progressing through its workflow. Then review your notification settings. Select the Settings gear and open the Notifications tab. Verify that the appropriate channel is enabled for the event you expect, such as email, SMS/text, or web notification.",
+    "requiredConcepts": [
+      "packet workflow",
+      "notification settings",
+      "settings gear",
+      "notifications tab",
+      "email notifications",
+      "sms notifications",
+      "web notifications"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "resend-packet-or-signing-link",
+    "question": "How do I resend a packet or signing link?",
+    "baselineResponse": "Go to My Documents, open the packet, and select the blue Resend Packet button in the upper-right corner of Packet Details. The resend goes to the current signing group only. For example, if Signing Group 1 has completed its work and the packet is waiting on Signing Group 2, the resend is sent to Signing Group 2 rather than everyone who previously participated.",
+    "requiredConcepts": [
+      "my documents",
+      "resend packet",
+      "packet details",
+      "current signing group",
+      "signing group 1",
+      "signing group 2"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "check-email-blocked-bounced-suppressed",
+    "question": "How do I check whether an email address is blocked, bounced, or suppressed?",
+    "baselineResponse": "Secure Sign does not currently expose bounce or suppression status to users. Contact MRI Support and provide the affected email address and, if available, the packet name or ID. Support can review the email-delivery service and determine whether the address was blocked or bounced.",
+    "requiredConcepts": [
+      "bounce status",
+      "suppression status",
+      "mri support",
+      "email address",
+      "packet name",
+      "packet id",
+      "email delivery service"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "configure-packet-reminders-expiration-notices",
+    "question": "How do I configure packet reminders and expiration notices?",
+    "baselineResponse": "To establish defaults for new packets, select the Settings gear and open Default Packet Settings. Enable reminders if desired, choose when the first reminder should be sent, and decide whether reminders should continue until the packet is fully executed. If recurring reminders are enabled, choose how often they should be sent.",
+    "requiredConcepts": [
+      "default packet settings",
+      "enable reminders",
+      "first reminder",
+      "fully executed packet",
+      "recurring reminders",
+      "reminder frequency"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "identify-pending-packet-participants",
+    "question": "How can I tell who still needs to complete a packet?",
+    "baselineResponse": "Go to My Documents and open the packet. On Packet Details, use the icons under Status:",
+    "requiredConcepts": [
+      "my documents",
+      "packet details",
+      "status icons",
+      "pending participants"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "packet-in-progress-after-signing",
+    "question": "Why does a packet still show In Progress when everyone appears to have signed?",
+    "baselineResponse": "Open the packet from My Documents and verify completion using the eye and pen icons under Status. Also review Sent Messages to confirm which signing group is active. A participant may have viewed or entered information without completing the entire signing step.",
+    "requiredConcepts": [
+      "my documents",
+      "eye icon",
+      "pen icon",
+      "status",
+      "sent messages",
+      "active signing group",
+      "incomplete signing step"
+    ],
+    "passingScore": 3
+  },
+    {
+    "id": "download-documents-with-certificate-of-completion",
+    "question": "How do I download documents with the Certificate of Completion?",
+    "baselineResponse": "Go to My Documents and open the packet. On Packet Details, select the checkbox next to each document you want, or use the checkbox in the column header to select all documents. After at least one document is selected, open the menu next to Print PDF and choose Print with Certificate of Completion.",
+    "requiredConcepts": [
+      "my documents",
+      "packet details",
+      "select documents",
+      "print pdf",
+      "certificate of completion"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "certificate-of-completion-missing",
+    "question": "Why is the Certificate of Completion missing from an email or PDF?",
+    "baselineResponse": "Some completed-document emails or copies intentionally include only the fully executed document and not the Certificate of Completion. This can occur for copies delivered to external signing parties.",
+    "requiredConcepts": [
+      "completed document",
+      "certificate of completion not included",
+      "fully executed document",
+      "external signing parties"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "view-packet-audit-trail",
+    "question": "How do I view a packet’s audit trail?",
+    "baselineResponse": "Go to My Documents and open the packet. On Packet Details, select Audit Trail. The audit-trail window includes packet information such as the owner, date created, packet ID, participants, and status, along with time-ordered activity such as packet creation, sending, revisions, participant opens, and signing events.",
+    "requiredConcepts": [
+      "my documents",
+      "audit trail",
+      "packet information",
+      "packet id",
+      "participants",
+      "status",
+      "packet creation",
+      "signing events"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "export-packet-audit-trail",
+    "question": "How do I export a packet’s audit trail?",
+    "baselineResponse": "Open the packet from My Documents and select Audit Trail on Packet Details. Scroll to the bottom of the audit-trail window and select the option to export the complete audit log to PDF.",
+    "requiredConcepts": [
+      "my documents",
+      "audit trail",
+      "packet details",
+      "audit log",
+      "export to pdf"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-participant-to-packet",
+    "question": "How do I add a participant to a packet?",
+    "baselineResponse": "From My Documents, open the packet. In the Participants section of Packet Details, select Add. Enter the participant’s email address, first name, and last name. You may also enter a phone number, address, and an informational role. A phone number can be used to enable one-time-pin authentication for additional access verification. Select Save to add the participant; the participant is placed in Signing Group 1 by default.",
+    "requiredConcepts": [
+      "participants section",
+      "add participant",
+      "email address",
+      "first name",
+      "last name",
+      "phone number",
+      "one-time-pin authentication",
+      "signing group 1"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "difference-between-signer-approver-recipient",
+    "question": "What is the difference between a Signer, Approver, and Recipient role?",
+    "baselineResponse": "Today, these role labels are informational. They help the packet owner describe each participant’s intended purpose, but the label itself does not control what the participant must do.",
+    "requiredConcepts": [
+      "role labels",
+      "informational",
+      "packet owner",
+      "participant purpose",
+      "does not control actions"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "how-signing-groups-work",
+    "question": "How do signing groups work?",
+    "baselineResponse": "Numbered signing groups control the order of the workflow. Every participant in the active numbered group must complete their step before the packet advances to the next group.",
+    "requiredConcepts": [
+      "numbered signing groups",
+      "workflow order",
+      "active group",
+      "participant completion",
+      "advance to next group"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "change-signing-order",
+    "question": "How do I change the signing order?",
+    "baselineResponse": "Go to My Documents and open the packet. In the Participants section of Packet Details, select and drag each participant’s box into the required numbered signing group. Participants in the same group act in parallel, and the workflow advances to the next numbered group only after everyone in the current group completes their step.",
+    "requiredConcepts": [
+      "my documents",
+      "participants section",
+      "drag participant",
+      "numbered signing group",
+      "parallel signing",
+      "workflow advancement"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "packet-not-advancing-to-next-signing-group",
+    "question": "Why isn’t the packet advancing to the next signing group?",
+    "baselineResponse": "At least one participant in the current numbered signing group has not completed their step. Open the packet from My Documents and use the eye and pen icons under Status to see who has viewed and signed. Then select Sent Messages to review which participants most recently received the packet or a reminder.",
+    "requiredConcepts": [
+      "current signing group",
+      "participant not completed",
+      "eye icon",
+      "pen icon",
+      "status",
+      "sent messages",
+      "packet reminder"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "recipient-did-not-receive-copy",
+    "question": "Why didn’t a participant marked as Recipient receive a copy?",
+    "baselineResponse": "The role label Recipient is informational and does not by itself cause a completed copy to be delivered. To receive a copy at the end of the workflow, the participant must be placed in the Recipient Group, the dedicated bucket at the end of the signing workflow.",
+    "requiredConcepts": [
+      "recipient role",
+      "informational label",
+      "completed copy",
+      "recipient group",
+      "end of workflow",
+      "signing workflow"
+    ],
+    "passingScore": 3
+  },  {
+    "id": "void-a-packet",
+    "question": "How do I void a packet?",
+    "baselineResponse": "You can void a packet only while it is In Progress. Go to My Documents, locate the packet, select the three-dot menu under Actions, and choose Void. Secure Sign warns that the entire packet will be voided and that the operation cannot be undone. Confirm Void to stop the workflow and move the packet to the Voided tab.",
+    "requiredConcepts": [
+      "In Progress",
+      "My Documents",
+      "three-dot menu",
+      "Actions",
+      "Void",
+      "operation cannot be undone",
+      "stop the workflow",
+      "Voided tab"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "restore-voided-packet",
+    "question": "Can a voided packet be restored?",
+    "baselineResponse": "No. Voiding a packet is permanent and cannot be undone. After a packet is voided, the signing workflow ends. The remaining actions are to archive or delete the voided packet, as applicable. If the document still needs to be signed, create and send a new packet.",
+    "requiredConcepts": [
+      "voiding is permanent",
+      "cannot be undone",
+      "signing workflow ends",
+      "archive packet",
+      "delete packet",
+      "create new packet",
+      "send new packet"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "difference-between-voiding-deleting-revising-resending-packet",
+    "question": "What is the difference between voiding, deleting, revising, and resending a packet?",
+    "baselineResponse": "Use the action that matches what you need:",
+    "requiredConcepts": [
+      "voiding",
+      "deleting",
+      "revising",
+      "resending",
+      "appropriate action"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "revise-sent-packet",
+    "question": "How do I revise a packet that has already been sent?",
+    "baselineResponse": "Use Revise when you need to change the documents, participants, assigned fields, or workflow of a sent packet. Revising pulls the packet back, lets you make the necessary changes, and then restarts the signing workflow.",
+    "requiredConcepts": [
+      "Revise",
+      "change documents",
+      "change participants",
+      "assigned fields",
+      "workflow changes",
+      "sent packet",
+      "pull packet back",
+      "restart signing workflow"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "rename-packet",
+    "question": "How do I rename a packet?",
+    "baselineResponse": "Go to My Documents and open the packet. On Packet Details, select Packet Settings. In the panel that opens from the right side, update the Packet Name field and select Save.",
+    "requiredConcepts": [
+      "My Documents",
+      "Packet Details",
+      "Packet Settings",
+      "Packet Name field",
+      "Save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-new-secure-sign-user",
+    "question": "How do I add a new Secure Sign user?",
+    "baselineResponse": "Only Company Admins and Branch Admins can add users. From the left navigation, select Company Management. Select Quick Actions in the upper-right corner, then choose the option to add a new user. Enter the user’s information, assign one or more branches, and choose the appropriate permission level: Basic User, Branch Admin, or Company Admin. Complete the flow to save the user.",
+    "requiredConcepts": [
+      "Company Admins",
+      "Branch Admins",
+      "Company Management",
+      "Quick Actions",
+      "add new user",
+      "assign branches",
+      "Basic User",
+      "Branch Admin",
+      "Company Admin",
+      "save user"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "edit-existing-secure-sign-user",
+    "question": "How do I edit an existing Secure Sign user?",
+    "baselineResponse": "A Company Admin or Branch Admin can select Company Management from the left navigation, locate the user in the grid or with the search box, and select the user. The administrator can then update the user’s contact information, assigned branches, or permission level and save the changes.",
+    "requiredConcepts": [
+      "Company Admin",
+      "Branch Admin",
+      "Company Management",
+      "locate user",
+      "search box",
+      "contact information",
+      "assigned branches",
+      "permission level",
+      "save changes"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "enable-disable-secure-sign-user",
+    "question": "How do I enable or disable a Secure Sign user?",
+    "baselineResponse": "A Company Admin or Branch Admin can open Company Management, find and select the user, and go to the Account Configuration section. Use the Status toggle to enable or disable the user.",
+    "requiredConcepts": [
+      "Company Admin",
+      "Branch Admin",
+      "Company Management",
+      "Account Configuration",
+      "Status toggle",
+      "enable user",
+      "disable user"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "difference-between-basic-user-branch-admin-company-admin",
+    "question": "What is the difference between Basic User, Branch Admin, and Company Admin?",
+    "baselineResponse": "The roles provide progressively broader access:",
+    "requiredConcepts": [
+      "Basic User",
+      "Branch Admin",
+      "Company Admin",
+      "roles",
+      "broader access"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "give-user-access-to-multiple-branches",
+    "question": "How do I give a user access to multiple branches or all branches?",
+    "baselineResponse": "A Company Admin or Branch Admin can add or edit the user from Company Management. In the Branches field, use the multi-select control to assign each branch the user should access. To give access to all branches, select all available branches and save the user.",
+    "requiredConcepts": [
+      "Company Admin",
+      "Branch Admin",
+      "Company Management",
+      "Branches field",
+      "multi-select control",
+      "assign branches",
+      "all available branches",
+      "save user"
     ],
     "passingScore": 3
   }

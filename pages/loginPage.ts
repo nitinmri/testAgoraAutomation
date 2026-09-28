@@ -27,12 +27,22 @@ readonly signInButtonTwo='button[id="loginPopupContinue"]'
 
   async login() { 
     await this.page.goto(loginCreds.Url,{ waitUntil:'domcontentloaded' });
-  // await this.page.fill(this.clientID, loginCredentials.clientID);
-  // await this.page.click(this.signinButton);
-  //await this.page.click(this.mriSaaSoktaPreviewOptionButton);
-  await this.page.locator(this.signInWithEmailField).or(this.page.locator(this.signInEmailIDfieldTwo)).first().fill(loginCreds.userName)
-  await this.page.locator(this.signinButton).or(this.page.locator(this.signInButtonTwo)).first().click()
-//  await this.page.click(this.signinButton);
+  const entry = loginCreds.loginEntry;
+  if (entry.type === 'email') {
+    await this.page.locator(entry.emailSelector).fill(loginCreds.userName);
+    await this.page.locator(entry.submitSelector).click();
+  } else if (entry.type === 'clientIdThenEmail') {
+    await this.page.locator(entry.clientIdSelector).fill(loginCreds.clientID);
+    await this.page.locator(entry.clientIdSubmitSelector).click();
+    await this.page.locator(entry.emailSelector).fill(loginCreds.userName);
+    await this.page.locator(entry.emailSubmitSelector).click();
+  } else {
+    await this.page.locator(this.signInWithEmailField)
+      .or(this.page.locator(this.signInEmailIDfieldTwo)).first().fill(loginCreds.userName);
+    await this.page.locator(this.signinButton)
+      .or(this.page.locator(this.signInButtonTwo)).first().click();
+  }
+
   await this.page.fill(this.emailField, loginCreds.userName);
   await this.page.fill(this.passwordField, loginCreds.password);
   await this.page.click(this.signInButtonForOkta);

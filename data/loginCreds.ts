@@ -10,18 +10,79 @@ const getRequiredEnv = (key: string) => {
   }
   return value;
 }
-const env = (process.env.AGORA_ENV || 'securesign').toLowerCase() as 'angus' | 'pmx' | 'horizon' | 'engageatwork' | 'securesign';
-const urls = {
-  angus: 'https://qa5.angus-systems.com/web?accountSwitch=true&mri_client_id=MRIQWEB&client=MRIQWEB&env_id=ANGUS-QA5',
-  pmx:'https://mrix6-trunk.qasaas.mrisoftware.net',
-  horizon: 'https://hzpdsys001.proleaseenterprise.mrisoftware.com/PDSYS01A/MainWindow/Create?client_id=MRIQWEB&env_id=HORIZON-DEV-0001',
-  engageatwork:'https://engage-atwork-back-office-qa.mriengage.com/admin',
-  securesign:'https://qasecuresign.ff.mrisoftware.net/secure?widget=packetList'
-};
+type LoginEntry =
+  | { type: 'email'; emailSelector: string; submitSelector: string }
+  | {
+      type: 'clientIdThenEmail';
+      clientIdSelector: string;
+      clientIdSubmitSelector: string;
+      emailSelector: string;
+      emailSubmitSelector: string;
+    }
+  | { type: 'emailFallback' };
 
+const products = {
+  angus: {
+    url: 'https://qa5.angus-systems.com/web?accountSwitch=true&mri_client_id=MRIQWEB&client=MRIQWEB&env_id=ANGUS-QA5',
+    loginEntry: {
+      type: 'email',
+      emailSelector: 'input[id="email"]',
+      submitSelector: '[id="loginButton"]',
+    },
+  },
+  elconnect: {
+    url: 'https://engage-resident-back-office-qa.mriengage.com/admin',
+    loginEntry: {
+      type: 'clientIdThenEmail',
+      clientIdSelector: 'div[class="login__form form"] input',
+      clientIdSubmitSelector: 'div[class="form-submit sso-btn"] button',
+      emailSelector: 'input[id="email"]',
+      emailSubmitSelector: '[id="loginButton"]',
+    },
+  },
+  securesign: {
+    url: 'https://qasecuresign.ff.mrisoftware.net/secure?widget=packetList',
+    loginEntry: {
+      type: 'email',
+      emailSelector: 'input[name="email"]',
+      submitSelector: 'button[id="loginPopupContinue"]',
+    },
+  },
+   elapply: {
+    url: 'https://engage-leasing-back-office-qa.mriengage.com/',
+    loginEntry: {
+      type: 'clientIdThenEmail',
+      clientIdSelector: 'div[class="login__form form"] input',
+      clientIdSubmitSelector: 'div[class="form-submit sso-btn"] button',
+      emailSelector: 'input[id="email"]',
+      emailSubmitSelector: '[id="loginButton"]',
+    },
+  },
+   elbroadcast: {
+    url: 'https://pricingandavailability-qa.mriengage.com/',
+loginEntry: {
+      type: 'email',
+      emailSelector: 'input[id="email"]',
+      submitSelector: '[id="loginButton"]',
+    },
+  }
+} satisfies Record<string, { url: string; loginEntry: LoginEntry }>;
+
+type Environment = keyof typeof products;
+const environmentName = (process.env.AGORA_ENV || 'elbroadcast').toLowerCase();
+if (!Object.prototype.hasOwnProperty.call(products, environmentName)) {
+  throw new Error(`Unsupported AGORA_ENV "${environmentName}". Configure its URL and login entry in data/loginCreds.ts.`);
+}
+const env = environmentName as Environment;
+const product = products[env];
 export const loginCreds = {
-  Url: urls[env],
-  clientID: getRequiredEnv('CLIENT_ID'),
+  environment: env,
+  Url: product.url,
+  loginEntry: product.loginEntry,
+  clientID:
+    product.loginEntry.type === 'clientIdThenEmail'
+      ? getRequiredEnv('CLIENT_ID')
+      : process.env.CLIENT_ID || '',
   oktaUrl: 'https://mrisaas.oktapreview.com/',
   userName: getRequiredEnv('AGORA_USERNAME'),
   password: getRequiredEnv('AGORA_PASSWORD'),

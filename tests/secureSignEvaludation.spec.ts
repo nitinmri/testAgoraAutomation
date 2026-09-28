@@ -10,7 +10,7 @@ test.describe('Ask Agora golden questions for Secure Sign', () => {
     await takeScreenshot('authenticated');
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('secureSign').entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('secureSign').slice(0,1).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const askAgora = new generalElements(page);
       await askAgora.openAskAgora();

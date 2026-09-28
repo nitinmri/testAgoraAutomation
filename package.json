@@ -7,9 +7,12 @@
     "clear_cookies": "npx rimraf sessionData.json",
     "clear_testResults": "npx rimraf test-results",
     "angus": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
+    "investmentCental": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
+    "salesAndLettings": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
     "pmx": "cross-env AGORA_ENV=pmx npx playwright test tests --project=chromium",
-    "horizon": "cross-env AGORA_ENV=horizon npx playwright test tests --project=chromium",
-    "engageAtWork": "cross-env AGORA_ENV=engageAtWork npx playwright test tests --project=chromium",
+     "elBroadcast":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elBroadcast npx playwright test tests/elBroadcastValidation.spec.ts --project=chromium",
+    "elConnect":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elConnect npx playwright test tests/elConnect.spec.ts --project=chromium",
+     "elApply":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elApply npx playwright test tests/elApply.spec.ts --project=chromium",
     "secureSign": "npm run clear_cookies && npm run clear_allure && clear_testResults &&  cross-env AGORA_ENV=secureSign npx playwright test tests/secureSignEvaludation.spec.ts --project=chromium"
     
   },

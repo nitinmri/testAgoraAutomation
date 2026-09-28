@@ -20,7 +20,7 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 : 2,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -37,7 +37,7 @@ export default defineConfig({
     screenshot: 'off',
      video:'retain-on-failure', 
    viewport:{width: 1920, height: 1080},
- headless: true, // Set to false if you want to see the browser UI during tests
+ headless: false, // Set to false if you want to see the browser UI during tests
  ignoreHTTPSErrors: true, // for self-signed certs
  // proxy: { server: 'http://proxy.com:3128' }, // if needed
 

@@ -1,0 +1,384 @@
+[
+  {
+    "id": "four-primary-sections-back-office-homepage",
+    "question": "What are the four primary sections available in the Back Office homepage?",
+    "baselineResponse": "Content Management, User Management, Branding, and Client & Property Management.",
+    "requiredConcepts": [
+      "Content Management",
+      "User Management",
+      "Branding",
+      "Client & Property Management"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "four-content-card-communication-channels",
+    "question": "What are the four content card communication channels available in the portal?",
+    "baselineResponse": "Alert, Announcement, Banner, and Notification.",
+    "requiredConcepts": [
+      "Alert",
+      "Announcement",
+      "Banner",
+      "Notification"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "supported-file-formats-content-card-documents",
+    "question": "What file formats are supported when attaching documents to a content card?",
+    "baselineResponse": "DOC, DOCX, PDF, CSV, TXT, PNG, and JPEG with a 20MB maximum size.",
+    "requiredConcepts": [
+      "DOC",
+      "DOCX",
+      "PDF",
+      "CSV",
+      "TXT",
+      "PNG",
+      "JPEG",
+      "20MB maximum size"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "standard-user-roles-back-office",
+    "question": "What standard user roles exist in the Back Office?",
+    "baselineResponse": "Super-Admin, Support Services, and Client-Admin.",
+    "requiredConcepts": [
+      "Super-Admin",
+      "Support Services",
+      "Client-Admin"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "mandatory-fields-portal-branding",
+    "question": "What mandatory fields are required when creating Portal Branding?",
+    "baselineResponse": "Title, Portal Logo, and Portal Favicon.",
+    "requiredConcepts": [
+      "Title",
+      "Portal Logo",
+      "Portal Favicon"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "documented-e-signature-provider",
+    "question": "Which e-signature provider is documented for integration?",
+    "baselineResponse": "Secure Sign.",
+    "requiredConcepts": [
+      "Secure Sign",
+      "e-signature provider"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-new-content-card",
+    "question": "How do you create a new Content Card?",
+    "baselineResponse": "Navigate to Dashboard → Content Management → Content Cards & Events → Create New → complete required fields → Save Draft or Publish Changes.",
+    "requiredConcepts": [
+      "Dashboard",
+      "Content Management",
+      "Content Cards & Events",
+      "Create New",
+      "required fields",
+      "Save Draft",
+      "Publish Changes"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-new-photo-album",
+    "question": "How do you create a new Photo Album?",
+    "baselineResponse": "Open Photo Albums, select Create New, provide title, description, thumbnail image, and client, then save or publish.",
+    "requiredConcepts": [
+      "Photo Albums",
+      "Create New",
+      "title",
+      "description",
+      "thumbnail image",
+      "client",
+      "save",
+      "publish"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "upload-new-media-file",
+    "question": "How do you upload a new media file?",
+    "baselineResponse": "Go to Media Library, Create New, upload a file or URL, add alternate text, select client, and save.",
+    "requiredConcepts": [
+      "Media Library",
+      "Create New",
+      "file or URL",
+      "alternate text",
+      "client",
+      "save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-new-email-template",
+    "question": "How do you create a new email template?",
+    "baselineResponse": "Navigate to Content Management → Email Templates → Create New, complete Contact Form Type, Subject, and Client, then save.",
+    "requiredConcepts": [
+      "Content Management",
+      "Email Templates",
+      "Create New",
+      "Contact Form Type",
+      "Subject",
+      "Client",
+      "save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "add-new-user",
+    "question": "How do you add a new user?",
+    "baselineResponse": "Go to User Management → Users → Create New, enter user details, assign role and client, then save.",
+    "requiredConcepts": [
+      "User Management",
+      "Users",
+      "Create New",
+      "user details",
+      "assign role",
+      "assign client",
+      "save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-new-custom-role",
+    "question": "How do you create a new custom role?",
+    "baselineResponse": "Dashboard → User Management → Roles → Create New → enter Role Name, Role Permissions, Client → Save.",
+    "requiredConcepts": [
+      "Dashboard",
+      "User Management",
+      "Roles",
+      "Create New",
+      "Role Name",
+      "Role Permissions",
+      "Client",
+      "Save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "resident-moved-out-portal-access-review",
+    "question": "A user can no longer access the portal after moving out. Which property setting should be reviewed?",
+    "baselineResponse": "Resident Portal Account Expiration Period.",
+    "requiredConcepts": [
+      "Resident Portal",
+      "Account Expiration Period"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "residents-cannot-print-ledger-statements",
+    "question": "Residents cannot print ledger statements. Which property configuration controls this functionality?",
+    "baselineResponse": "Print Payment Ledger Statements.",
+    "requiredConcepts": [
+      "Print Payment Ledger Statements",
+      "ledger statements"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "client-email-sender-address-update",
+    "question": "A client-specific email sender address is incorrect. Where should it be updated?",
+    "baselineResponse": "Property-level From Email can override the client-level email configuration.",
+    "requiredConcepts": [
+      "Property-level From Email",
+      "client-level email configuration",
+      "override"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "remove-back-office-user-access",
+    "question": "A user should no longer access the Back Office. How can their access be removed?",
+    "baselineResponse": "Locate the user record and change status from Active to Inactive, then save.",
+    "requiredConcepts": [
+      "user record",
+      "Active",
+      "Inactive",
+      "save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "difference-login-branding-portal-branding",
+    "question": "What is the difference between Login Branding and Portal Branding?",
+    "baselineResponse": "Login Branding controls the login experience before unit selection; Portal Branding controls the portal experience after login.",
+    "requiredConcepts": [
+      "Login Branding",
+      "login experience",
+      "before unit selection",
+      "Portal Branding",
+      "portal experience",
+      "after login"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "difference-alerts-notifications",
+    "question": "What is the difference between Alerts and Notifications?",
+    "baselineResponse": "Alerts are urgent updates displayed at the top of the screen; Notifications are less urgent communications.",
+    "requiredConcepts": [
+      "Alerts",
+      "urgent updates",
+      "top of the screen",
+      "Notifications",
+      "less urgent communications"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "support-services-vs-client-admin-access",
+    "question": "How does Support Services access differ from Client-Admin access?",
+    "baselineResponse": "Support Services has view access to Global Configuration Settings; Client-Admin has full access to assigned client areas.",
+    "requiredConcepts": [
+      "Support Services",
+      "view access",
+      "Global Configuration Settings",
+      "Client-Admin",
+      "full access",
+      "assigned client areas"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "difference-media-library-document-library",
+    "question": "What is the difference between the Media Library and Document Library?",
+    "baselineResponse": "Media Library stores uploaded photos/media; Document Library stores uploaded documents.",
+    "requiredConcepts": [
+      "Media Library",
+      "uploaded photos",
+      "uploaded media",
+      "Document Library",
+      "uploaded documents"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-property-branded-resident-experience",
+    "question": "How would you create a property-branded resident experience from login through portal usage?",
+    "baselineResponse": "Create Login Branding and Portal Branding configurations, then assign branding to properties as part of property/client setup.",
+    "requiredConcepts": [
+      "Login Branding",
+      "Portal Branding",
+      "branding configurations",
+      "assign branding",
+      "properties",
+      "property/client setup"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "publish-resident-announcement-with-attachment",
+    "question": "How would an administrator publish a resident announcement with an attached file and visibility dates?",
+    "baselineResponse": "Create a Content Card, upload or select a document, configure communication channel and visibility dates, then publish.",
+    "requiredConcepts": [
+      "Content Card",
+      "document attachment",
+      "communication channel",
+      "visibility dates",
+      "publish"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "create-new-client-after-onboarding",
+    "question": "What steps are required to create a new client after onboarding is completed?",
+    "baselineResponse": "Complete initiation process, have DevOps create the subdomain, then create the client record with required Resident Portal and Payload Back Office settings.",
+    "requiredConcepts": [
+      "initiation process",
+      "DevOps",
+      "subdomain",
+      "client record",
+      "Resident Portal settings",
+      "Payload Back Office settings"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "enable-secure-sign-esignatures-client",
+    "question": "How would an administrator enable Secure Sign e-signatures for a client?",
+    "baselineResponse": "Create an E‑Signature record, choose Secure Sign, enter URL, API key, private key, assign client, and save.",
+    "requiredConcepts": [
+      "E-Signature record",
+      "Secure Sign",
+      "URL",
+      "API key",
+      "private key",
+      "assign client",
+      "save"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "publish-community-updates-immediately",
+    "question": "How can I publish community updates that residents will immediately see upon logging in?",
+    "baselineResponse": "Use Content Cards and select a communication channel such as Alert, Banner, Notification, or Announcement, then publish.",
+    "requiredConcepts": [
+      "Content Cards",
+      "Alert",
+      "Banner",
+      "Notification",
+      "Announcement",
+      "publish"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "resident-access-email-templates",
+    "question": "Where can residents access email templates used for property communication?",
+    "baselineResponse": "Email templates are available from both the My Community and My Lease sections of the Front Office menu.",
+    "requiredConcepts": [
+      "Email templates",
+      "My Community",
+      "My Lease",
+      "Front Office menu"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "client-employee-managing-back-office",
+    "question": "Which role should be assigned to a client employee managing back-office configurations and content?",
+    "baselineResponse": "Client-Admin.",
+    "requiredConcepts": [
+      "Client-Admin"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "configure-ai-powered-sentiment-analysis",
+    "question": "How do I configure AI-powered resident sentiment analysis dashboards?",
+    "baselineResponse": "The supplied documentation does not describe AI-powered sentiment analysis dashboards.",
+    "requiredConcepts": [
+      "not described in documentation",
+      "AI-powered sentiment analysis dashboards"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "integrate-salesforce-crm-lead-management",
+    "question": "How do I integrate the Resident Portal with Salesforce CRM lead management?",
+    "baselineResponse": "The supplied documentation does not describe Salesforce CRM lead management integration.",
+    "requiredConcepts": [
+      "not described in documentation",
+      "Salesforce CRM",
+      "lead management integration"
+    ],
+    "passingScore": 3
+  },
+  {
+    "id": "configure-rent-increase-recommendation-reports",
+    "question": "Where can administrators configure automated rent increase recommendation reports?",
+    "baselineResponse": "The supplied documentation does not contain information about rent increase recommendation reporting.",
+    "requiredConcepts": [
+      "not described in documentation",
+      "rent increase recommendation reporting"
+    ],
+    "passingScore": 3
+  }
+]

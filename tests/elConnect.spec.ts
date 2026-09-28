@@ -4,13 +4,13 @@ import { getGoldenQuestions } from '../data/goldenQuestions';
 import { evaluateAnswer } from '../utils/answerEvaluator';
 import { restoreOrLogin } from '../utils/sessionManager';
 
-test.describe('Ask Agora golden questions for Angus', () => {
+test.describe('Ask Agora golden questions for ElConnect', () => {
   test.beforeEach(async ({ page, takeScreenshot }) => {
     await restoreOrLogin(page);
     await takeScreenshot('authenticated');
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('angus').slice(0,1).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('elConnect').slice(0,1).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const askAgora = new generalElements(page);
       await askAgora.openAskAgora();
