@@ -69,7 +69,7 @@ loginEntry: {
 } satisfies Record<string, { url: string; loginEntry: LoginEntry }>;
 
 type Environment = keyof typeof products;
-const environmentName = (process.env.AGORA_ENV || 'elapply').toLowerCase();
+const environmentName = (process.env.AGORA_ENV || 'securesign').toLowerCase();
 if (!Object.prototype.hasOwnProperty.call(products, environmentName)) {
   throw new Error(`Unsupported AGORA_ENV "${environmentName}". Configure its URL and login entry in data/loginCreds.ts.`);
 }

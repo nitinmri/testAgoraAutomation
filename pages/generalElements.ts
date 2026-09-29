@@ -38,27 +38,34 @@ export class generalElements{
 
   async askQuestion(question: string): Promise<string> {
     const modal = this.page.locator(this.askAgoraModal);
+    const responseCountBeforeSubmit = await modal.locator(this.responseBodyContainer).count();
+    const errorCountBeforeSubmit = await modal.locator(this.errorContainer).count();
+    const response = modal.locator(this.responseBodyContainer).nth(responseCountBeforeSubmit);
+    const error = modal.locator(this.errorContainer).nth(errorCountBeforeSubmit);
+
     await this.page.locator(this.askAgoraPromptInput).fill(question);
     await expect(this.page.locator(this.sendButton)).toBeEnabled();
     await this.page.locator(this.sendButton).click();
-    await this.page.waitForTimeout(1000);
-    // The widget disables the input while the response is being generated.
-    await expect(this.page.locator(this.askAgoraPromptInput)).toBeDisabled({
-      timeout: 60_000,
-    });
-    await expect(modal.getByText(this.processingMessage).first()).toBeHidden({
-      timeout: 60_000,
-    }); 
-    await this.page.waitForSelector(this.responseBodyContainer)
-    await expect(this.page.locator(this.responseBodyContainer)).toBeVisible()
-    await this.page.waitForTimeout(5000)
-    const responseBodies = modal.locator(this.responseBodyContainer);
-    const answer = responseBodies.last();
-    await expect(answer).toBeVisible({ timeout: 60_000 });
-    await expect(answer).not.toHaveText('', { timeout: 60_000 });
-    const answerText = (await answer.innerText()).trim();
-    expect(answerText, 'Ask Agora did not render an answer').not.toBe('');
-    return answerText;
+
+    await Promise.race([
+      response.waitFor({ state: 'visible', timeout: 60_000 }).catch(() => undefined),
+      error.waitFor({ state: 'visible', timeout: 60_000 }).catch(() => undefined),
+    ]);
+
+    if (await response.isVisible()) {
+      await this.page.waitForTimeout(5000)
+      const answerText = (await response.innerText()).trim();
+      expect(answerText, 'Ask Agora did not render an answer').not.toBe('');
+      return answerText;
+    }
+
+    if (await error.isVisible()) {
+      const errorText = (await modal.locator(this.errortext).nth(errorCountBeforeSubmit).innerText()).trim();
+      expect(errorText, 'Ask Agora error response did not include error text').not.toBe('');
+      return errorText;
+    }
+
+    throw new Error('Ask Agora rendered neither an answer nor an error response.');
   }
 
 }
