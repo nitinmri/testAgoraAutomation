@@ -20,6 +20,11 @@ export class generalElements{
   readonly askAgoraDisclaimer='div[class="chat-window-disclaimer"]'
   readonly responseBodyContainer='div[class="chat-response-body-container"]'
   readonly processingMessage=/Checking if query is suitable|Query is suitable|documentation research phase/i
+  readonly errorContainer='div[class="ask-ai-error-response-container"]'
+  readonly errortext='div[class="ask-ai-error-response-container"] div[class="ask-ai-error-response-container-error-message"]'
+  readonly wentWrong='div[class="ask-ai-error-response-container"] div[class="ask-ai-error-response-container-error-message"] h1'
+  readonly errorDetail='div[class="ask-ai-error-response-container"] div[class="ask-ai-error-response-container-error-message"] p'
+
  
   constructor(page: Page) {
     this.page = page;

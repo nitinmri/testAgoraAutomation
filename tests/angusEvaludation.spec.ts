@@ -3,22 +3,32 @@ import { generalElements } from '../pages/generalElements';
 import { getGoldenQuestions } from '../data/goldenQuestions';
 import { evaluateAnswer } from '../utils/answerEvaluator';
 import { restoreOrLogin } from '../utils/sessionManager';
+import { retryOnExecutionError } from '../utils/executionRetry';
 
 test.describe('Ask Agora golden questions for Angus', () => {
   test.beforeEach(async ({ page, takeScreenshot }) => {
-    await restoreOrLogin(page);
-    await takeScreenshot('authenticated');
+    await retryOnExecutionError(async () => {
+      await restoreOrLogin(page);
+      await takeScreenshot('authenticated');
+    }, async () => {
+      if (!page.isClosed()) await restoreOrLogin(page);
+    });
   });
 
   for (const [questionIndex, goldenQuestion] of getGoldenQuestions('angus').slice(0,1).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
-      const askAgora = new generalElements(page);
-      await askAgora.openAskAgora();
-      await takeScreenshot('ask-agora-open');
-      await page.waitForTimeout(1000)
-      const actualAnswer = await askAgora.askQuestion(goldenQuestion.question);
-      await takeScreenshot('answer-rendered');
-      const evaluation = await evaluateAnswer(goldenQuestion, actualAnswer);
+      const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
+        const askAgora = new generalElements(page);
+        await askAgora.openAskAgora();
+        await takeScreenshot('ask-agora-open');
+        await page.waitForTimeout(1000)
+        const actualAnswer = await askAgora.askQuestion(goldenQuestion.question);
+        await takeScreenshot('answer-rendered');
+        const evaluation = await evaluateAnswer(goldenQuestion, actualAnswer);
+        return { actualAnswer, evaluation };
+      }, async () => {
+        if (!page.isClosed()) await restoreOrLogin(page);
+      });
       console.log('\nAsk Agora golden question evaluation');
       console.log(`Question: ${goldenQuestion.question}`);
       console.log(`Expected response: ${goldenQuestion.expectedAnswer}`);
