@@ -4,16 +4,18 @@
   "main": "index.js",
   "scripts": {
     "clear_allure": "npx rimraf allure-report allure-results",
+    "allure": "allure generate allure-results --clean -o allure-report && allure open allure-report",
     "clear_cookies": "npx rimraf sessionData.json",
     "clear_testResults": "npx rimraf test-results",
     "angus": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
-    "investmentCental": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
+    "investmentCental": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=iCentral npx playwright test tests/iCentralValidation.spec.ts --project=chromium",
     "salesAndLettings": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=angus npx playwright test tests/angusEvaludation.spec.ts --project=chromium",
-     "elBroadcast":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elBroadcast npx playwright test tests/elBroadcastValidation.spec.ts --project=chromium",
-    "elConnect":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elConnect npx playwright test tests/elConnect.spec.ts --project=chromium",
-     "elApply":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elApply npx playwright test tests/elApply.spec.ts --project=chromium",
-    "secureSign": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=secureSign npx playwright test tests/secureSignEvaludation.spec.ts --project=chromium"
-    
+    "elBroadcast": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elBroadcast npx playwright test tests/elBroadcastValidation.spec.ts --project=chromium",
+    "elConnect": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elConnect npx playwright test tests/elConnect.spec.ts --project=chromium",
+    "elApply": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elApply npx playwright test tests/elApply.spec.ts --project=chromium",
+    "docBot": "cross-env AGORA_ENV=icentral npx playwright test tests/docBotValidation.spec.ts --project=chromium",
+    "secureSign": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=secureSign npx playwright test tests/secureSignEvaludation.spec.ts --project=chromium",
+    "contractintelligence": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=contractintelligence npx playwright test tests/contractintelligenceValidation.spec.ts --project=chromium"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "@types/node": "^22.20.3",
+    "allure-commandline": "^2.46.1",
     "allure-playwright": "^3.12.1",
     "cross-env": "^10.1.0",
     "typescript": "^7.0.2"

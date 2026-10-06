@@ -20,6 +20,9 @@ readonly rememberMe='input[name="rememberDevice"]'
 readonly sendPushButon='input[value="Send Push"]'
 readonly signInEmailIDfieldTwo='input[name="email"]';
 readonly signInButtonTwo='button[id="loginPopupContinue"]'
+readonly usernameField='input[id="username"]'
+readonly passwordFieldNew='input[id="password-field"]'
+readonly signInWithMRIButton='button[id="mriLogin"]'
   constructor(page: Page) {
     this.page = page;
 
@@ -36,21 +39,22 @@ readonly signInButtonTwo='button[id="loginPopupContinue"]'
     await this.page.locator(entry.clientIdSubmitSelector).click();
     await this.page.locator(entry.emailSelector).fill(loginCreds.userName);
     await this.page.locator(entry.emailSubmitSelector).click();
-  } else {
+  } else if (entry.type === 'usernamePassword') {
+    await this.page.locator(entry.usernameField).fill(loginCreds.userName);
+    await this.page.locator(entry.passwordField).fill(loginCreds.password);
+    await this.page.locator(entry.submitSelector).click();
+  }else {
     await this.page.locator(this.signInWithEmailField)
       .or(this.page.locator(this.signInEmailIDfieldTwo)).first().fill(loginCreds.userName);
     await this.page.locator(this.signinButton)
       .or(this.page.locator(this.signInButtonTwo)).first().click();
   }
-
   await this.page.fill(this.emailField, loginCreds.userName);
-  await this.page.fill(this.passwordField, loginCreds.password);
-  await this.page.click(this.signInButtonForOkta);
-  /* 3 lines are for the session cookies*/
-// await  this.page.getByText('Send push automatically').click();
-// await this.page.getByText('Do not challenge me on this').click();
- await this.page.locator(this.sendPushButon).click();
- await this.page.waitForTimeout(3000);
+    await this.page.fill(this.passwordField, loginCreds.password);
+    await this.page.click(this.signInButtonForOkta);
+    await this.page.locator(this.sendPushButon).click();
+    await this.page.waitForTimeout(3000);
+
     await this.page.waitForSelector('.minimized-container', { state: 'visible' });
       /* get session cookies*/
     // Get session cookies

@@ -19,6 +19,12 @@ type LoginEntry =
       emailSelector: string;
       emailSubmitSelector: string;
     }
+  | {
+      type: 'usernamePassword';
+      usernameField: string;
+      passwordField: string;
+      submitSelector: string;
+    }
   | { type: 'emailFallback' };
 
 const products = {
@@ -65,11 +71,28 @@ loginEntry: {
       emailSelector: 'input[id="email"]',
       submitSelector: '[id="loginButton"]',
     },
+  },
+   icentral: {
+    url: 'https://docbot-sandbox.devtest.mrisoftware.com/?product=investmentcentral',
+loginEntry: {
+      type: 'email',
+      emailSelector: 'input[id="email"]',
+      submitSelector: '[id="loginButton"]',
+    },
+  },
+  contractintelligence: {
+    url: 'https://platform-ng-edge.dev.leverton.it/view/',
+loginEntry: {
+      type: 'usernamePassword',
+      usernameField:'input[id="username"]',
+      passwordField:'input[id="password-field"]',
+      submitSelector: 'button[id="mriLogin"]',
+    },
   }
 } satisfies Record<string, { url: string; loginEntry: LoginEntry }>;
 
 type Environment = keyof typeof products;
-const environmentName = (process.env.AGORA_ENV || 'securesign').toLowerCase();
+const environmentName = (process.env.AGORA_ENV || 'contractintelligence').toLowerCase();
 if (!Object.prototype.hasOwnProperty.call(products, environmentName)) {
   throw new Error(`Unsupported AGORA_ENV "${environmentName}". Configure its URL and login entry in data/loginCreds.ts.`);
 }
@@ -88,4 +111,3 @@ export const loginCreds = {
   password: getRequiredEnv('AGORA_PASSWORD'),
 };
 
- 

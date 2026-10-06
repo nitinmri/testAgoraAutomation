@@ -24,8 +24,10 @@ export class generalElements{
   readonly errortext='div[class="ask-ai-error-response-container"] div[class="ask-ai-error-response-container-error-message"]'
   readonly wentWrong='div[class="ask-ai-error-response-container"] div[class="ask-ai-error-response-container-error-message"] h1'
   readonly errorDetail='div[class="ask-ai-error-response-container"] div[class="ask-ai-error-response-container-error-message"] p'
+  readonly docBotresponseBodyContainer='app-botmessage div[class="message-content"]'
+readonly docBotSubmitButton='button[class="submit-button"]'
+  readonly inputForDocNot='div[class="input-row"] textarea'
 
- 
   constructor(page: Page) {
     this.page = page;
   }
@@ -67,5 +69,23 @@ export class generalElements{
 
     throw new Error('Ask Agora rendered neither an answer nor an error response.');
   }
+  
+  async askQuestionFordocBot(question: string): Promise<string> {
+    const modal =  await this.page.locator(this.docBotresponseBodyContainer)
+    await this.page.locator(this.inputForDocNot).fill(question);
+    await expect(this.page.locator(this.docBotSubmitButton)).toBeEnabled();
+    await this.page.locator(this.docBotSubmitButton).click();
 
+    await Promise.race([
+      modal.waitFor({ state: 'visible', timeout: 60_000 }).catch(() => undefined),
+    ]);
+
+    if (await modal.isVisible()) {
+      await this.page.waitForTimeout(5000)
+      const answerText = (await modal.innerText()).trim();
+      expect(answerText, 'Ask Agora did not render an answer').not.toBe('');
+      return answerText;
+    }
+    throw new Error('Ask Agora rendered neither an answer nor an error response.');
+  }
 }

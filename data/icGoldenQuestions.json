@@ -1,0 +1,423 @@
+﻿[
+    {
+        "id":  "supported-report-types-in-portfolio-reporting",
+        "question":  "What are the supported report types in Portfolio Reporting?",
+        "baselineResponse":  "Portfolio Reporting currently supports SSRS (SQL Server Reporting Services) and SAP Crystal Reports. SpreadsheetGear support is planned for a future release.",
+        "requiredConcepts":  [
+                                 "SSRS",
+                                 "SQL Server Reporting Services",
+                                 "SAP Crystal Reports",
+                                 "Crystal Reports"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "security-roles-permission-options",
+        "question":  "What are the five permission options available on the Security Roles screen?",
+        "baselineResponse":  "Visible, Insert, Update, Delete, and Delete DTL. Each permission controls specific access capabilities on screens.",
+        "requiredConcepts":  [
+                                 "Visible",
+                                 "Insert",
+                                 "Update",
+                                 "Delete",
+                                 "Delete DTL",
+                                 "permissions"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "whitelabeling-settings-record-list-fields",
+        "question":  "What fields are displayed in the Whitelabeling Settings record list?",
+        "baselineResponse":  "Name, Description, and Role.",
+        "requiredConcepts":  [
+                                 "Name",
+                                 "Description",
+                                 "Role"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "workq-statuses-and-meanings",
+        "question":  "What statuses are documented in WorkQ and what do they mean?",
+        "baselineResponse":  "Due = outstanding document not received; Received = document collected but not extracted; Hold = error/question exists; Loaded = data extracted and imported.",
+        "requiredConcepts":  [
+                                 "Due",
+                                 "outstanding document not received",
+                                 "Received",
+                                 "document collected but not extracted",
+                                 "Hold",
+                                 "error/question exists",
+                                 "Loaded",
+                                 "data extracted and imported"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "required-fields-creating-new-user",
+        "question":  "What are the required fields when creating a new user?",
+        "baselineResponse":  "Email, Session Name, First Name, Last Name, Role, Group, and Default Page are required.",
+        "requiredConcepts":  [
+                                 "Email",
+                                 "Session Name",
+                                 "First Name",
+                                 "Last Name",
+                                 "Role",
+                                 "Group",
+                                 "Default Page"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "reserve-requirements-form-information",
+        "question":  "What information can be stored on the Reserve Requirements form?",
+        "baselineResponse":  "Users can track reserve requirements such as operating reserves and replacement reserves, including reserve type, deposit type, reserve details, bank information, balance sheet account number, and payment details.",
+        "requiredConcepts":  [
+                                 "operating reserves",
+                                 "replacement reserves",
+                                 "reserve type",
+                                 "deposit type",
+                                 "reserve details",
+                                 "bank information",
+                                 "balance sheet account number",
+                                 "payment details",
+                                 "reserve tracking"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "create-and-activate-new-user",
+        "question":  "How do you create and activate a new user?",
+        "baselineResponse":  "Navigate to Users, enter required fields, save the record, status becomes Pending, then use \u0027Invite This User\u0027 to send credentials and activate the user.",
+        "requiredConcepts":  [
+                                 "Users",
+                                 "required fields",
+                                 "save record",
+                                 "Pending status",
+                                 "Invite This User",
+                                 "send credentials",
+                                 "activate user"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "create-and-publish-portfolio-reporting-batch",
+        "question":  "What are the documented steps to create and publish a Portfolio Reporting batch?",
+        "baselineResponse":  "Create batch name and filters, Define batch parts, Execute and Review reports/documents, Publish compiled reports, then Complete workflow.",
+        "requiredConcepts":  [
+                                 "batch name",
+                                 "filters",
+                                 "Define batch parts",
+                                 "Execute",
+                                 "Review reports/documents",
+                                 "Publish compiled reports",
+                                 "Complete workflow"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "attach-existing-document-multi-document-attachments",
+        "question":  "How do users attach an existing document in the Multi-Document Attachments feature?",
+        "baselineResponse":  "Select Attach Existing Documents, filter and select documents, click Attach, then save the parent data record to preserve associations.",
+        "requiredConcepts":  [
+                                 "Attach Existing Documents",
+                                 "filter documents",
+                                 "select documents",
+                                 "Attach",
+                                 "save parent data record",
+                                 "preserve associations"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "create-memo-and-associate-document",
+        "question":  "How do you create a new memo and associate a document?",
+        "baselineResponse":  "Create a memo using New and Save. Then either upload a new document using quick upload or attach an existing document using the folder icon, followed by saving the memo.",
+        "requiredConcepts":  [
+                                 "New",
+                                 "Save",
+                                 "memo creation",
+                                 "quick upload",
+                                 "attach existing document",
+                                 "folder icon",
+                                 "save memo"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "create-vendor-and-assign-contact",
+        "question":  "How do users create a Vendor record and assign a contact?",
+        "baselineResponse":  "Create a vendor with New, enter vendor information, then use Assign Contact to link an existing contact or Add New Contact to create one.",
+        "requiredConcepts":  [
+                                 "vendor creation",
+                                 "vendor information",
+                                 "Assign Contact",
+                                 "existing contact",
+                                 "Add New Contact",
+                                 "contact assignment"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "create-unit-mix-period-using-existing-data",
+        "question":  "How do users create a new Unit Mix period using existing data?",
+        "baselineResponse":  "Use the Clone button, which clears the date and copies all rent data; enter a new date, update values, and save.",
+        "requiredConcepts":  [
+                                 "Clone button",
+                                 "clears the date",
+                                 "copies rent data",
+                                 "new date",
+                                 "update values",
+                                 "save"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "user-cannot-see-page-security-check",
+        "question":  "A user cannot see a page. What documented security area should be checked first?",
+        "baselineResponse":  "Check the Security Role permissions to ensure the page is Visible for the user\u0027s role.",
+        "requiredConcepts":  [
+                                 "Security Role",
+                                 "permissions",
+                                 "Visible",
+                                 "user role",
+                                 "page visibility"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "user-locked-out-password-attempts",
+        "question":  "A user is locked out after password attempts. What action is documented?",
+        "baselineResponse":  "Use Reset/Unlock User on the User screen to unlock the account.",
+        "requiredConcepts":  [
+                                 "Reset/Unlock User",
+                                 "User screen",
+                                 "unlock account"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "whitelabeling-theme-change-not-visible",
+        "question":  "A Whitelabeling theme was saved but users do not see the change. What documented action is required?",
+        "baselineResponse":  "Refresh the browser using Ctrl+F5 after saving the active theme.",
+        "requiredConcepts":  [
+                                 "Ctrl+F5",
+                                 "browser refresh",
+                                 "active theme",
+                                 "saved theme"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "occupancy-record-cannot-be-saved",
+        "question":  "An occupancy record cannot be saved. What documented validation rules should be checked?",
+        "baselineResponse":  "Only one occupancy record is allowed per property per period, and the Date Reported must be the last day of the month.",
+        "requiredConcepts":  [
+                                 "one occupancy record per property per period",
+                                 "Date Reported",
+                                 "last day of the month",
+                                 "occupancy validation rules"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "difference-between-security-roles-and-security-groups",
+        "question":  "What is the difference between Security Roles and Security Groups?",
+        "baselineResponse":  "Roles control permissions and access levels for screens, reports, and documents, while Groups control which properties and funds a user can see.",
+        "requiredConcepts":  [
+                                 "Roles",
+                                 "permissions",
+                                 "access levels",
+                                 "screens",
+                                 "reports",
+                                 "documents",
+                                 "Groups",
+                                 "properties visibility",
+                                 "funds visibility",
+                                 "permissions vs visibility"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "difference-between-owners-and-vendors",
+        "question":  "What is the difference between Owners and Vendors?",
+        "baselineResponse":  "Both store entity information and contacts, but Owners represent owner entities while Vendors represent vendor entities. Both have similar contact and relationship management functions.",
+        "requiredConcepts":  [
+                                 "Owners",
+                                 "Vendors",
+                                 "entity information",
+                                 "contacts",
+                                 "owner entities",
+                                 "vendor entities",
+                                 "contact management",
+                                 "relationship management"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "difference-between-multi-document-attachments-and-memo-attachments",
+        "question":  "How do Multi-Document Attachments differ from Memo document attachments?",
+        "baselineResponse":  "Multi-Document Attachments allow multiple documents per record with metadata, while Memo attachments associate individual documents with memo records.",
+        "requiredConcepts":  [
+                                 "Multi-Document Attachments",
+                                 "multiple documents per record",
+                                 "metadata",
+                                 "Memo attachments",
+                                 "individual documents",
+                                 "memo records",
+                                 "scope difference"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "difference-between-portfolio-reporting-and-reports-screen",
+        "question":  "What is the difference between Portfolio Reporting and the Reports screen?",
+        "baselineResponse":  "Reports provides access to individual reports, while Portfolio Reporting combines reports/documents into batches for compilation and publication workflows.",
+        "requiredConcepts":  [
+                                 "Reports screen",
+                                 "individual reports",
+                                 "Portfolio Reporting",
+                                 "report batches",
+                                 "documents",
+                                 "compilation workflow",
+                                 "publication workflow"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "configure-custom-branded-experience",
+        "question":  "How would you configure a custom branded experience for specific users?",
+        "baselineResponse":  "Create a Whitelabeling theme, apply it to selected roles, ensure the theme is active, and users must have access through Role security.",
+        "requiredConcepts":  [
+                                 "Whitelabeling theme",
+                                 "selected roles",
+                                 "theme is active",
+                                 "Role security",
+                                 "role access",
+                                 "custom branding"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "determine-properties-and-screen-access",
+        "question":  "How can a user determine which properties they can view and what screens they can update?",
+        "baselineResponse":  "Groups determine visible properties/funds, while Roles determine page visibility and update permissions.",
+        "requiredConcepts":  [
+                                 "Groups",
+                                 "properties",
+                                 "funds",
+                                 "visibility",
+                                 "Roles",
+                                 "page visibility",
+                                 "update permissions"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "portfolio-reporting-prerequisite-relationship-data",
+        "question":  "What prerequisite relationship data is required before Portfolio Reporting iterations can run correctly?",
+        "baselineResponse":  "Investment and Investor relationships must exist in the Investors table with vsource=\u0027manual\u0027. Query Tool can be used to verify the records.",
+        "requiredConcepts":  [
+                                 "Investment relationships",
+                                 "Investor relationships",
+                                 "Investors table",
+                                 "vsource=\u0027manual\u0027",
+                                 "Query Tool",
+                                 "verify records"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "trace-loaded-financial-document-from-workq",
+        "question":  "How can a user trace a loaded financial document from WorkQ to financial review activity?",
+        "baselineResponse":  "In WorkQ, Loaded status records can provide access to loaded data and, where applicable, open the Financial Review Form for adjustments and reclasses.",
+        "requiredConcepts":  [
+                                 "WorkQ",
+                                 "Loaded status",
+                                 "loaded data",
+                                 "Financial Review Form",
+                                 "adjustments",
+                                 "reclasses",
+                                 "financial review activity"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "new-employee-system-access-setup",
+        "question":  "A new employee needs system access. What documented setup actions are required?",
+        "baselineResponse":  "Create the user, assign Role, Group, and Default Page, save, then send an invitation.",
+        "requiredConcepts":  [
+                                 "create user",
+                                 "Role",
+                                 "Group",
+                                 "Default Page",
+                                 "save",
+                                 "send invitation",
+                                 "system access setup"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "portfolio-reporting-distribute-investor-reports",
+        "question":  "How can Portfolio Reporting be used to distribute investor reports?",
+        "baselineResponse":  "Portfolio Reporting can batch reports/documents, create compiled reports, and publish compiled reports for Investor Connect users.",
+        "requiredConcepts":  [
+                                 "batch reports",
+                                 "batch documents",
+                                 "compiled reports",
+                                 "publish compiled reports",
+                                 "Investor Connect",
+                                 "investor report distribution"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "different-branding-for-user-groups",
+        "question":  "A client wants different branding for different user groups. What documented feature supports this?",
+        "baselineResponse":  "Whitelabeling Settings allows themes to be applied to specific security roles, with one theme per role.",
+        "requiredConcepts":  [
+                                 "Whitelabeling Settings",
+                                 "themes",
+                                 "security roles",
+                                 "role-based themes",
+                                 "one theme per role"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "ai-investment-recommendations",
+        "question":  "Can Investment Central automatically generate AI investment recommendations based on portfolio performance?",
+        "baselineResponse":  "This capability is not described in the supplied documentation.",
+        "requiredConcepts":  [
+                                 "not documented",
+                                 "AI investment recommendations",
+                                 "capability not described"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "salesforce-synchronization-support",
+        "question":  "Does Investment Central support automatic Salesforce synchronization of Owners, Investors, and Vendors?",
+        "baselineResponse":  "This functionality is not described in the supplied documentation.",
+        "requiredConcepts":  [
+                                 "not documented",
+                                 "Salesforce synchronization",
+                                 "Owners",
+                                 "Investors",
+                                 "Vendors",
+                                 "capability not described"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "configure-chatbot-and-predictive-forecasting-engine",
+        "question":  "How do administrators configure the built-in chatbot and predictive forecasting engine?",
+        "baselineResponse":  "The supplied documentation does not describe a chatbot or predictive forecasting engine.",
+        "requiredConcepts":  [
+                                 "not documented",
+                                 "chatbot",
+                                 "predictive forecasting engine",
+                                 "configuration not described"
+                             ],
+        "passingScore":  3
+    }
+]

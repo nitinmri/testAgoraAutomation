@@ -5,7 +5,7 @@ import { evaluateAnswer } from '../utils/answerEvaluator';
 import { restoreOrLogin } from '../utils/sessionManager';
 import { retryOnExecutionError } from '../utils/executionRetry';
 
-test.describe('Ask Agora golden questions for ElBroadCast', () => {
+test.describe('Ask Agora golden questions for contract Intelligence', () => {
   test.beforeEach(async ({ page, takeScreenshot }) => {
     await retryOnExecutionError(async () => {
       await restoreOrLogin(page);
@@ -15,7 +15,7 @@ test.describe('Ask Agora golden questions for ElBroadCast', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('elBroadcast').slice(0,1).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('cIntelligence').slice(3,5).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
         const askAgora = new generalElements(page);

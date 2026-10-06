@@ -3,6 +3,8 @@ import secureSignGoldenQuestionRecords from './secureSignGoldenQuestions.json';
 import elConnectGoldenQuestionRecords from './elConnectGoldenQuestions.json';
 import elApplyGoldenQuestionRecords from './elApplyGoldenQuestions.json'
 import elBroadcastGoldenQuestionRecords from './elBroadcastGoldenQuestions.json'
+import icGoldenQuestionRecords from './icGoldenQuestions.json'
+import contractIntelligenceGoldenQuestionRecords from './contractIntelligenceGoldenQuestions.json'
 export type GoldenQuestion = {
   id: string;
   question: string;
@@ -11,8 +13,9 @@ export type GoldenQuestion = {
   passingScore: number;
 };
 
-type GoldenQuestionRecord = Omit<GoldenQuestion, 'expectedAnswer'> & {
+type GoldenQuestionRecord = Omit<GoldenQuestion, 'expectedAnswer' | 'passingScore'> & {
   baselineResponse: string;
+  passingScore?: number;
 };
 
 const mapGoldenQuestions = (
@@ -23,10 +26,18 @@ const mapGoldenQuestions = (
     throw new Error(`No golden questions are registered for product "${product}".`);
   }
 
-  return records.map(({ baselineResponse, ...question }) => ({
-    ...question,
-    expectedAnswer: baselineResponse,
-  }));
+  return records.map(({ baselineResponse, ...question }) => {
+    const passingScore = question.passingScore;
+    if (passingScore === undefined || Number.isNaN(Number(passingScore))) {
+      throw new Error(`Golden question "${question.id}" for product "${product}" has no valid passing score.`);
+    }
+
+    return {
+      ...question,
+      passingScore: Number(passingScore),
+      expectedAnswer: baselineResponse,
+    };
+  });
 };
 
 const goldenQuestionRecords = {
@@ -34,7 +45,9 @@ const goldenQuestionRecords = {
   secureSign: secureSignGoldenQuestionRecords,
   elConnect: elConnectGoldenQuestionRecords,
   elApply:elApplyGoldenQuestionRecords,
-  elBroadcast:elBroadcastGoldenQuestionRecords
+  elBroadcast:elBroadcastGoldenQuestionRecords,
+  iCentral:icGoldenQuestionRecords,
+  cIntelligence:contractIntelligenceGoldenQuestionRecords
 };
 
 export type GoldenQuestionProduct = keyof typeof goldenQuestionRecords;

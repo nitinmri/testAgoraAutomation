@@ -1,212 +1,380 @@
-[
-  {
-    "id": "five-application-steps",
-    "question": "What are the five application steps in the leasing application process?",
-    "baselineResponse": "Your Details, Additional Applicants, Additional Items, Your Documents, Summary.",
-    "requiredConcepts": ["Your Details", "Additional Applicants", "Additional Items", "Your Documents", "Summary"],
-    "expectedScore": 3
-  },
-  {
-    "id": "your-details-information",
-    "question": "What information is required in the Your Details section?",
-    "baselineResponse": "First Name, Last Name, Date of Birth, Address, Employment, Emergency Contact, and Additional Applicants information.",
-    "requiredConcepts": ["First Name", "Last Name", "Date of Birth", "Address", "Employment", "Emergency Contact", "Additional Applicants"],
-    "expectedScore": 3
-  },
-  {
-    "id": "optional-services-additional-items",
-    "question": "Which optional services can applicants add in Additional Items?",
-    "baselineResponse": "Vehicles, animals, and rentable items such as appliances, parking, and storage.",
-    "requiredConcepts": ["Vehicles", "Animals", "Appliances", "Parking", "Storage", "Rentable Items"],
-    "expectedScore": 3
-  },
-  {
-    "id": "required-document-uploads",
-    "question": "What documents are shown as required uploads in the documentation example?",
-    "baselineResponse": "Pet Photo and Bank Statement.",
-    "requiredConcepts": ["Pet Photo", "Bank Statement"],
-    "expectedScore": 3
-  },
-  {
-    "id": "leasing-portal-integrations",
-    "question": "What systems does the leasing portal integrate with?",
-    "baselineResponse": "MRI Residential Management, PMX RM, CPID, Secure Sign, and MRI partner integrations.",
-    "requiredConcepts": ["MRI Residential Management", "PMX RM", "CPID", "Secure Sign", "MRI Partner Integrations"],
-    "expectedScore": 3
-  },
-  {
-    "id": "unit-search-filters",
-    "question": "What search filters are available on the unit search page?",
-    "baselineResponse": "Move-in Date, Min Price, Max Price, Beds, Floorplans, Unit ID, and Amenities.",
-    "requiredConcepts": ["Move-in Date", "Min Price", "Max Price", "Beds", "Floorplans", "Unit ID", "Amenities"],
-    "expectedScore": 3
-  },
-  {
-    "id": "create-new-account",
-    "question": "How does a user create a new account?",
-    "baselineResponse": "Sign Up, enter required information, verify email, confirm account, create credentials, then return to login.",
-    "requiredConcepts": ["Sign Up", "Required Information", "Verify Email", "Confirm Account", "Create Credentials", "Return To Login"],
-    "expectedScore": 3
-  },
-  {
-    "id": "add-co-applicant",
-    "question": "How do you add a co-applicant to an application?",
-    "baselineResponse": "Go to Additional Applicants, select New/Add New Person, enter required details, and save.",
-    "requiredConcepts": ["Additional Applicants", "Add New Person", "Required Details", "Save"],
-    "expectedScore": 3
-  },
-  {
-    "id": "add-vehicle",
-    "question": "How do applicants add a vehicle to their application?",
-    "baselineResponse": "Open Additional Items, select New Vehicles, enter vehicle information, and click Add.",
-    "requiredConcepts": ["Additional Items", "New Vehicles", "Vehicle Information", "Add"],
-    "expectedScore": 3
-  },
-  {
-    "id": "add-pet",
-    "question": "How does an applicant add a pet?",
-    "baselineResponse": "Choose New Animals, select Cat or Dog, provide pet details, select optional checkboxes, and save.",
-    "requiredConcepts": ["New Animals", "Cat", "Dog", "Pet Details", "Optional Checkboxes", "Save"],
-    "expectedScore": 3
-  },
-  {
-    "id": "upload-required-documents",
-    "question": "How do applicants upload required documents?",
-    "baselineResponse": "Open Your Documents, use Upload on each required document card, upload files, verify completion, and continue.",
-    "requiredConcepts": ["Your Documents", "Upload", "Required Document Card", "Upload Files", "Verify Completion", "Continue"],
-    "expectedScore": 3
-  },
-  {
-    "id": "identity-verification",
-    "question": "How is identity verification completed?",
-    "baselineResponse": "Start Application, receive SMS, access secure link, upload ID, or use Verify Later if allowed.",
-    "requiredConcepts": ["Start Application", "Receive SMS", "Secure Link", "Upload ID", "Verify Later"],
-    "expectedScore": 3
-  },
-  {
-    "id": "forgot-password",
-    "question": "What should a user do if they forgot their password?",
-    "baselineResponse": "Use Forgot Password, receive verification code, verify email, reset password, and log in with the new password.",
-    "requiredConcepts": ["Forgot Password", "Verification Code", "Verify Email", "Reset Password", "Log In"],
-    "expectedScore": 3
-  },
-  {
-    "id": "inactive-more-than-two-hours",
-    "question": "What happens if a user is inactive during an application for more than two hours?",
-    "baselineResponse": "The unit is automatically released and the applicant may restart the application process.",
-    "requiredConcepts": ["Unit Released", "Restart Application"],
-    "expectedScore": 3
-  },
-  {
-    "id": "unit-unavailable-session",
-    "question": "What happens if a unit becomes unavailable during an application session?",
-    "baselineResponse": "A notification appears informing the user the unit is unavailable and offers alternatives.",
-    "requiredConcepts": ["Notification", "Unit Unavailable", "Alternatives"],
-    "expectedScore": 3
-  },
-  {
-    "id": "bankruptcy-history-yes",
-    "question": "What happens if bankruptcy history is marked Yes?",
-    "baselineResponse": "Additional bankruptcy details are required before proceeding.",
-    "requiredConcepts": ["Additional Bankruptcy Details"],
-    "expectedScore": 3
-  },
-  {
-    "id": "additional-applicants-vs-additional-items",
-    "question": "What is the difference between Additional Applicants and Additional Items?",
-    "baselineResponse": "Additional Applicants are people added to the application, while Additional Items are optional services, animals, vehicles, or rentable items.",
-    "requiredConcepts": ["Additional Applicants", "People Added To Application", "Additional Items", "Optional Services", "Animals", "Vehicles", "Rentable Items"],
-    "expectedScore": 3
-  },
-  {
-    "id": "your-details-vs-your-documents",
-    "question": "What is the difference between Your Details and Your Documents?",
-    "baselineResponse": "Your Details captures applicant information, while Your Documents stores supporting uploaded files.",
-    "requiredConcepts": ["Your Details", "Applicant Information", "Your Documents", "Supporting Uploaded Files"],
-    "expectedScore": 3
-  },
-  {
-    "id": "cat-dog-workflow",
-    "question": "How do Cat and Dog additions differ in the pet workflow?",
-    "baselineResponse": "Users select either Cat or Dog before entering pet details; both follow a similar process.",
-    "requiredConcepts": ["Cat", "Dog", "Pet Details", "Similar Process"],
-    "expectedScore": 3
-  },
-  {
-    "id": "checkpoint-id-vs-secure-sign",
-    "question": "What is the difference between Checkpoint ID Verification and Secure Sign?",
-    "baselineResponse": "Both are verification mechanisms configured in Back Office; users must complete whichever options administrators require.",
-    "requiredConcepts": ["Checkpoint ID Verification", "Secure Sign", "Verification Mechanisms", "Back Office", "Administrator Requirements"],
-    "expectedScore": 3
-  },
-  {
-    "id": "unit-selection-to-application-setup",
-    "question": "A prospect wants to apply for a unit. What steps occur from selecting a unit through application setup?",
-    "baselineResponse": "Select property, choose unit and move-in date, start application, create/login account, complete identity verification, then proceed to application setup.",
-    "requiredConcepts": ["Select Property", "Choose Unit", "Move-in Date", "Start Application", "Create Account", "Login Account", "Identity Verification", "Application Setup"],
-    "expectedScore": 3
-  },
-  {
-    "id": "summary-to-final-submission",
-    "question": "How does an applicant move from Summary to final submission?",
-    "baselineResponse": "Review sections, agree to terms, make payment, receive payment confirmation, submit application, then it is sent for screening and approval.",
-    "requiredConcepts": ["Review Sections", "Agree To Terms", "Make Payment", "Payment Confirmation", "Submit Application", "Screening", "Approval"],
-    "expectedScore": 3
-  },
-  {
-    "id": "leasing-agent-unit-unavailable",
-    "question": "What happens if a leasing agent invites a prospect to apply but the unit is no longer available?",
-    "baselineResponse": "The system performs real-time availability checks and informs the user if the unit becomes unavailable.",
-    "requiredConcepts": ["Real-time Availability Checks", "Unit Becomes Unavailable", "User Notification"],
-    "expectedScore": 3
-  },
-  {
-    "id": "administrator-identity-verification-settings",
-    "question": "How do administrator settings influence identity verification requirements?",
-    "baselineResponse": "Administrators configure Checkpoint ID and Secure Sign requirements in Back Office, and applicants must follow the configured process.",
-    "requiredConcepts": ["Administrators", "Checkpoint ID", "Secure Sign", "Back Office", "Configured Process"],
-    "expectedScore": 3
-  },
-  {
-    "id": "portal-settings-management",
-    "question": "Where are portal settings, content, and images managed?",
-    "baselineResponse": "In the Payload Back Office used by property management personnel.",
-    "requiredConcepts": ["Payload Back Office", "Property Management Personnel"],
-    "expectedScore": 3
-  },
-  {
-    "id": "pricing-availability-service",
-    "question": "Which service provides real-time pricing and availability data displayed to prospects?",
-    "baselineResponse": "Engage Living Pricing & Availability (P&A) Service.",
-    "requiredConcepts": ["Engage Living", "Pricing & Availability Service", "P&A Service"],
-    "expectedScore": 3
-  },
-  {
-    "id": "secure-sign-checkpoint-client-configuration",
-    "question": "Can Secure Sign and Checkpoint ID be enabled differently for clients?",
-    "baselineResponse": "Yes. Both can be enabled or disabled for specific clients based on business requirements.",
-    "requiredConcepts": ["Secure Sign", "Checkpoint ID", "Enabled", "Disabled", "Specific Clients", "Business Requirements"],
-    "expectedScore": 3
-  },
-  {
-    "id": "ai-powered-lead-scoring",
-    "question": "How do I configure AI-powered lead scoring for applicants?",
-    "baselineResponse": "The supplied documentation does not mention AI-powered lead scoring. The agent should state that the information is unavailable.",
-    "requiredConcepts": ["AI-powered Lead Scoring", "Information Unavailable", "Not Documented"],
-    "expectedScore": 3
-  },
-  {
-    "id": "salesforce-crm-integration",
-    "question": "How do I set up Salesforce CRM integration in the leasing portal?",
-    "baselineResponse": "The supplied documentation does not describe Salesforce integration. The agent should indicate no information is available.",
-    "requiredConcepts": ["Salesforce CRM Integration", "Information Unavailable", "Not Documented"],
-    "expectedScore": 3
-  },
-  {
-    "id": "portal-theme-customization",
-    "question": "How can administrators customize portal themes using a color palette editor?",
-    "baselineResponse": "No color palette editor or theme customization functionality is documented. The agent should acknowledge the information is unavailable.",
-    "requiredConcepts": ["Color Palette Editor", "Theme Customization", "Information Unavailable", "Not Documented"],
-    "expectedScore": 3
-  }
+﻿[
+    {
+        "id":  "five-application-steps",
+        "question":  "What are the five application steps in the leasing application process?",
+        "baselineResponse":  "Your Details, Additional Applicants, Additional Items, Your Documents, Summary.",
+        "requiredConcepts":  [
+                                 "Your Details",
+                                 "Additional Applicants",
+                                 "Additional Items",
+                                 "Your Documents",
+                                 "Summary"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "your-details-information",
+        "question":  "What information is required in the Your Details section?",
+        "baselineResponse":  "First Name, Last Name, Date of Birth, Address, Employment, Emergency Contact, and Additional Applicants information.",
+        "requiredConcepts":  [
+                                 "First Name",
+                                 "Last Name",
+                                 "Date of Birth",
+                                 "Address",
+                                 "Employment",
+                                 "Emergency Contact",
+                                 "Additional Applicants"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "optional-services-additional-items",
+        "question":  "Which optional services can applicants add in Additional Items?",
+        "baselineResponse":  "Vehicles, animals, and rentable items such as appliances, parking, and storage.",
+        "requiredConcepts":  [
+                                 "Vehicles",
+                                 "Animals",
+                                 "Appliances",
+                                 "Parking",
+                                 "Storage",
+                                 "Rentable Items"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "required-document-uploads",
+        "question":  "What documents are shown as required uploads in the documentation example?",
+        "baselineResponse":  "Pet Photo and Bank Statement.",
+        "requiredConcepts":  [
+                                 "Pet Photo",
+                                 "Bank Statement"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "leasing-portal-integrations",
+        "question":  "What systems does the leasing portal integrate with?",
+        "baselineResponse":  "MRI Residential Management, PMX RM, CPID, Secure Sign, and MRI partner integrations.",
+        "requiredConcepts":  [
+                                 "MRI Residential Management",
+                                 "PMX RM",
+                                 "CPID",
+                                 "Secure Sign",
+                                 "MRI Partner Integrations"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "unit-search-filters",
+        "question":  "What search filters are available on the unit search page?",
+        "baselineResponse":  "Move-in Date, Min Price, Max Price, Beds, Floorplans, Unit ID, and Amenities.",
+        "requiredConcepts":  [
+                                 "Move-in Date",
+                                 "Min Price",
+                                 "Max Price",
+                                 "Beds",
+                                 "Floorplans",
+                                 "Unit ID",
+                                 "Amenities"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "create-new-account",
+        "question":  "How does a user create a new account?",
+        "baselineResponse":  "Sign Up, enter required information, verify email, confirm account, create credentials, then return to login.",
+        "requiredConcepts":  [
+                                 "Sign Up",
+                                 "Required Information",
+                                 "Verify Email",
+                                 "Confirm Account",
+                                 "Create Credentials",
+                                 "Return To Login"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "add-co-applicant",
+        "question":  "How do you add a co-applicant to an application?",
+        "baselineResponse":  "Go to Additional Applicants, select New/Add New Person, enter required details, and save.",
+        "requiredConcepts":  [
+                                 "Additional Applicants",
+                                 "Add New Person",
+                                 "Required Details",
+                                 "Save"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "add-vehicle",
+        "question":  "How do applicants add a vehicle to their application?",
+        "baselineResponse":  "Open Additional Items, select New Vehicles, enter vehicle information, and click Add.",
+        "requiredConcepts":  [
+                                 "Additional Items",
+                                 "New Vehicles",
+                                 "Vehicle Information",
+                                 "Add"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "add-pet",
+        "question":  "How does an applicant add a pet?",
+        "baselineResponse":  "Choose New Animals, select Cat or Dog, provide pet details, select optional checkboxes, and save.",
+        "requiredConcepts":  [
+                                 "New Animals",
+                                 "Cat",
+                                 "Dog",
+                                 "Pet Details",
+                                 "Optional Checkboxes",
+                                 "Save"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "upload-required-documents",
+        "question":  "How do applicants upload required documents?",
+        "baselineResponse":  "Open Your Documents, use Upload on each required document card, upload files, verify completion, and continue.",
+        "requiredConcepts":  [
+                                 "Your Documents",
+                                 "Upload",
+                                 "Required Document Card",
+                                 "Upload Files",
+                                 "Verify Completion",
+                                 "Continue"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "identity-verification",
+        "question":  "How is identity verification completed?",
+        "baselineResponse":  "Start Application, receive SMS, access secure link, upload ID, or use Verify Later if allowed.",
+        "requiredConcepts":  [
+                                 "Start Application",
+                                 "Receive SMS",
+                                 "Secure Link",
+                                 "Upload ID",
+                                 "Verify Later"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "forgot-password",
+        "question":  "What should a user do if they forgot their password?",
+        "baselineResponse":  "Use Forgot Password, receive verification code, verify email, reset password, and log in with the new password.",
+        "requiredConcepts":  [
+                                 "Forgot Password",
+                                 "Verification Code",
+                                 "Verify Email",
+                                 "Reset Password",
+                                 "Log In"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "inactive-more-than-two-hours",
+        "question":  "What happens if a user is inactive during an application for more than two hours?",
+        "baselineResponse":  "The unit is automatically released and the applicant may restart the application process.",
+        "requiredConcepts":  [
+                                 "Unit Released",
+                                 "Restart Application"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "unit-unavailable-session",
+        "question":  "What happens if a unit becomes unavailable during an application session?",
+        "baselineResponse":  "A notification appears informing the user the unit is unavailable and offers alternatives.",
+        "requiredConcepts":  [
+                                 "Notification",
+                                 "Unit Unavailable",
+                                 "Alternatives"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "bankruptcy-history-yes",
+        "question":  "What happens if bankruptcy history is marked Yes?",
+        "baselineResponse":  "Additional bankruptcy details are required before proceeding.",
+        "requiredConcepts":  [
+                                 "Additional Bankruptcy Details"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "additional-applicants-vs-additional-items",
+        "question":  "What is the difference between Additional Applicants and Additional Items?",
+        "baselineResponse":  "Additional Applicants are people added to the application, while Additional Items are optional services, animals, vehicles, or rentable items.",
+        "requiredConcepts":  [
+                                 "Additional Applicants",
+                                 "People Added To Application",
+                                 "Additional Items",
+                                 "Optional Services",
+                                 "Animals",
+                                 "Vehicles",
+                                 "Rentable Items"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "your-details-vs-your-documents",
+        "question":  "What is the difference between Your Details and Your Documents?",
+        "baselineResponse":  "Your Details captures applicant information, while Your Documents stores supporting uploaded files.",
+        "requiredConcepts":  [
+                                 "Your Details",
+                                 "Applicant Information",
+                                 "Your Documents",
+                                 "Supporting Uploaded Files"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "cat-dog-workflow",
+        "question":  "How do Cat and Dog additions differ in the pet workflow?",
+        "baselineResponse":  "Users select either Cat or Dog before entering pet details; both follow a similar process.",
+        "requiredConcepts":  [
+                                 "Cat",
+                                 "Dog",
+                                 "Pet Details",
+                                 "Similar Process"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "checkpoint-id-vs-secure-sign",
+        "question":  "What is the difference between Checkpoint ID Verification and Secure Sign?",
+        "baselineResponse":  "Both are verification mechanisms configured in Back Office; users must complete whichever options administrators require.",
+        "requiredConcepts":  [
+                                 "Checkpoint ID Verification",
+                                 "Secure Sign",
+                                 "Verification Mechanisms",
+                                 "Back Office",
+                                 "Administrator Requirements"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "unit-selection-to-application-setup",
+        "question":  "A prospect wants to apply for a unit. What steps occur from selecting a unit through application setup?",
+        "baselineResponse":  "Select property, choose unit and move-in date, start application, create/login account, complete identity verification, then proceed to application setup.",
+        "requiredConcepts":  [
+                                 "Select Property",
+                                 "Choose Unit",
+                                 "Move-in Date",
+                                 "Start Application",
+                                 "Create Account",
+                                 "Login Account",
+                                 "Identity Verification",
+                                 "Application Setup"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "summary-to-final-submission",
+        "question":  "How does an applicant move from Summary to final submission?",
+        "baselineResponse":  "Review sections, agree to terms, make payment, receive payment confirmation, submit application, then it is sent for screening and approval.",
+        "requiredConcepts":  [
+                                 "Review Sections",
+                                 "Agree To Terms",
+                                 "Make Payment",
+                                 "Payment Confirmation",
+                                 "Submit Application",
+                                 "Screening",
+                                 "Approval"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "leasing-agent-unit-unavailable",
+        "question":  "What happens if a leasing agent invites a prospect to apply but the unit is no longer available?",
+        "baselineResponse":  "The system performs real-time availability checks and informs the user if the unit becomes unavailable.",
+        "requiredConcepts":  [
+                                 "Real-time Availability Checks",
+                                 "Unit Becomes Unavailable",
+                                 "User Notification"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "administrator-identity-verification-settings",
+        "question":  "How do administrator settings influence identity verification requirements?",
+        "baselineResponse":  "Administrators configure Checkpoint ID and Secure Sign requirements in Back Office, and applicants must follow the configured process.",
+        "requiredConcepts":  [
+                                 "Administrators",
+                                 "Checkpoint ID",
+                                 "Secure Sign",
+                                 "Back Office",
+                                 "Configured Process"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "portal-settings-management",
+        "question":  "Where are portal settings, content, and images managed?",
+        "baselineResponse":  "In the Payload Back Office used by property management personnel.",
+        "requiredConcepts":  [
+                                 "Payload Back Office",
+                                 "Property Management Personnel"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "pricing-availability-service",
+        "question":  "Which service provides real-time pricing and availability data displayed to prospects?",
+        "baselineResponse":  "Engage Living Pricing \u0026 Availability (P\u0026A) Service.",
+        "requiredConcepts":  [
+                                 "Engage Living",
+                                 "Pricing \u0026 Availability Service",
+                                 "P\u0026A Service"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "secure-sign-checkpoint-client-configuration",
+        "question":  "Can Secure Sign and Checkpoint ID be enabled differently for clients?",
+        "baselineResponse":  "Yes. Both can be enabled or disabled for specific clients based on business requirements.",
+        "requiredConcepts":  [
+                                 "Secure Sign",
+                                 "Checkpoint ID",
+                                 "Enabled",
+                                 "Disabled",
+                                 "Specific Clients",
+                                 "Business Requirements"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "ai-powered-lead-scoring",
+        "question":  "How do I configure AI-powered lead scoring for applicants?",
+        "baselineResponse":  "The supplied documentation does not mention AI-powered lead scoring. The agent should state that the information is unavailable.",
+        "requiredConcepts":  [
+                                 "AI-powered Lead Scoring",
+                                 "Information Unavailable",
+                                 "Not Documented"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "salesforce-crm-integration",
+        "question":  "How do I set up Salesforce CRM integration in the leasing portal?",
+        "baselineResponse":  "The supplied documentation does not describe Salesforce integration. The agent should indicate no information is available.",
+        "requiredConcepts":  [
+                                 "Salesforce CRM Integration",
+                                 "Information Unavailable",
+                                 "Not Documented"
+                             ],
+        "passingScore":  3
+    },
+    {
+        "id":  "portal-theme-customization",
+        "question":  "How can administrators customize portal themes using a color palette editor?",
+        "baselineResponse":  "No color palette editor or theme customization functionality is documented. The agent should acknowledge the information is unavailable.",
+        "requiredConcepts":  [
+                                 "Color Palette Editor",
+                                 "Theme Customization",
+                                 "Information Unavailable",
+                                 "Not Documented"
+                             ],
+        "passingScore":  3
+    }
 ]
