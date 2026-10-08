@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import type { Reporter, TestCase, TestResult } from '@playwright/test/reporter';
+import type { BaselineAnswerScore } from './answerEvaluator';
 
 type Evaluation = {
   question: string;
@@ -8,12 +9,7 @@ type Evaluation = {
   actualAnswer: string;
   passed: boolean;
   review: string;
-  missingConcepts: string[];
-  evidence: string[];
-  score: number;
-  tokenUsage?: {
-    totalTokens?: number;
-  } | null;
+  score: number | BaselineAnswerScore;
 };
 
 function csvCell(value: unknown): string {
@@ -54,27 +50,21 @@ export default class CsvReporter implements Reporter {
 
     const header = [
       'questions',
-      'baselineResponses(expectedAnswers)',
-      'actual answers',
+      'Expected Answer',
+      'Generated Answer',
+      'score',
       'passed',
       'review',
-      'missingConcepts',
-      'evidence',
-      'score',
-      'token used',
     ];
 
     const lines = [...this.rows.values()].map((row) =>
       [
         row.question,
         row.expectedAnswer,
-        row.actualAnswer,
-        row.passed,
-        row.review,
-        row.missingConcepts.join('; '),
-        row.evidence.join('; '),
+        row.actualAnswer,    
         row.score,
-        row.tokenUsage?.totalTokens ?? '',
+         row.passed,
+          row.review,  
       ]
         .map(csvCell)
         .join(','),

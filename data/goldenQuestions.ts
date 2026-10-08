@@ -9,7 +9,7 @@ export type GoldenQuestion = {
   id: string;
   question: string;
   expectedAnswer: string;
-  requiredConcepts: string[];
+  requiredConcepts?: string[];
   passingScore: number;
 };
 

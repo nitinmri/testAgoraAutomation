@@ -3,379 +3,180 @@
         "id":  "property-fields-cannot-be-overridden",
         "question":  "Which property fields cannot be overridden on the Property page?",
         "baselineResponse":  "The Cross Streets and Total Units fields cannot be overridden.",
-        "requiredConcepts":  [
-                                 "Cross Streets",
-                                 "Total Units",
-                                 "Cannot Be Overridden"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "maximum-media-upload-size",
         "question":  "What is the maximum file size allowed when uploading media to a property?",
         "baselineResponse":  "Uploaded files cannot exceed 5 MB.",
-        "requiredConcepts":  [
-                                 "5 MB",
-                                 "Uploaded Files",
-                                 "Maximum File Size"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "supported-unit-statuses",
         "question":  "What unit statuses are supported on the Units page?",
         "baselineResponse":  "Vacant, Make Ready, Occupied, and Administrative.",
-        "requiredConcepts":  [
-                                 "Vacant",
-                                 "Make Ready",
-                                 "Occupied",
-                                 "Administrative"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "user-role-permission-levels",
         "question":  "What permission levels are available when creating user roles?",
         "baselineResponse":  "Full Access, View Only, and No Access.",
-        "requiredConcepts":  [
-                                 "Full Access",
-                                 "View Only",
-                                 "No Access"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "export-toggle-control",
         "question":  "What does the Export toggle control in Amenity Setup?",
         "baselineResponse":  "It determines whether the amenity is included in data feeds sent to marketing sources.",
-        "requiredConcepts":  [
-                                 "Export Toggle",
-                                 "Amenity",
-                                 "Data Feeds",
-                                 "Marketing Sources"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "editable-client-information",
         "question":  "What information can be edited on the Clients page?",
         "baselineResponse":  "Users can edit the Client Name and add the Online Leasing Domain.",
-        "requiredConcepts":  [
-                                 "Client Name",
-                                 "Online Leasing Domain"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "create-new-user-role",
         "question":  "How do you create a new user role?",
         "baselineResponse":  "Navigate to System Settings \u003e User Roles, select Add, enter role information, assign permissions, and click Save.",
-        "requiredConcepts":  [
-                                 "System Settings",
-                                 "User Roles",
-                                 "Add",
-                                 "Role Information",
-                                 "Assign Permissions",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "add-new-user-from-okta",
         "question":  "How do you add a new user from Okta?",
         "baselineResponse":  "Go to System Settings \u003e Users, click Add, select Add New Okta User, complete user details, assign a role, and save.",
-        "requiredConcepts":  [
-                                 "System Settings",
-                                 "Users",
-                                 "Add",
-                                 "Add New Okta User",
-                                 "User Details",
-                                 "Assign Role",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "override-property-amenities",
         "question":  "How do you override amenities for a property?",
         "baselineResponse":  "Go to Content Management \u003e Property, open Amenities tab, click Assign, select amenities, and save.",
-        "requiredConcepts":  [
-                                 "Content Management",
-                                 "Property",
-                                 "Amenities Tab",
-                                 "Assign",
-                                 "Select Amenities",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "add-floor-plan",
         "question":  "How do you add a floor plan?",
         "baselineResponse":  "Navigate to Content Management \u003e Floor Plans, enter floor plan details, assign unit types, optionally add media and amenities, then save.",
-        "requiredConcepts":  [
-                                 "Content Management",
-                                 "Floor Plans",
-                                 "Floor Plan Details",
-                                 "Assign Unit Types",
-                                 "Media",
-                                 "Amenities",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "create-unit-level-special-offer",
         "question":  "How do you create a special offer at the unit level?",
         "baselineResponse":  "Go to Content Management \u003e Specials, click Add, choose Unit type, configure details, select the unit, and save.",
-        "requiredConcepts":  [
-                                 "Content Management",
-                                 "Specials",
-                                 "Add",
-                                 "Unit Type",
-                                 "Configure Details",
-                                 "Select Unit",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "enable-marketing-source-export",
         "question":  "How do you enable export for a marketing source?",
         "baselineResponse":  "Navigate to Marketing Sources \u003e Property Export Management and turn on the Export To switch for the desired marketing source.",
-        "requiredConcepts":  [
-                                 "Marketing Sources",
-                                 "Property Export Management",
-                                 "Export To Switch",
-                                 "Marketing Source"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "property-image-upload-fails",
         "question":  "A property image upload fails. What documented limitation should be checked first?",
         "baselineResponse":  "Verify the uploaded file does not exceed 5 MB.",
-        "requiredConcepts":  [
-                                 "Uploaded File",
-                                 "5 MB",
-                                 "File Size Limit"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "marketing-source-export-toggle-disabled",
         "question":  "A marketing source export toggle cannot be enabled. What documented requirement may be missing?",
         "baselineResponse":  "A unique identifier may need to be entered through Setup before export can be enabled.",
-        "requiredConcepts":  [
-                                 "Unique Identifier",
-                                 "Setup",
-                                 "Export Enabled"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "units-not-appearing-in-exported-feeds",
         "question":  "Why might units not appear in exported marketing feeds?",
         "baselineResponse":  "Availability settings may limit exports through unit display limits or available-date filters.",
-        "requiredConcepts":  [
-                                 "Availability Settings",
-                                 "Unit Display Limits",
-                                 "Available-Date Filters",
-                                 "Exports"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "user-cannot-modify-data",
         "question":  "A user cannot modify data on a page. What role configuration should be reviewed?",
         "baselineResponse":  "Review the user role permission level because View Only users cannot update data or settings.",
-        "requiredConcepts":  [
-                                 "User Role",
-                                 "Permission Level",
-                                 "View Only",
-                                 "Cannot Update Data",
-                                 "Cannot Update Settings"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "global-vs-property-export-management",
         "question":  "What is the difference between Global Export Management and Property Export Management?",
         "baselineResponse":  "Global Export Management manages multiple properties for one marketing source, while Property Export Management manages multiple marketing sources for a single property.",
-        "requiredConcepts":  [
-                                 "Global Export Management",
-                                 "Multiple Properties",
-                                 "One Marketing Source",
-                                 "Property Export Management",
-                                 "Multiple Marketing Sources",
-                                 "Single Property"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "full-access-vs-view-only",
         "question":  "What is the difference between Full Access and View Only permissions?",
         "baselineResponse":  "Full Access allows use of all page features; View Only allows viewing data but not changing data or settings.",
-        "requiredConcepts":  [
-                                 "Full Access",
-                                 "All Page Features",
-                                 "View Only",
-                                 "View Data",
-                                 "Cannot Change Data",
-                                 "Cannot Change Settings"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "custom-vs-industry-amenity",
         "question":  "What is the difference between a custom amenity and an industry amenity?",
         "baselineResponse":  "Industry amenities follow the MITS industry standard; custom amenities are user-added within Engage Broadcast.",
-        "requiredConcepts":  [
-                                 "Industry Amenities",
-                                 "MITS Industry Standard",
-                                 "Custom Amenities",
-                                 "User-Added",
-                                 "Engage Broadcast"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "special-types-differences",
         "question":  "What is the difference between property-level, floor-plan-level, and unit-level specials?",
         "baselineResponse":  "Specials can be applied to an entire property, a specific floor plan, or a specific unit depending on the selected type.",
-        "requiredConcepts":  [
-                                 "Property-Level",
-                                 "Floor-Plan-Level",
-                                 "Unit-Level",
-                                 "Entire Property",
-                                 "Specific Floor Plan",
-                                 "Specific Unit"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "floor-plan-security-deposit-override",
         "question":  "How would you create a floor plan and ensure it displays a specific security deposit amount on marketing sources?",
         "baselineResponse":  "Create a floor plan, enter the Security Deposit Override value, assign unit types, and save. The override applies to all unit types in that floor plan.",
-        "requiredConcepts":  [
-                                 "Floor Plan",
-                                 "Security Deposit Override",
-                                 "Assign Unit Types",
-                                 "Save",
-                                 "Applies To All Unit Types"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "configure-property-amenities-export",
         "question":  "How would you configure a property so amenities are exported and visible at the property level?",
         "baselineResponse":  "Configure amenities in Amenity Setup, enable Export, then assign them at the property level through Property \u003e Amenities.",
-        "requiredConcepts":  [
-                                 "Amenity Setup",
-                                 "Enable Export",
-                                 "Property Level",
-                                 "Property Amenities"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "send-updated-property-data",
         "question":  "How can a user immediately send updated property data to all enabled marketing sources?",
         "baselineResponse":  "Enable desired exports in Property Export Management and then perform a Mass Export.",
-        "requiredConcepts":  [
-                                 "Property Export Management",
-                                 "Enable Exports",
-                                 "Mass Export",
-                                 "Marketing Sources"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "grant-access-to-future-properties",
         "question":  "How would you grant a new employee access to future properties while restricting page permissions?",
         "baselineResponse":  "Create or use a role with desired permissions, add the user, assign the role, and select Assign User to All Future Properties.",
-        "requiredConcepts":  [
-                                 "Role",
-                                 "Desired Permissions",
-                                 "Add User",
-                                 "Assign Role",
-                                 "Assign User To All Future Properties"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "add-pet-restrictions-and-fees",
         "question":  "How can I add pet restrictions and fees for dogs at my property?",
         "baselineResponse":  "Navigate to Content Management \u003e Policies, add a Pet Policy, select Dog, configure fees, restrictions, deposits, and save.",
-        "requiredConcepts":  [
-                                 "Content Management",
-                                 "Policies",
-                                 "Pet Policy",
-                                 "Dog",
-                                 "Fees",
-                                 "Restrictions",
-                                 "Deposits",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "add-leasing-agent-profile",
         "question":  "How can I add a new leasing agent profile and associate it with an office?",
         "baselineResponse":  "Go to Content Management \u003e Office, open Agents tab, click Add, enter agent information, select the office, and save.",
-        "requiredConcepts":  [
-                                 "Content Management",
-                                 "Office",
-                                 "Agents Tab",
-                                 "Add",
-                                 "Agent Information",
-                                 "Select Office",
-                                 "Save"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "allow-user-to-manage-access",
         "question":  "How can I allow another user to manage user access even if they are not an Admin?",
         "baselineResponse":  "Create a custom user role and configure permissions that allow access to user administration functions.",
-        "requiredConcepts":  [
-                                 "Custom User Role",
-                                 "Configure Permissions",
-                                 "User Administration Functions"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "ai-powered-lead-scoring",
         "question":  "How do I configure AI-powered lead scoring for prospective renters?",
         "baselineResponse":  "The documentation does not describe AI-powered lead scoring functionality. The agent should state that the information is not available.",
-        "requiredConcepts":  [
-                                 "AI-Powered Lead Scoring",
-                                 "Information Not Available",
-                                 "Not Documented"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "salesforce-crm-integration",
         "question":  "How do I connect Engage Broadcast directly to Salesforce CRM?",
         "baselineResponse":  "No Salesforce CRM integration is documented in the supplied knowledge base.",
-        "requiredConcepts":  [
-                                 "Salesforce CRM",
-                                 "Integration",
-                                 "Not Documented"
-                             ],
         "passingScore":  3
     },
     {
         "id":  "predictive-occupancy-report",
         "question":  "Which dashboard report predicts future occupancy using machine learning?",
         "baselineResponse":  "No predictive occupancy report or machine-learning reporting capability is documented.",
-        "requiredConcepts":  [
-                                 "Predictive Occupancy Report",
-                                 "Machine Learning",
-                                 "Not Documented"
-                             ],
         "passingScore":  3
     }
 ]

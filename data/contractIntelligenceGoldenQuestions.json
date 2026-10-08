@@ -3,817 +3,306 @@
     "id": "what-is-mri-contract-intelligence-mci",
     "question": "What is MRI Contract Intelligence (MCI)?",
     "baselineResponse": "MRI Contract Intelligence (MCI) is an AI-powered lease abstraction platform designed to extract, review, manage, and integrate lease and contract data. Core capabilities include Import, Extract, Review, Manage, Explore, and Integrate. MCI supports multiple languages and provides role-based access for Importers, Reviewers, Project Administrators, and Client Administrators.",
-    "requiredConcepts": [
-      "AI-powered lease abstraction platform",
-      "extract lease and contract data",
-      "Import",
-      "Extract",
-      "Review",
-      "Manage",
-      "Explore",
-      "Integrate",
-      "PMX integration",
-      "multiple languages",
-      "role-based access",
-      "Importers",
-      "Reviewers",
-      "Project Administrators",
-      "Client Administrators"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-file-types-can-i-upload",
     "question": "What file types can I upload?",
     "baselineResponse": "MCI accepts PDF documents and ZIP archives containing PDF files. Only PDFs are supported for extraction. ZIP folder structures are preserved automatically.",
-    "requiredConcepts": [
-      "PDF",
-      "ZIP archive",
-      "PDF files only",
-      "supported upload types",
-      "folder structure preserved",
-      "extraction support"
-    ],
+
     "passingScore": 3
   },
   {
     "id": "can-i-upload-word-excel-or-image-files",
     "question": "Can I upload Word, Excel, or image files?",
     "baselineResponse": "No. MCI does not accept Word, Excel, or image files directly. These files must be converted to PDF before being uploaded.",
-    "requiredConcepts": [
-      "Word not supported",
-      "Excel not supported",
-      "image files not supported",
-      "convert to PDF",
-      "upload PDF"
-    ],
+
     "passingScore": 3
   },
   {
     "id": "how-do-i-upload-multiple-leases",
     "question": "How do I upload multiple leases?",
     "baselineResponse": "Place PDF lease documents into folders, zip the top-level folder, upload the ZIP through Import, and MCI preserves the folder structure automatically.",
-    "requiredConcepts": [
-      "PDF lease documents",
-      "folder structure",
-      "ZIP archive",
-      "Import application",
-      "upload ZIP",
-      "folder hierarchy preserved"
-    ],
+
     "passingScore": 3
   },
   {
     "id": "how-do-i-organize-documents",
     "question": "How do I organize documents?",
     "baselineResponse": "Documents can be organized by uploading a ZIP file with folders or by creating folders manually within the Files tab.",
-    "requiredConcepts": [
-      "ZIP upload",
-      "folder structure",
-      "Files tab",
-      "create folders",
-      "manual organization",
-      "document management"
-    ],
+
     "passingScore": 3
   },
   {
     "id": "can-i-change-the-language-after-uploading",
     "question": "Can I change the language after uploading?",
     "baselineResponse": "Yes. Update the Language field from the Files tab and save. If extraction has already occurred, the document must be reprocessed.",
-    "requiredConcepts": [
-      "change language",
-      "Files tab",
-      "Language field",
-      "save changes",
-      "reprocess document",
-      "extraction already completed"
-    ],
+
     "passingScore": 3
   },
   {
     "id": "which-languages-does-mci-support",
     "question": "Which languages does MCI support?",
     "baselineResponse": "MCI supports multiple languages and delivers the best extraction quality for English and German documents.",
-    "requiredConcepts": [
-      "multiple languages",
-      "English",
-      "German",
-      "document extraction",
-      "language support",
-      "extraction quality"
-    ],
+
     "passingScore": 3
   },
   {
     "id": "which-english-language-should-i-select",
     "question": "Which English language should I select?",
     "baselineResponse": "Select the appropriate English variant from the Language dropdown in the Files tab and save before extraction.",
-    "requiredConcepts": [
-      "English variant",
-      "Language dropdown",
-      "Files tab",
-      "save changes",
-      "before extraction"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-long-does-extraction-take",
     "question": "How long does extraction take?",
     "baselineResponse": "Extraction typically takes a few seconds per page and depends on document size, document complexity, and system load.",
-    "requiredConcepts": [
-      "few seconds per page",
-      "document size",
-      "document complexity",
-      "system load",
-      "extraction time"
-    ],
     "passingScore": 3
   },
   {
     "id": "why-did-my-extraction-fail",
     "question": "Why did my extraction fail?",
     "baselineResponse": "Retry extraction, verify document quality, confirm the correct language, ensure the file is a valid PDF, and contact support if the issue persists.",
-    "requiredConcepts": [
-      "retry extraction",
-      "document quality",
-      "correct language",
-      "valid PDF",
-      "contact support",
-      "DocSet ID",
-      "error details"
-    ],
     "passingScore": 3
   },
   {
     "id": "why-are-only-a-few-fields-extracted",
     "question": "Why are only a few fields extracted?",
     "baselineResponse": "If only a few fields are extracted, verify the document language, check document quality, ensure the document is a searchable PDF rather than an image scan, review the document content, and reprocess the document after correcting any issues.",
-    "requiredConcepts": [
-      "document language",
-      "incorrect language setting",
-      "document quality",
-      "poor scan quality",
-      "low resolution",
-      "unclear text",
-      "searchable PDF",
-      "image-based scan",
-      "OCR",
-      "document content",
-      "empty fields",
-      "unlock DocSet",
-      "replace document",
-      "resubmit for extraction",
-      "reprocess document"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-edit-a-document-after-extraction",
     "question": "Can I edit a document after extraction?",
     "baselineResponse": "Yes. The DocSet must be unlocked before editing documents. After making changes, the DocSet should be resubmitted for extraction. Extracted values can also be edited directly in the Review application without modifying the source document.",
-    "requiredConcepts": [
-      "unlock DocSet",
-      "edit document",
-      "replace document",
-      "add documents",
-      "resubmit for extraction",
-      "extracted data retained",
-      "re-extraction",
-      "Review application",
-      "edit extracted values",
-      "source document"
-    ],
     "passingScore": 3
   },
   {
     "id": "does-unlocking-delete-extracted-data",
     "question": "Does unlocking delete extracted data?",
     "baselineResponse": "No. Unlocking a DocSet does not delete previously extracted data. Unlocking allows document management activities such as adding, removing, replacing, reordering documents, and changing language settings.",
-    "requiredConcepts": [
-      "does not delete extracted data",
-      "unlock DocSet",
-      "add documents",
-      "remove documents",
-      "replace documents",
-      "re-order documents",
-      "change language settings",
-      "resubmit for extraction",
-      "re-extraction may produce updated results"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-do-i-add-documents-to-an-extracted-docset",
     "question": "How do I add documents to an extracted DocSet?",
     "baselineResponse": "Navigate to the DocSet, unlock it, go to the Files tab, upload additional PDF documents or a ZIP archive, and resubmit the DocSet for extraction. Existing extracted data is retained.",
-    "requiredConcepts": [
-      "DocSet",
-      "unlock",
-      "Files tab",
-      "upload PDF documents",
-      "upload ZIP archive",
-      "submit for extraction",
-      "new documents processed",
-      "existing extracted data retained"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-delete-documents-from-a-docset",
     "question": "Can I delete documents from a DocSet?",
     "baselineResponse": "Yes. Documents can be deleted from a DocSet. If extraction has not been completed, delete the documents from the Files tab. If extraction has been completed, unlock the DocSet first, delete the documents, and resubmit the DocSet for extraction if needed.",
-    "requiredConcepts": [
-      "delete documents",
-      "DocSet",
-      "Files tab",
-      "extraction not completed",
-      "unlock DocSet",
-      "delete documents after extraction",
-      "resubmit for extraction"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-rename-documents",
     "question": "Can I rename documents?",
     "baselineResponse": "Yes. Documents can be renamed within a DocSet by using the Edit option, entering a new name, and saving the change. Renaming does not affect extraction results or require reprocessing.",
-    "requiredConcepts": [
-      "rename documents",
-      "DocSet",
-      "Files tab",
-      "Edit option",
-      "new document name",
-      "save changes",
-      "does not affect extraction",
-      "no reprocessing required"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-reorder-documents",
     "question": "Can I reorder documents?",
     "baselineResponse": "Yes. Documents can be reordered using drag and drop within the Files tab. The new order is saved automatically and does not impact extracted data or require reprocessing.",
-    "requiredConcepts": [
-      "reorder documents",
-      "drag and drop",
-      "Files tab",
-      "saved automatically",
-      "does not affect extracted data",
-      "no reprocessing required"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-do-the-colors-in-the-extract-panel-mean",
     "question": "What do the colors in the Extract panel mean?",
     "baselineResponse": "The colors in the Extract panel indicate the review and validation status of extracted fields and help reviewers identify which fields require attention and which have already been validated.",
-    "requiredConcepts": [
-      "Extract panel",
-      "color indicators",
-      "field status",
-      "review status",
-      "validation status",
-      "requires attention",
-      "validated fields"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-happens-if-an-extract-is-missing",
     "question": "What happens if an Extract is missing?",
     "baselineResponse": "If information is not present in the contract, do not delete the Extract. Confirm the information is unavailable and mark the Extract as Not Applicable. This preserves the audit trail and data structure.",
-    "requiredConcepts": [
-      "missing Extract",
-      "do not delete Extract",
-      "Not Applicable",
-      "information not available",
-      "audit trail",
-      "preserve data structure",
-      "review decision"
-    ],
     "passingScore": 3
   },
   {
     "id": "should-i-delete-an-empty-extractset",
     "question": "Should I delete an empty ExtractSet?",
     "baselineResponse": "No. Keep at least one instance of the ExtractSet and mark it as Not Applicable. Deleting the ExtractSet removes it from the data structure and may affect downstream integrations and reporting.",
-    "requiredConcepts": [
-      "do not delete ExtractSet",
-      "keep one instance",
-      "Not Applicable",
-      "data structure",
-      "downstream integrations",
-      "reports",
-      "review completeness"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-do-i-recover-a-deleted-extractset",
     "question": "How do I recover a deleted ExtractSet?",
     "baselineResponse": "A deleted ExtractSet can be restored from the Additions panel in the Review application by selecting the deleted ExtractSet and using the Restore or Add option.",
-    "requiredConcepts": [
-      "recover ExtractSet",
-      "Additions panel",
-      "Review application",
-      "Restore",
-      "Add option",
-      "deleted ExtractSet"
-    ],
     "passingScore": 3
   },
   {
     "id": "why-does-autofill-fail",
     "question": "Why does Autofill fail?",
     "baselineResponse": "Autofill fails when prerequisite source Extracts are missing or when source data is conflicting. Complete prerequisite fields, check Guidelines for dependencies, and retry Autofill.",
-    "requiredConcepts": [
-      "Autofill",
-      "prerequisite fields",
-      "source Extracts",
-      "missing fields",
-      "conflicting data",
-      "Guidelines panel",
-      "dependencies",
-      "Not Applicable",
-      "retry Autofill"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-filter-only-empty-extracts",
     "question": "Can I filter only empty Extracts?",
     "baselineResponse": "No dedicated filter exists for empty Extracts. Use Extract search, navigate through ExtractSets, and enable automatic navigation to efficiently identify fields that need attention.",
-    "requiredConcepts": [
-      "no dedicated filter",
-      "empty Extracts",
-      "Extract search",
-      "ExtractSets",
-      "automatic navigation",
-      "Review Settings",
-      "color indicators"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-mci-automatically-move-to-the-next-extract",
     "question": "Can MCI automatically move to the next Extract?",
     "baselineResponse": "Yes. Enable 'Move to the next Extract automatically' in Review Settings. MCI will automatically advance after confirming, editing, or marking an Extract as Not Applicable.",
-    "requiredConcepts": [
-      "Move to the next Extract automatically",
-      "Review Settings",
-      "automatic navigation",
-      "confirm Extract",
-      "edit Extract",
-      "Not Applicable"
-    ],
     "passingScore": 3
   },
   {
     "id": "where-can-i-find-guidance-for-an-extract",
     "question": "Where can I find guidance for an Extract?",
     "baselineResponse": "Guidance is available through the Guidelines panel accessed via the Bulb icon and through the Information icon associated with an Extract.",
-    "requiredConcepts": [
-      "Guidelines panel",
-      "Bulb icon",
-      "Information icon",
-      "Extract guidance",
-      "instructions",
-      "best practices",
-      "context-sensitive help"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-happens-if-information-is-not-available-in-the-lease",
     "question": "What happens if information is not available in the lease?",
     "baselineResponse": "Mark the Extract as Not Applicable rather than leaving it blank or deleting it. This confirms review, preserves the audit trail, and supports downstream processing.",
-    "requiredConcepts": [
-      "Not Applicable",
-      "do not leave blank",
-      "do not delete Extract",
-      "audit trail",
-      "review confirmation",
-      "downstream processes",
-      "integrations"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-mci-integrate-with-other-mri-products",
     "question": "Can MCI integrate with other MRI products?",
     "baselineResponse": "Yes. MCI supports integrations with MRI platforms including PMX for synchronizing extracted lease data with downstream systems.",
-    "requiredConcepts": [
-      "integrations",
-      "MRI products",
-      "PMX",
-      "lease data synchronization",
-      "downstream systems",
-      "reviewed data",
-      "project configuration"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-accurate-is-ai-extraction",
     "question": "How accurate is AI extraction?",
     "baselineResponse": "AI extraction accuracy depends on document quality, language selection, and other factors. Human review remains necessary to confirm and correct extracted data before finalization.",
-    "requiredConcepts": [
-      "AI extraction accuracy",
-      "document quality",
-      "language selection",
-      "human review",
-      "confirm extracted data",
-      "correct extracted data",
-      "data quality"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-roles-are-available-in-mci",
     "question": "What roles are available in MCI?",
     "baselineResponse": "MCI provides role-based access control. Roles determine access to Import, Review, Manage, and Explore applications and define which actions users can perform.",
-    "requiredConcepts": [
-      "role-based access control",
-      "Import",
-      "Review",
-      "Manage",
-      "Explore",
-      "roles",
-      "permissions",
-      "assigned by administrators"
-    ],
     "passingScore": 3
   },
   {
     "id": "where-can-i-get-help-if-i-am-stuck",
     "question": "Where can I get help if I am stuck?",
     "baselineResponse": "Help is available through the Help Center, product documentation, MRI Support, Project Managers, and the Contract Assistant feature.",
-    "requiredConcepts": [
-      "Help Center",
-      "product documentation",
-      "MRI Support",
-      "support ticket",
-      "Project Manager",
-      "Contract Assistant",
-      "technical issues"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-is-a-docset",
     "question": "What is a DocSet?",
     "baselineResponse": "A DocSet is a collection of one or more related documents that are processed, reviewed, and managed together. It moves through the lifecycle of Import, Extract, Review, and Manage.",
-    "requiredConcepts": [
-      "DocSet",
-      "collection of documents",
-      "related documents",
-      "processed together",
-      "reviewed together",
-      "managed together",
-      "Import",
-      "Extract",
-      "Review",
-      "Manage",
-      "lease lifecycle"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-is-the-difference-between-import-review-manage-and-explore",
     "question": "What is the difference between Import, Review, Manage, and Explore?",
     "baselineResponse": "Import is used for uploading and organizing DocSets, Review is used for validating extraction results, Manage is used for finalized DocSets and integrations, and Explore is used for searching, reporting, and portfolio analysis.",
-    "requiredConcepts": [
-      "Import",
-      "upload documents",
-      "organize DocSets",
-      "Review",
-      "validate extraction",
-      "edit extracted values",
-      "Manage",
-      "finalized DocSets",
-      "integrations",
-      "Explore",
-      "search",
-      "reporting",
-      "portfolio analysis"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-is-ocr-in-mci",
     "question": "What is OCR in MCI?",
     "baselineResponse": "OCR converts scanned PDF documents into machine-readable text before AI extraction. OCR is required for image-based PDFs and directly impacts extraction accuracy.",
-    "requiredConcepts": [
-      "OCR",
-      "Optical Character Recognition",
-      "machine-readable text",
-      "scanned PDF",
-      "image-based PDF",
-      "searchable text",
-      "AI extraction",
-      "extraction accuracy"
-    ],
     "passingScore": 3
   },
   {
     "id": "when-should-i-re-run-ocr-or-extraction",
     "question": "When should I re-run OCR or extraction?",
     "baselineResponse": "Re-run OCR or extraction after changing document language, replacing documents, improving scan quality, correcting upload issues, or re-running OCR itself.",
-    "requiredConcepts": [
-      "re-run OCR",
-      "re-run extraction",
-      "change language",
-      "replace document",
-      "improve document quality",
-      "correct upload issues",
-      "unlock DocSet",
-      "resubmit for extraction"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-replace-a-document-after-upload",
     "question": "Can I replace a document after upload?",
     "baselineResponse": "Yes. Unlock the DocSet if necessary, use the Replace option in the Files tab, upload the new document version, and resubmit the DocSet for extraction.",
-    "requiredConcepts": [
-      "replace document",
-      "unlock DocSet",
-      "Files tab",
-      "Replace option",
-      "upload new version",
-      "resubmit for extraction",
-      "re-extraction required",
-      "other documents unaffected"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-do-i-export-extracted-data",
     "question": "How do I export extracted data?",
     "baselineResponse": "Export functionality is available from the Manage or Explore applications depending on permissions and project configuration. Users can select DocSets or search results, choose the Export option, select the desired format, and download the exported file.",
-    "requiredConcepts": [
-      "Manage application",
-      "Explore application",
-      "Export option",
-      "select DocSets",
-      "search and filters",
-      "export format",
-      "download exported file",
-      "permissions",
-      "project configuration"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-export-formats-are-supported",
     "question": "What export formats are supported?",
     "baselineResponse": "MCI supports exporting extracted data into formats configured for the project. Common formats include Excel (.xlsx), with additional structured output formats potentially available based on project configuration, permissions, and export templates.",
-    "requiredConcepts": [
-      "Excel",
-      ".xlsx",
-      "structured output",
-      "project configuration",
-      "user role",
-      "permissions",
-      "export templates",
-      "Project Administrator"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-is-contract-assistant",
     "question": "What is Contract Assistant?",
     "baselineResponse": "Contract Assistant is an AI-powered feature that answers questions about uploaded contracts using extracted information and original document content. It helps users locate contract clauses, terms, and information using natural language questions.",
-    "requiredConcepts": [
-      "AI-powered feature",
-      "uploaded contracts",
-      "extracted information",
-      "original document content",
-      "natural language questions",
-      "contract clauses",
-      "contract terms",
-      "source document context"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-is-collaboration-hub",
     "question": "What is Collaboration Hub?",
     "baselineResponse": "Collaboration Hub enables users to collaborate on document-related questions and review comments. Users can create discussion threads, assign questions, discuss and resolve issues, and track question status.",
-    "requiredConcepts": [
-      "Collaboration Hub",
-      "discussion threads",
-      "assign questions",
-      "team members",
-      "review comments",
-      "resolve issues",
-      "track status",
-      "open questions",
-      "resolved questions"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-do-i-assign-review-work",
     "question": "How do I assign review work?",
     "baselineResponse": "Review assignments are managed through project workflows and permissions configured by Project Administrators. Assignments may be direct, workflow-based, or self-assigned depending on project configuration.",
-    "requiredConcepts": [
-      "project workflows",
-      "Project Administrator",
-      "review assignments",
-      "Reviewers",
-      "assigned DocSets",
-      "workflow stages",
-      "direct assignment",
-      "workflow-based routing",
-      "self-assignment"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-do-user-roles-work-in-mci",
     "question": "How do user roles work in MCI?",
     "baselineResponse": "User access is controlled through role-based permissions assigned by administrators. Roles determine application access, permitted actions, visibility, and may differ across projects.",
-    "requiredConcepts": [
-      "role-based permissions",
-      "administrator assigned",
-      "Import",
-      "Review",
-      "Manage",
-      "Explore",
-      "application access",
-      "user actions",
-      "project-specific roles",
-      "hierarchical roles"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-multiple-users-review-the-same-docset",
     "question": "Can multiple users review the same DocSet?",
     "baselineResponse": "Yes. Multiple reviewers can participate in reviewing the same DocSet depending on project workflow configuration. Review may occur across multiple stages or by multiple reviewers.",
-    "requiredConcepts": [
-      "multiple reviewers",
-      "same DocSet",
-      "workflow configuration",
-      "review stages",
-      "quality check",
-      "final approval",
-      "simultaneous review",
-      "sequential review",
-      "Project Administrator"
-    ],
     "passingScore": 3
   },
   {
     "id": "does-mci-maintain-an-audit-trail",
     "question": "Does MCI maintain an audit trail?",
     "baselineResponse": "Yes. MCI records review activity, extracted data changes, confirmations, uploads, deletions, workflow transitions, and status changes to support auditability, transparency, and accountability.",
-    "requiredConcepts": [
-      "audit trail",
-      "change history",
-      "who made changes",
-      "when changes were made",
-      "before and after values",
-      "confirmation actions",
-      "document uploads",
-      "document deletions",
-      "workflow transitions",
-      "status changes",
-      "audit reports"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-search-across-all-contracts",
     "question": "Can I search across all contracts?",
     "baselineResponse": "Yes. The Explore application allows searching across contracts using extracted metadata, keywords, filters, and specific search criteria. Results can be filtered, sorted, and exported.",
-    "requiredConcepts": [
-      "Explore application",
-      "search across contracts",
-      "extracted metadata",
-      "keywords",
-      "filters",
-      "date ranges",
-      "tenant name",
-      "property",
-      "Extract values",
-      "document status",
-      "export results"
-    ],
     "passingScore": 3
   },
   {
     "id": "can-i-customize-extraction-templates",
     "question": "Can I customize extraction templates?",
     "baselineResponse": "Yes. Extraction templates, ExtractSets, validation rules, guidelines, and included data points can be customized based on project requirements by authorized users or MRI teams.",
-    "requiredConcepts": [
-      "custom extraction templates",
-      "ExtractSets",
-      "validation rules",
-      "guidelines",
-      "data points",
-      "authorized users",
-      "MRI teams",
-      "Project Administrator",
-      "project requirements"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-does-mci-integrate-with-pmx",
     "question": "How does MCI integrate with PMX?",
     "baselineResponse": "MCI synchronizes extracted and reviewed lease data with PMX when configured. Confirmed lease information is sent to PMX to support property management workflows.",
-    "requiredConcepts": [
-      "PMX",
-      "Property Management X",
-      "lease data synchronization",
-      "reviewed data",
-      "confirmed Extracts",
-      "lease dates",
-      "rent amounts",
-      "tenant information",
-      "property details",
-      "workflow state",
-      "integration configured"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-happens-if-pmx-integration-fails",
     "question": "What happens if PMX integration fails?",
     "baselineResponse": "Failed integrations are logged in MCI. Users can review error details, correct issues, and retry synchronization. The DocSet remains available and is not lost.",
-    "requiredConcepts": [
-      "integration log",
-      "error details",
-      "failed integration",
-      "retry synchronization",
-      "DocSet retained",
-      "missing required fields",
-      "data format mismatch",
-      "authentication issues",
-      "connection issues",
-      "PMX validation rules"
-    ],
     "passingScore": 3
   },
   {
     "id": "how-is-mci-billed",
     "question": "How is MCI billed?",
     "baselineResponse": "MCI billing depends on an organization's commercial agreement and may vary based on licensing model, document volume, and contracted services.",
-    "requiredConcepts": [
-      "commercial agreement",
-      "licensing model",
-      "subscription-based pricing",
-      "usage-based pricing",
-      "document volume",
-      "processed pages",
-      "contracted services",
-      "custom integrations",
-      "professional services",
-      "Account Manager"
-    ],
     "passingScore": 3
   },
   {
     "id": "what-browsers-are-supported",
     "question": "What browsers are supported?",
     "baselineResponse": "MCI supports current versions of modern web browsers including Google Chrome and Microsoft Edge. Users should keep browsers updated for optimal performance and security.",
-    "requiredConcepts": [
-      "Google Chrome",
-      "Microsoft Edge",
-      "supported browsers",
-      "latest version",
-      "browser updates",
-      "performance",
-      "security",
-      "clear cache",
-      "disable extensions"
-    ],
     "passingScore": 3
   },
   {
     "id": "where-can-i-find-product-documentation-and-release-notes",
     "question": "Where can I find product documentation and release notes?",
     "baselineResponse": "Product documentation, Help Center articles, user guides, and release notes are available through the MRI Help Center, organization documentation portals, and in-app help resources.",
-    "requiredConcepts": [
-      "MRI Help Center",
-      "product documentation",
-      "release notes",
-      "user guides",
-      "FAQs",
-      "troubleshooting guides",
-      "organization documentation portal",
-      "in-app help",
-      "Contract Intelligence",
-      "MCI articles"
-    ],
     "passingScore": 3
   }
 ]
-
-
-
-  

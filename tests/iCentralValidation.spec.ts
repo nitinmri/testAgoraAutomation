@@ -1,7 +1,7 @@
 import { test, expect } from '../utils/fixtures';
 import { generalElements } from '../pages/generalElements';
 import { getGoldenQuestions } from '../data/goldenQuestions';
-import { evaluateAnswer } from '../utils/answerEvaluator';
+import { evaluateBaselineAnswer } from '../utils/answerEvaluator';
 import { restoreOrLogin } from '../utils/sessionManager';
 import { retryOnExecutionError } from '../utils/executionRetry';
 
@@ -15,7 +15,7 @@ test.describe('Ask Agora golden questions for Investment Central', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('iCentral').slice(0,1).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('iCentral').entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
         const askAgora = new generalElements(page);
@@ -24,7 +24,7 @@ test.describe('Ask Agora golden questions for Investment Central', () => {
         await page.waitForTimeout(1000)
         const actualAnswer = await askAgora.askQuestion(goldenQuestion.question);
         await takeScreenshot('answer-rendered');
-        const evaluation = await evaluateAnswer(goldenQuestion, actualAnswer);
+        const evaluation = await evaluateBaselineAnswer(goldenQuestion, actualAnswer);
         return { actualAnswer, evaluation };
       }, async () => {
         if (!page.isClosed()) await restoreOrLogin(page);
@@ -33,7 +33,7 @@ test.describe('Ask Agora golden questions for Investment Central', () => {
       console.log(`Question: ${goldenQuestion.question}`);
       console.log(`Expected response: ${goldenQuestion.expectedAnswer}`);
       console.log(`Received response: ${actualAnswer}`);
-      console.log(`Score: ${evaluation.score}/${Object.keys(evaluation.criteria).length}`);
+      console.log(`Score: ${evaluation.score}`);
       console.log('Token usage:', evaluation.usage);
       await testInfo.attach('answer-evaluation.json', {
         body: JSON.stringify(
@@ -44,9 +44,7 @@ test.describe('Ask Agora golden questions for Investment Central', () => {
             score: evaluation.score,
             passingScore: goldenQuestion.passingScore,
             passed: evaluation.passed,
-            criteria: evaluation.criteria,
             review: evaluation.review,
-            missingConcepts: evaluation.missingConcepts,
             evidence: evaluation.evidence,
             tokenUsage: evaluation.usage ?? null,
           },
@@ -56,9 +54,6 @@ test.describe('Ask Agora golden questions for Investment Central', () => {
         contentType: 'application/json',
       });
 
-      expect(evaluation.score, evaluation.review).toBeGreaterThanOrEqual(
-        goldenQuestion.passingScore,
-      );
       expect(evaluation.passed, evaluation.review).toBe(true);
     });
   }

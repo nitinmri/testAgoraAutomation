@@ -11,6 +11,17 @@ export type AnswerEvaluation = {
   usage?: TokenUsage;
 };
 
+export type BaselineAnswerScore = 1 | 2 | 3 | 'N/A';
+
+export type BaselineAnswerEvaluation = {
+  score: BaselineAnswerScore;
+  passed: boolean;
+  review: string;
+  evidence: string[];
+  hallucinatedClaims: string[];
+  usage?: TokenUsage;
+};
+
 export type TokenUsage = {
   promptTokens: number;
   completionTokens: number;
@@ -73,6 +84,20 @@ Rules:
 Return only JSON matching the response schema.
 `;
 
+const BASELINE_SYSTEM_PROMPT = `
+You evaluate a candidate answer against the supplied baseline answer for the same question.
+
+Judge whether the candidate gives behaviorally equivalent guidance: it should lead the user to the same understanding, action, or outcome as the baseline. Do not compare wording, sentence structure, or keyword overlap. Accept concise answers and paraphrases when they preserve the baseline's important meaning. Do not require incidental details that do not change the behavior or outcome.
+
+Use exactly one score:
+- "3": behaviorally matches the baseline and preserves its important guidance. Different wording is fine.
+- "2": partly matches, but omits or weakens important guidance in a way that reduces completeness; it does not materially contradict the baseline.
+- "1": unrelated, incorrect, or materially contradictory to the baseline.
+- "N/A": the candidate only requests clarification instead of answering the question. Do not use N/A for a direct answer that also asks an optional follow-up question.
+
+As part of the same scoring judgment, check the candidate's factual claims against the baseline. Identify specific material claims that contradict the baseline or introduce unsupported facts, requirements, limitations, or instructions. Do not call a paraphrase, harmless explanation, or immaterial extra detail a hallucination. A material hallucination makes the answer incorrect and should result in "1"; account for its impact when selecting the score rather than applying a separate score adjustment afterward. Include the detected claims in hallucinatedClaims. The review must explain both the behavioral match and any hallucinations, or explicitly say no material hallucinations were detected. Cite concise evidence from the candidate answer. Return only JSON matching the response schema.
+`;
+
 const createOpenAIClient = () => {
   const azureApiKey = process.env.AZURE_OPENAI_API_KEY;
   const azureEndpoint = process.env.AZURE_OPENAI_ENDPOINT;
@@ -113,11 +138,12 @@ const evaluateWithAI = async (
   actualAnswer: string,
 ): Promise<AIValidationResult> => {
   const client = createOpenAIClient();
+  const requiredConcepts = goldenQuestion.requiredConcepts ?? [];
 
   const payload = {
     question: goldenQuestion.question,
     expectedAnswer: goldenQuestion.expectedAnswer,
-    requiredConcepts: goldenQuestion.requiredConcepts,
+    requiredConcepts,
     passingScore: goldenQuestion.passingScore,
     actualAnswer,
   };
@@ -242,7 +268,7 @@ export async function evaluateAnswer(
   const missingConcepts = aiResult.missingConcepts.length > 0
     ? aiResult.missingConcepts
     : Array.from(new Set(
-        goldenQuestion.requiredConcepts.filter(
+        (goldenQuestion.requiredConcepts ?? []).filter(
           (concept) => !aiResult.matchedConcepts.includes(concept) && !aiResult.partialConcepts.includes(concept),
         ),
       ));
@@ -261,5 +287,102 @@ export async function evaluateAnswer(
     missingConcepts,
     evidence,
     usage: aiResult.usage,
+  };
+}
+
+export async function evaluateBaselineAnswer(
+  goldenQuestion: GoldenQuestion,
+  actualAnswer: string,
+): Promise<BaselineAnswerEvaluation> {
+  const client = createOpenAIClient();
+  const prompt = `
+Compare the candidate answer with the baseline answer for the question. Judge semantic meaning, not exact wording. Use only the baseline answer as the reference; do not use or infer a separate checklist.
+
+Question:
+${goldenQuestion.question}
+
+Baseline answer:
+${goldenQuestion.expectedAnswer}
+
+Candidate answer:
+${actualAnswer}
+
+Choose exactly one score:
+3 = same answer in meaning, including the important information from the baseline; paraphrasing is acceptable.
+2 = partially matches the baseline but omits or weakens important information, without a material contradiction.
+1 = does not match, is unrelated, or materially contradicts the baseline.
+N/A = asks the user for clarification instead of providing a substantive answer.
+
+While making that same score decision, identify specific material claims that contradict the baseline or introduce unsupported facts, requirements, limitations, or instructions. Do not flag harmless explanation or equivalent paraphrasing. If a material hallucination changes the answer's correctness, reflect that in both the score and review. Return the score as one of the strings "3", "2", "1", or "N/A", a review that explains the behavioral comparison and hallucination check, brief evidence from the candidate answer, and a hallucinatedClaims array (empty when none are found).
+`;
+
+  const response = await client.chat.completions.create({
+    model: getEvaluationModel(),
+    messages: [
+      {
+        role: 'system',
+        content: BASELINE_SYSTEM_PROMPT,
+      },
+      { role: 'user', content: prompt },
+    ],
+    response_format: {
+      type: 'json_schema',
+      json_schema: {
+        name: 'baseline_answer_evaluation',
+        strict: true,
+        schema: {
+          type: 'object',
+          properties: {
+            score: { type: 'string', enum: ['3', '2', '1', 'N/A'] },
+            review: { type: 'string' },
+            evidence: { type: 'array', items: { type: 'string' } },
+            hallucinatedClaims: { type: 'array', items: { type: 'string' } },
+          },
+          required: ['score', 'review', 'evidence', 'hallucinatedClaims'],
+          additionalProperties: false,
+        },
+      },
+    },
+  });
+
+  const responseText = response.choices[0]?.message?.content;
+  if (!responseText) {
+    throw new Error('OpenAI returned an empty baseline answer evaluation response.');
+  }
+
+  if (response.choices[0]?.finish_reason === 'length') {
+    throw new Error('OpenAI truncated the baseline answer evaluation response before returning complete JSON.');
+  }
+
+  let parsed: { score: string; review: string; evidence: string[]; hallucinatedClaims: string[] };
+  try {
+    parsed = JSON.parse(responseText) as typeof parsed;
+  } catch (error) {
+    throw new Error(
+      `OpenAI returned invalid JSON for baseline answer evaluation: ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+
+  if (!['3', '2', '1', 'N/A'].includes(parsed.score)) {
+    throw new Error(`OpenAI returned an unsupported baseline answer score: ${parsed.score}`);
+  }
+
+  const score: BaselineAnswerScore = parsed.score === 'N/A'
+    ? 'N/A'
+    : Number(parsed.score) as 1 | 2 | 3;
+
+  return {
+    score,
+    passed: typeof score === 'number' && score >= goldenQuestion.passingScore,
+    review: parsed.review,
+    evidence: parsed.evidence,
+    hallucinatedClaims: parsed.hallucinatedClaims,
+    usage: response.usage
+      ? {
+          promptTokens: response.usage.prompt_tokens,
+          completionTokens: response.usage.completion_tokens,
+          totalTokens: response.usage.total_tokens,
+        }
+      : undefined,
   };
 }
