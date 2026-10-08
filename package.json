@@ -15,7 +15,8 @@
     "elApply": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=elApply npx playwright test tests/elApply.spec.ts --project=chromium",
     "docBot": "cross-env AGORA_ENV=icentral npx playwright test tests/docBotValidation.spec.ts --project=chromium",
     "secureSign": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=secureSign npx playwright test tests/secureSignEvaludation.spec.ts --project=chromium",
-    "contractintelligence": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=contractintelligence npx playwright test tests/contractintelligenceValidation.spec.ts --project=chromium"
+    "contractintelligence": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=contractintelligence npx playwright test tests/contractintelligenceValidation.spec.ts --project=chromium",
+    "testForInfosec" : "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=contractintelligence npx playwright test tests/testForInfoSec.spec.ts --project=chromium --workers=6"
   },
   "keywords": [],
   "author": "",

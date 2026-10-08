@@ -15,7 +15,7 @@ test.describe('Ask Agora golden questions for Angus', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('angus').slice(0,2).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('angus').entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
         const askAgora = new generalElements(page);

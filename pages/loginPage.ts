@@ -66,12 +66,20 @@ readonly signInWithMRIButton='button[id="mriLogin"]'
 
     // Store session data as needed (e.g., in a file or variable)
     // Example: Write to a JSON file
-    fs.writeFileSync('sessionData.json', JSON.stringify({ cookies, localStorage, sessionStorage }));
+    fs.writeFileSync('sessionData.json', JSON.stringify({
+      environment: loginCreds.environment,
+      cookies,
+      localStorage,
+      sessionStorage,
+    }));
     return { cookies, localStorage, sessionStorage };
   }
 
  async restoreSession() {
   const session = JSON.parse(fs.readFileSync('sessionData.json','utf-8'));
+  if (session.environment !== loginCreds.environment) {
+    throw new Error(`Saved session is for "${session.environment ?? 'an unknown environment'}", not "${loginCreds.environment}".`);
+  }
 
   // Restore cookies
   await this.page.context().addCookies(session.cookies);
