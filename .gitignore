@@ -7,9 +7,8 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-/sessionData.json/
 allure-results/
 allure-results/ 
-sessionData/
+sessionData.json
 test-results/
 allure-report/

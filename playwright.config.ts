@@ -16,14 +16,14 @@ export default defineConfig({
    timeout:180000,
   testDir: './tests',
   globalSetup: './utils/globalSetup.ts',
-  /* Run tests in files in parallel */
-  fullyParallel: false,
+  /* Run each test independently across workers. */
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Selective execution retries are handled by the test helper. */
   retries: 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  /* Keep CI runs parallel while limiting resource usage. */
+  workers: process.env.CI ? 6 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
  reporter: [
   ['list'],
@@ -38,7 +38,7 @@ export default defineConfig({
     screenshot: 'off',
      video:'retain-on-failure', 
    viewport:{width: 1920, height: 1080},
- headless: false, // Set to false if you want to see the browser UI during tests
+ headless: true, // Set to false if you want to see the browser UI during tests
  ignoreHTTPSErrors: true, // for self-signed certs
  // proxy: { server: 'http://proxy.com:3128' }, // if needed
 
