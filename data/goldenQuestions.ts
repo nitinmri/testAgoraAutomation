@@ -1,4 +1,5 @@
 import angusGoldenQuestionRecords from './angusGoldenQuestions.json';
+import araGoldenQuestionRecords from './araGoldenQuestions.json';
 import secureSignGoldenQuestionRecords from './secureSignGoldenQuestions.json';
 import elConnectGoldenQuestionRecords from './elConnectGoldenQuestions.json';
 import elApplyGoldenQuestionRecords from './elApplyGoldenQuestions.json'
@@ -43,6 +44,7 @@ const mapGoldenQuestions = (
 
 const goldenQuestionRecords = {
   angus: angusGoldenQuestionRecords,
+  ara: araGoldenQuestionRecords,
   secureSign: secureSignGoldenQuestionRecords,
   elConnect: elConnectGoldenQuestionRecords,
   elApply:elApplyGoldenQuestionRecords,

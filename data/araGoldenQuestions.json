@@ -1,0 +1,182 @@
+[
+    {
+        "id": "where-do-i-start-an-arrears-action",
+        "question": "Where do I start an arrears action?",
+        "baselineResponse": "From the Homepage, select Accommodation Rent Accounting, then select My rent accounts. Open the required account using its Rent account ref or Rent account id.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-create-an-arrears-action",
+        "question": "How do I create an arrears action?",
+        "baselineResponse": "On the Rent account summary page, scroll to the \"Arrears actions\" section and select Create arrears action. When the confirmation message appears, select OK.",
+        "passingScore": 3
+    },
+    {
+        "id": "what-inormation-is-mandatory-when-creating-an-arrears-action",
+        "question": "What information is mandatory when creating an arrears action?",
+        "baselineResponse": "You must enter the Arrears Action date and select an Arrears Action Type.",
+        "passingScore": 3
+    },
+    {
+        "id": "can-i-edit-an-existing-arrears-action",
+        "question": "Can I edit an existing arrears action?",
+        "baselineResponse": "Yes. Select \"Edit\", make the required changes on the Rent arrears action screen, then select Save.",
+        "passingScore": 3
+    },
+    {
+        "id": "when-shold-i-pdate-an-arrears-action",
+        "question": "When should I update an arrears action?",
+        "baselineResponse": "An Arrears Action can be updated when a suitable outcome has been achieved or when the target date has been reached.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-close-an-arrears-action",
+        "question": "How do I close an arrears action?",
+        "baselineResponse": "In the Status column, select the down arrow for the relevant Arrears Action record, then select \"Closed\". A message confirms that the status has been updated.",
+        "passingScore": 3
+    },
+    {
+        "id": "what-happens-when-an-open-arrears-action-is-assigned-to-me",
+        "question": "What happens when an open arrears action is assigned to me?",
+        "baselineResponse": "An urgent action appears on the Dashboard to let you know that an open Arrears Action is assigned to you.",
+        "passingScore": 3
+    },
+    {
+        "id": "what-happens-when-the-target-date-is-reached-or-overde",
+        "question": "What happens when the target date is reached or overdue?",
+        "baselineResponse": "An urgent action appears to advise you that the target date has been reached or is overdue.",
+        "passingScore": 3
+    },
+    {
+        "id": "what-does-the-open-arrears-actions-widget-show",
+        "question": "What does the Open arrears actions widget show?",
+        "baselineResponse": "The Open arrears actions widget lists rent accounts with an open action and shows the type of action.",
+        "passingScore": 3
+    },
+    {
+        "id": "what-does-the-rent-accont-arrears-actions-with-ntq-widget-show",
+        "question": "What does the Rent Account Arrears Actions with NTQ widget show?",
+        "baselineResponse": "It shows open Arrears Actions where a Notice to Quit has been served.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-record-a-temporary-accommodation-placement",
+        "question": "How do I record a temporary accommodation placement?",
+        "baselineResponse": "In the Accommodation Placement section of the \"Case Summary\", select \"Record accommodation placement\". Set Usage to Temporary Accommodation, complete the relevant accommodation details, enter the start and end dates, complete the address and any bond or deposit information, and then select Save.",
+        "passingScore": 3
+    },
+    {
+        "id": "can-i-enter-a-temporary-accommodation-address-manally",
+        "question": "Can I enter a temporary accommodation address manually?",
+        "baselineResponse": "Yes. Use \"Enter address\" manually. Either the house name or house number is required, and the postcode is mandatory.",
+        "passingScore": 3
+    },
+    {
+        "id": "when-isn-t-ind-address-available",
+        "question": "When isn't \"Find Address\" available?",
+        "baselineResponse": "Find Address becomes available after a valid postcode has been entered. Select it, then choose the required property from the list.",
+        "passingScore": 3
+    },
+    {
+        "id": "when-can-i-enter-bond-details",
+        "question": "When can I enter bond details?",
+        "baselineResponse": "The bond amount and bond end date fields are enabled when \"Is there a bond against the property?\" is set to \"Yes\".",
+        "passingScore": 3
+    },
+    {
+        "id": "when-can-i-enter-a-deposit-amont",
+        "question": "When can I enter a deposit amount?",
+        "baselineResponse": "The deposit amount field is enabled when Has the deposit been put into the national deposit scheme is set to \"Yes\".",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-set-p-a-new-payment-plan",
+        "question": "How do I set up a new payment plan?",
+        "baselineResponse": "On the Rent Account summary, click the \"Add payment plan\" button in the \"Payment plans\" section. You will then be prompted for a frequency, amount, start date and end date (optional).",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-view-the-charge-schedles-or-an-accont",
+        "question": "How do I view the charge schedules for an account?",
+        "baselineResponse": "Charge schedules for a rent account can be viewed by clicking the \"Charge schedules\" tab. You may also add/edit them here too.",
+        "passingScore": 3
+    },
+    {
+        "id": "what-are-labels-sed-or",
+        "question": "What are labels used for?",
+        "baselineResponse": "Labels are used to match suitable accommodation with rent accounts when creating placements.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-add-a-label-to-a-rent-accont",
+        "question": "How do I add a label to a rent account?",
+        "baselineResponse": "On the Rent Account summary, select the label from the Labels list and click the \"Assign label\" button.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-add-a-label-to-accommodation",
+        "question": "How do I add a label to accommodation?",
+        "baselineResponse": "On the Accommodation overview, select the label from the Labels list and click the \"Assign label\" button.",
+        "passingScore": 3
+    },
+    {
+        "id": "can-i-add-new-labels",
+        "question": "Can I add new labels?",
+        "baselineResponse": "Labels can be added (or removed) under the \"Labels\" tab in the \"Configuration\" section of Accommodation Rent Accounting. Note: you may need appropriate permissions to do this.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-add-new-accommodation",
+        "question": "How do I add new accommodation?",
+        "baselineResponse": "New accommodation is added in the \"Accommodation database\" (not ARA). From the Homepage, select \"Accommodation Database\", then select \"Add accommodation\"",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-add-new-service-providers",
+        "question": "How do I add new service providers?",
+        "baselineResponse": "New service providers are added in the \"Accommodation database\" (not ARA). From the Homepage, select \"Accommodation Database\", then select \"Add service provider\"",
+        "passingScore": 3
+    },
+    {
+        "id": "can-i-manally-record-a-payment",
+        "question": "Can I manually record a payment?",
+        "baselineResponse": "Yes, on the Rent Account summary, click the \"Add payment\" button in the Customer details section.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-assign-a-rent-accont",
+        "question": "How do I assign a rent account?",
+        "baselineResponse": "On the Rent Account summary, click the \"Reassign\" button in the Customer details section, and select the relevant officer. When asked to confirm, select OK. A confirmation message will be displayed when the case has been assigned.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-nassign-a-case",
+        "question": "How do I unassign a case?",
+        "baselineResponse": "From the \"Case summary\" page, open the Case assigned to by clicking the \"Reassign\" button, and select \"Nobody (Unassigned)\". When asked to confirm, select OK. A message will confirm that the case has been unassigned.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-end-a-placement",
+        "question": "How do I end a placement?",
+        "baselineResponse": "On the Rent Account summary in the \"Current accommodation placement\" section, either click the \"Edit\" link next to the placement and add the end date, or use the \"End and Copy\" link if the current placement is ending but the household are remaining in the same accommodation.",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-create-a-new-rent-accont",
+        "question": "How do I create a new rent account?",
+        "baselineResponse": "Open the customer record and select Create rent account. Select the local authority, enter the account reference, complete the housing benefit information and bedrooms required, then click \"Create rent account\"",
+        "passingScore": 3
+    },
+    {
+        "id": "how-do-i-pdate-a-cstomer-s-hosing-beneit-details",
+        "question": "How do I update a customer's housing benefit details?",
+        "baselineResponse": "On the Rent Account summary in the \"Customer details\" section, click the \"Edit\" button at the top.",
+        "passingScore": 3
+    },
+    {
+        "id": "why-are-my-rent-acconts-ot-o-date",
+        "question": "Why are my rent accounts out of date?",
+        "baselineResponse": "There may have been an issue with your data import. Please contact MRI Support.",
+        "passingScore": 3
+    }
+]
