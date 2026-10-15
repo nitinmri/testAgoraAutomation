@@ -73,7 +73,7 @@ loginEntry: {
     },
   },
    icentral: {
-    url: 'https://docbot-sandbox.devtest.mrisoftware.com/?product=investmentcentral',
+    url: 'https://dev.formsintelligence.mrisoftware.com/projects',
 loginEntry: {
       type: 'email',
       emailSelector: 'input[id="email"]',
@@ -88,11 +88,27 @@ loginEntry: {
       passwordField:'input[id="password-field"]',
       submitSelector: 'button[id="mriLogin"]',
     },
+  },
+  docbot: {
+    url: 'https://docbot-dev.devtest.mrisoftware.com/?product=contractintelligence',
+    loginEntry: {
+      type: 'email',
+      emailSelector: 'input[id="email"]',
+      submitSelector: '[id="loginButton"]',
+    },
+  },
+  foundryprompts: {
+    url: 'https://dev.formsintelligence.mrisoftware.com/projects',
+loginEntry: {
+        type: 'email',
+      emailSelector: 'input[id="email"]',
+      submitSelector: '[id="loginButton"]',
+    },
   }
 } satisfies Record<string, { url: string; loginEntry: LoginEntry }>;
 
 type Environment = keyof typeof products;
-const environmentName = (process.env.AGORA_ENV || 'contractintelligence').toLowerCase();
+const environmentName = (process.env.AGORA_ENV || 'docbot').toLowerCase();
 if (!Object.prototype.hasOwnProperty.call(products, environmentName)) {
   throw new Error(`Unsupported AGORA_ENV "${environmentName}". Configure its URL and login entry in data/loginCreds.ts.`);
 }

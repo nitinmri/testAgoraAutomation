@@ -23,6 +23,7 @@ readonly signInButtonTwo='button[id="loginPopupContinue"]'
 readonly usernameField='input[id="username"]'
 readonly passwordFieldNew='input[id="password-field"]'
 readonly signInWithMRIButton='button[id="mriLogin"]'
+readonly formsintelligenceLogo='a[class="title-bar-link"]'
   constructor(page: Page) {
     this.page = page;
 
@@ -53,9 +54,7 @@ readonly signInWithMRIButton='button[id="mriLogin"]'
     await this.page.fill(this.passwordField, loginCreds.password);
     await this.page.click(this.signInButtonForOkta);
     await this.page.locator(this.sendPushButon).click();
-    await this.page.waitForTimeout(3000);
-
-    await this.page.waitForSelector('.minimized-container', { state: 'visible' });
+    await this.waitForLoginSuccess();
       /* get session cookies*/
     // Get session cookies
     const cookies = await this.page.context().cookies();
@@ -73,6 +72,12 @@ readonly signInWithMRIButton='button[id="mriLogin"]'
       sessionStorage,
     }));
     return { cookies, localStorage, sessionStorage };
+  }
+
+  private async waitForLoginSuccess() {
+      await this.page.locator('.minimized-container:visible, a.title-bar-link:visible, div[class="input-row"] textarea:visible')
+      .first()
+      .waitFor({ state: 'visible' });
   }
 
  async restoreSession() {
@@ -96,7 +101,7 @@ readonly signInWithMRIButton='button[id="mriLogin"]'
   await this.page.reload();
 
   // Confirm login was successful
-  await this.page.waitForSelector('.minimized-container', { state: 'visible' });
+  await this.waitForLoginSuccess();
 
 }
 

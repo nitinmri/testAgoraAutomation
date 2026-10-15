@@ -298,9 +298,6 @@ export async function evaluateBaselineAnswer(
   const prompt = `
 Compare the candidate answer with the baseline answer for the question. Judge semantic meaning, not exact wording. Use only the baseline answer as the reference; do not use or infer a separate checklist.
 
-Question:
-${goldenQuestion.question}
-
 Baseline answer:
 ${goldenQuestion.expectedAnswer}
 

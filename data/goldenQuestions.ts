@@ -5,6 +5,7 @@ import elApplyGoldenQuestionRecords from './elApplyGoldenQuestions.json'
 import elBroadcastGoldenQuestionRecords from './elBroadcastGoldenQuestions.json'
 import icGoldenQuestionRecords from './icGoldenQuestions.json'
 import contractIntelligenceGoldenQuestionRecords from './contractIntelligenceGoldenQuestions.json'
+import foundryPromptRecords from './foundry_test_prompts_automation.json'
 export type GoldenQuestion = {
   id: string;
   question: string;
@@ -47,7 +48,8 @@ const goldenQuestionRecords = {
   elApply:elApplyGoldenQuestionRecords,
   elBroadcast:elBroadcastGoldenQuestionRecords,
   iCentral:icGoldenQuestionRecords,
-  cIntelligence:contractIntelligenceGoldenQuestionRecords
+  cIntelligence:contractIntelligenceGoldenQuestionRecords,
+  foundryPrompts:foundryPromptRecords
 };
 
 export type GoldenQuestionProduct = keyof typeof goldenQuestionRecords;

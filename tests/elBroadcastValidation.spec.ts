@@ -38,6 +38,7 @@ test.describe('Ask Agora golden questions for ElBroadCast', () => {
       await testInfo.attach('answer-evaluation.json', {
         body: JSON.stringify(
           {
+            id: goldenQuestion.id,
             question: goldenQuestion.question,
             expectedAnswer: goldenQuestion.expectedAnswer,
             actualAnswer,

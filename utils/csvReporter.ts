@@ -4,6 +4,7 @@ import type { Reporter, TestCase, TestResult } from '@playwright/test/reporter';
 import type { BaselineAnswerScore } from './answerEvaluator';
 
 type Evaluation = {
+  id: string;
   question: string;
   expectedAnswer: string;
   actualAnswer: string;
@@ -12,12 +13,16 @@ type Evaluation = {
   score: number | BaselineAnswerScore;
 };
 
+type ReportRow = {
+  evaluation: Evaluation;
+};
+
 function csvCell(value: unknown): string {
   return `"${String(value ?? '').replace(/"/g, '""')}"`;
 }
 
 export default class CsvReporter implements Reporter {
-  private rows = new Map<string, Evaluation>();
+  private rows = new Map<string, ReportRow>();
 
   async onTestEnd(test: TestCase, result: TestResult): Promise<void> {
     const attachment = result.attachments.find(
@@ -40,7 +45,9 @@ export default class CsvReporter implements Reporter {
       return;
     }
 
-    this.rows.set(test.id, JSON.parse(content) as Evaluation);
+    this.rows.set(test.id, {
+      evaluation: JSON.parse(content) as Evaluation,
+    });
   }
 
   async onEnd(): Promise<void> {
@@ -49,6 +56,7 @@ export default class CsvReporter implements Reporter {
     await fs.mkdir(path.dirname(outputPath), { recursive: true });
 
     const header = [
+      'ID',
       'questions',
       'Expected Answer',
       'Generated Answer',
@@ -57,14 +65,15 @@ export default class CsvReporter implements Reporter {
       'review',
     ];
 
-    const lines = [...this.rows.values()].map((row) =>
+    const lines = [...this.rows.values()].map(({ evaluation }) =>
       [
-        row.question,
-        row.expectedAnswer,
-        row.actualAnswer,    
-        row.score,
-         row.passed,
-          row.review,  
+        evaluation.id,
+        evaluation.question,
+        evaluation.expectedAnswer,
+        evaluation.actualAnswer,
+        evaluation.score,
+        evaluation.passed,
+        evaluation.review,
       ]
         .map(csvCell)
         .join(','),
@@ -72,7 +81,7 @@ export default class CsvReporter implements Reporter {
 
     await fs.writeFile(
       outputPath,
-      [header.map(csvCell).join(','), ...lines].join('\n') + '\n',
+      '\uFEFF' + [header.map(csvCell).join(','), ...lines].join('\n') + '\n',
       'utf8',
     );
 

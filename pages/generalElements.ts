@@ -27,6 +27,7 @@ export class generalElements{
   readonly docBotresponseBodyContainer='app-botmessage div[class="message-content"]'
 readonly docBotSubmitButton='button[class="submit-button"]'
   readonly inputForDocNot='div[class="input-row"] textarea'
+readonly askAgorabutton='ask-ai-sparkle-button[id="sparkle-button-container"]'
 
   constructor(page: Page) {
     this.page = page;
@@ -71,21 +72,34 @@ readonly docBotSubmitButton='button[class="submit-button"]'
   }
   
   async askQuestionFordocBot(question: string): Promise<string> {
-    const modal =  await this.page.locator(this.docBotresponseBodyContainer)
+    const responses = this.page.locator(this.docBotresponseBodyContainer);
+    const responseCountBeforeSubmit = await responses.count();
+    const response = responses.nth(responseCountBeforeSubmit);
     await this.page.locator(this.inputForDocNot).fill(question);
     await expect(this.page.locator(this.docBotSubmitButton)).toBeEnabled();
     await this.page.locator(this.docBotSubmitButton).click();
 
-    await Promise.race([
-      modal.waitFor({ state: 'visible', timeout: 60_000 }).catch(() => undefined),
-    ]);
+    await response.waitFor({ state: 'visible', timeout: 60_000 });
 
-    if (await modal.isVisible()) {
-      await this.page.waitForTimeout(5000)
-      const answerText = (await modal.innerText()).trim();
-      expect(answerText, 'Ask Agora did not render an answer').not.toBe('');
-      return answerText;
-    }
-    throw new Error('Ask Agora rendered neither an answer nor an error response.');
+    await expect(response).not.toHaveText('', { timeout: 60_000 });
+    await this.page.waitForTimeout(5000);
+    const answerText = (await response.innerText()).trim();
+    expect(answerText, 'DocBot did not render an answer').not.toBe('');
+    return answerText;
   }
+  async OpenAskAgoraForFormsIntelligence(){
+    await expect(this.page.locator(this.askAgorabutton)).toBeVisible();
+    await this.page.locator(this.askAgorabutton).click();
+    const modal = this.page.locator(this.askAgoraModal);
+    try {
+      await modal.waitFor({ state: 'visible', timeout: 5000 });
+      return;
+    } catch {
+      const minimizedWidget = this.page.locator(this.bottomRightWidget);
+      await expect(minimizedWidget).toBeVisible();
+      await minimizedWidget.click();
+      await expect(modal).toBeVisible();
+    }
+  }
+
 }
