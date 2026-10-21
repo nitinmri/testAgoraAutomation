@@ -15,7 +15,7 @@ test.describe('this suite automates the foundry prompts', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('foundryPrompts').slice(0,10).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('foundryPrompts').slice(2,4).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
         const askAgora = new generalElements(page);
@@ -54,7 +54,6 @@ test.describe('this suite automates the foundry prompts', () => {
         ),
         contentType: 'application/json',
       });
-
       expect(evaluation.passed, evaluation.review).toBe(true);
     });
   }

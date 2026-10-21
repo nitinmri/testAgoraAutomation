@@ -5,7 +5,7 @@ import { evaluateBaselineAnswer } from '../utils/answerEvaluator';
 import { restoreOrLogin } from '../utils/sessionManager';
 import { retryOnExecutionError } from '../utils/executionRetry';
 
-test.describe('DocBot golden questions for Contract Intelligence', () => {
+test.describe('DocBot golden questions for ara', () => {
   test.beforeEach(async ({ page, takeScreenshot }) => {
     await retryOnExecutionError(async () => {
       await restoreOrLogin(page);
@@ -15,7 +15,7 @@ test.describe('DocBot golden questions for Contract Intelligence', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('cIntelligence').slice(0,10).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('repairs').entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
         const docBot = new generalElements(page);

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "how-do-i-raise-a-repair",
+    "question": "How do i raise a repair",
+    "baselineResponse": "Navigate to Job Management > Add Job. \r\nSearch and select the property. \r\nIf not defaulted, select the correct contract \r\nFill in any mandatory (marked with an *) or optional feilds as required. \r\nSelect the relevant template from the Problem (contract template) drop down box.\r\nUpdate repair details and access details if required.\r\nClick search availability from the operative availability.\r\nSelect the desired appointment date / time from the available choices\r\nClick on the \"Create Job\" blue button on the bottom right of the screen. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-the-repair-history-for-a-property-before-i-raise-a-new-repair",
+    "question": "How do i see the repair history for a property before i raise a new repair",
+    "baselineResponse": "Navigate to Job Management > Add Job. \r\nSearch and select the property. \r\nReview the property history in the displayed grid.\r\nFor more details, click on \"Show Property History\" on the bottom left of the section. \r\nFor just open / completed jobs, filter the grid on using the \"Complete\" or \"Open\" buttons on the bottom right of the section. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-raise-a-follow-up-visit-for-a-repair",
+    "question": "How do i raise a follow-up visit for a repair",
+    "baselineResponse": "On the Main Job screen, click on Add Event > Create at the bottom of the screen.\r\nFill in any mandatory (marked with an *) or optional feilds as required. \r\nClick on the \"Save Event\" blue button on the bottom right of the screen. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-extend-the-target-date-of-a-repair",
+    "question": "How do i extend the target date of a repair",
+    "baselineResponse": "On the Main Job Detail, click and amend the Target Date field to the required date.\r\nPopulate the Extended By with your User ID\r\nPopulate the Extended On with the current Date\r\nPopulate the Extended Reason with the revelant value. \r\nClick on the \"Save Job\" blue button on the bottom right of the screen. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-an-sor-code-to-a-repair",
+    "question": "How do i add an SOR code to a repair",
+    "baselineResponse": "On the Main Job screen, click on Add Job Item.\r\nSelect the required code from the catalogue\r\nEnter the quantity required\r\nClick on the \"Save Job Item\" blue button on the bottom right of the screen. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-upload-a-document-on-a-repair",
+    "question": "How do i upload a document on a repair",
+    "baselineResponse": "On the Main Job screen, click on futher actions > upload document. \r\nSelect the event No, Document Type\r\nAdd the document desctiption and note if reuqired. \r\nChoose the file\r\nClick the \"Upload\" blue button on the bottom right of the section. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-assign-a-repair-visit-on-the-evolving-day",
+    "question": "How do i assign a repair visit on the Evolving Day",
+    "baselineResponse": "Navigate to Job Management > Evolving Day > Required Configuration\r\nFind the job you want to assign on the right hand side in the \"unallocated jobs\"\r\nRight Click and drag the job over the required operatives name.\r\nClick on the \"Reassign Event\" blue button on the bottom right of the section. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-reassign-a-repair-visit-to-a-different-operative-on-the-evolving-day",
+    "question": "How do i reassign a repair visit to a different operative  on the Evolving Day",
+    "baselineResponse": "Locate the job in the middle grid against the original operative.\r\nRight click and drag the job over the new operatives name. \r\nClick on the \"Reassign Event\" blue button on the bottom right of the section. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-my-cost-v-sales-margins-on-a-job",
+    "question": "How do i see my cost v sales margins on a job",
+    "baselineResponse": "On the Main job screen, click into the Job Totals tab.\r\nOn the left hand side of the screen you can see the total cost and total Sales of the job. \r\nBelow that you can see the Margin Value and Margin %",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-financially-complete-a-repair",
+    "question": "How do i financially complete a repair",
+    "baselineResponse": "On the Main Job Details, ensure the Job Status 1* is set to a completed status. \r\nClick on \"CTI Job & Save\" white button on the bottom right of the completion details section. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-a-template-of-events-to-a-job",
+    "question": "How do i add a template of events to a job",
+    "baselineResponse": "On the Main Job Details, click on \"Apply Template\"\r\nSelect the required template from the options\r\nClick Apply\r\nClick Yes on the confirmation message",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-template-sors-to-a-job",
+    "question": "How do i add template SORs to a job",
+    "baselineResponse": "On the Main Job screen, click into the events tab.\r\nSelect the required event and click on \"Template Items\" from the options at the bottom of the page.\r\nSelect the required template and select (tick) the items you want to add. \r\nAmend the quantity field if reuqired on each line\r\nClick \"Add Selected Items\" ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-send-a-job-to-an-opertives-mobile-device",
+    "question": "How do i send a job to an opertives mobile device",
+    "baselineResponse": "On the Main Job Detais, click into the events tab. \r\nSelect the required event and click on \"Send to Mobile\" at bottom of the screen.\r\nThe button will update to \"Remove from Mobile\" and the Mobile status will update to 1. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-can-i-see-all-repairs-with-an-attend-on-date-of-today",
+    "question": "How can i see all repairs with an attend on date of today",
+    "baselineResponse": "Navigate to Job Management > Events Control\r\nFilter Date by \"Attend on Date\"\r\nIn the Date range, select \"Today\" \r\nClick \"Search\" on the bottom right of the grid. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-get-a-tile-to-appear-on-my-dashboard",
+    "question": "How do i get a tile to appear on my dashboard",
+    "baselineResponse": "Navigate to Reports > Tile Reports\r\nFind the tile you want to appear on your dashboard.\r\nClick on the star on the top right of the tile\r\nThis will turn gold when favourited.\r\nNavigate back to Home and the new tile will be displayed",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-raise-a-purchase-order-with-an-item",
+    "question": "How do i raise a purchase order with an item ",
+    "baselineResponse": "Navigate to Purchase to Pay > Create / Edit Purchase Orders\r\nClick on \"Create Purchase Order\"\r\nFill in any mandatory (marked with an *) or optional feilds as required. \r\nClick on \"Create Purchase Order\" \r\nClick into the PO Items tab\r\nClick on \"Add PO Item\"\r\nSelect the required item and update the quantity ordered \r\nClick on Save Purchase Order Item. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-fully-grn-a-purchase-order",
+    "question": "How do I fully GRN a purchase order",
+    "baselineResponse": "Navigate to Purchase to Pay > Create / Edit Purchase Orders\r\nSearch for an existing purchase Order \r\nClick on \"Book in PO\" \r\nClick on GRN All Items on the bottom left of the screen\r\nSelect the required location to GRN the items into \r\nClick on Create GRN",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-authorise-a-purchase-order",
+    "question": "How do i authorise a purchase order ",
+    "baselineResponse": "Navigate to Purchase to Pay > Create / Edit Purchase Orders\r\nSearch for an existing purchase Order \r\nClick on \"Authorise PO\" on the bottom right of the screen. \r\nThe PO Authorised Field will update to Y.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-my-compliance-stats-for-a-specific-complaince-task",
+    "question": "How do i see my compliance stats for a specific complaince task",
+    "baselineResponse": "Navigate to Compliance > Compliance Task Control\r\nSelect the relevent Compliance Task ID and click the \"Search\" blue button on the bottom right of the section. \r\nScroll down to the \"Compliance Stats\" section for review. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-all-the-compliance-tasks-at-an-individual-property",
+    "question": "How do i see all the compliance tasks at an individual property ",
+    "baselineResponse": "Navigate to System Admin > Properties / Assets > Properties.\r\nIn the \"search for an existing property\" section, click on \"Select Property\"\r\nSearch for and select the revelant property from the results\r\nAt the bottom of the screen, click on \"Compliance Task\" and review",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-find-out-what-locations-a-stock-item-is-in",
+    "question": "How do i find out what locations a stock item is in",
+    "baselineResponse": "Navigate to Stock Management > Stock Operations\r\nSearch for the item in the \"search term\" box at the top of the screen\r\nSelect the relevant record from result in the grid.\r\nClick on the \"Stock Locations\" button at the bottom of the screen to review. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-what-stock-is-in-a-individual-van",
+    "question": "How do i see what stock is in a individual van",
+    "baselineResponse": "Navigate to Stock Management > vehicles and Stock items\r\nEnter the details for the relevant record (via Operative ID / location or Vehicle) and click search\r\nSelect the required record from the grid of results and click on \"Vehicle Stock Items\" button on the bottom left of the section\r\nReview the stock records in the grid. \r\nFor the most recent  stock levels, click on \"Deterime Stock Levels\" button on the bottom left of the section. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-a-survey-response",
+    "question": "How do i see a survey response",
+    "baselineResponse": "Navigate to Survey Response and select the required Survey name from the list displayed. \r\nEnter the Status / Response Date or job number if required, or click \"search\" for all records\r\nFrom the results in the grid, select the relevant record and click \"View\"",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-reset-a-user-password",
+    "question": "How do i reset a user password",
+    "baselineResponse": "Navigate to system Admin > Security > Users\r\nIn the \"search for an existing user section\" enter the user details and select the relevant record from the results\r\ngo to the password settings tab and click \"reset password\"\r\nEnter the new password and re-enter the new password\r\nClick on Submit. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-a-role-to-a-user",
+    "question": "How do i add a role to a user ",
+    "baselineResponse": "Navigate to System Admin > Security > Roles\r\nIn the first box, click into Users and search for the relevant user you wish to update\r\nIn the action, make sure it is \"assign to\"\r\nIn the Role box, search and select the role you wish to update against the user\r\nClick on \"Update Users / Roles\" ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-a-new-record-to-a-system-default-dropdown-list",
+    "question": "How do i add a new record to a system default dropdown list",
+    "baselineResponse": "Navigate to System Admin > System Setup > System Defaults\r\nIn the search bar, enter the details of the default you want to update to constrain the list or scroll down until you find the record and click \"Open\"\r\nClick Add on the bottom right of the section\r\nEnter the relevant details\r\nClick Add ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-amend-the-price-of-a-stock-sor-item",
+    "question": "How do i amend the price of a stock / SOR item",
+    "baselineResponse": "Navigate to System Admin > Stock / SORs > Item Details\r\nIn the Edit an existing Item box click on \"Search An Existing Item\"\r\nEnter the details of the item in the search bar and select the relevant record from the list of results and click \"Choose Selected Codes\"\r\nClick on the Pricing Tab and update the requested price feild. \r\nClick on \"Save\" on the bottom right of the screen. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-see-all-jobs-created-today",
+    "question": "How do i see all jobs created today",
+    "baselineResponse": "Navigate to Job Management > Job Control\r\nIn the Job Control Adanced Search, click on filter date by and select recorded date\r\nIn the Date Range select today\r\nClick on Search on the bottom right of the screen and review the results in the grid. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-an-absense-record-for-an-operative",
+    "question": "How do i add an absense record for an operative",
+    "baselineResponse": "Navigate to System Admin > Operatives > Absence Details For an Operative\r\nSearch for the operative in the search bar and select the relevant record for the results \r\nFill in any mandatory (marked with an *) or optional feilds as required. \r\nClick on \"Save\" at the bottom right of the screen. ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-update-a-qualification-expiry-date-for-an-operative",
+    "question": "How do i update a qualification expiry date for an operative",
+    "baselineResponse": "Navigate to System Admin > Operatives > Operatives\r\nIn the Search for an existing Operative section, enter the operative details and select the relevant record from the results\r\nClick the \"Qualifications\" button at the bottom of the screen\r\nClick on the Qualification record you want to update and amend the expiry date field\r\nClick on \"Update\" and click on the \"OK\" confirmation message. ",
+    "passingScore": 3
+  }
+]

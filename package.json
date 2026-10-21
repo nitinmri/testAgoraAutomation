@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "convert:xlsx": "node utils/xlsxToGoldenQuestions.ts",
     "clear_allure": "npx rimraf allure-report allure-results",
     "allure": "allure generate allure-results --clean -o allure-report && allure open allure-report",
     "clear_cookies": "npx rimraf sessionData.json",

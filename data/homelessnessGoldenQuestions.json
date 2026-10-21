@@ -1,0 +1,182 @@
+[
+  {
+    "id": "how-do-i-open-a-case-summary",
+    "question": "How do I open a case summary?",
+    "baselineResponse": "From the Homepage, select the Homelessness Reduction icon, select My Cases, and then select the required Case Ref. The Case Summary page will be displayed.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-the-case-number-wheel-show",
+    "question": "What does the Case Number wheel show?",
+    "baselineResponse": "The Case Number wheel shows how the customer’s case assessment has progressed, such as approach, prevention, relief or closed.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-the-flowchart-section-show",
+    "question": "What does the Flowchart section show?",
+    "baselineResponse": "The Flowchart section shows the customer’s current assessment position on the HRA flowchart.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-case-guide-used-for",
+    "question": "What is the Case Guide used for?",
+    "baselineResponse": "The Case Guide shows any outstanding actions that are required to progress the case.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-assign-a-case",
+    "question": "How do I assign a case?",
+    "baselineResponse": "Open the urgent action on your Dashboard for \"cases that need assigning\". On the list of unassigned cases, select the required officer next to the relevant case. A confirmation message will be displayed when the case has been assigned.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-unassign-a-case",
+    "question": "How do I unassign a case?",
+    "baselineResponse": "From the \"Case summary\" page, open the Case assigned to by clicking the \"Reassign\" button, and select \"Nobody (Unassigned)\". When asked to confirm, select OK. A message will confirm that the case has been unassigned.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-can-t-i-see-the-delete-case-option",
+    "question": "Why can't I see the Delete Case option?",
+    "baselineResponse": "Whether a case can be deleted depends on its position in the HRA Flowchart. The Delete Case option is only available when the case can be deleted.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-record-a-temporary-accommodation-placement",
+    "question": "How do I record a temporary accommodation placement?",
+    "baselineResponse": "In the Accommodation Placement section of the \"Case Summary\", select \"Record accommodation placement\". Set Usage to Temporary Accommodation, complete the relevant accommodation details, enter the start and end dates, complete the address and any bond or deposit information, and then select Save.",
+    "passingScore": 3
+  },
+  {
+    "id": "can-i-enter-a-temporary-accommodation-address-manually",
+    "question": "Can I enter a temporary accommodation address manually?",
+    "baselineResponse": "Yes. Use \"Enter address\" manually. Either the house name or house number is required, and the postcode is mandatory.",
+    "passingScore": 3
+  },
+  {
+    "id": "when-isn-t-find-address-available",
+    "question": "When isn't \"Find Address\" available?",
+    "baselineResponse": "Find Address becomes available after a valid postcode has been entered. Select it, then choose the required property from the list.",
+    "passingScore": 3
+  },
+  {
+    "id": "when-can-i-enter-bond-details",
+    "question": "When can I enter bond details?",
+    "baselineResponse": "The bond amount and bond end date fields are enabled when \"Is there a bond against the property?\" is set to \"Yes\".",
+    "passingScore": 3
+  },
+  {
+    "id": "when-can-i-enter-a-deposit-amount",
+    "question": "When can I enter a deposit amount?",
+    "baselineResponse": "The deposit amount field is enabled when Has the deposit been put into the national deposit scheme is set to \"Yes\".",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-a-legacy-case",
+    "question": "What is a legacy case?",
+    "baselineResponse": "Legacy cases are households awaiting a decision under the existing legislation, or households owed a main duty or intentional homelessness duty.",
+    "passingScore": 3
+  },
+  {
+    "id": "does-the-flag-icon-mean-a-case-is-definitely-a-legacy-case",
+    "question": "Does the flag icon mean a case is definitely a legacy case?",
+    "baselineResponse": "No. The flag indicates that the case may be a legacy case. It does not automatically convert the case; each local authority must determine whether it should be treated as a legacy case.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-do-some-fields-or-questions-have-php-next-to-them",
+    "question": "Why do some fields or questions have \"PHP\" next to them?",
+    "baselineResponse": "This information will be included in the customer's Personal Housing Plan. You can also edit this information directly in the \"Personal Housing Plan\" section.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-start-a-new-hra-case",
+    "question": "How do I start a new HRA case?",
+    "baselineResponse": "Open the customer record and select Create a HRA case. Complete the referral information, homelessness date and approached date, then select Create case.",
+    "passingScore": 3
+  },
+  {
+    "id": "who-is-the-case-assigned-to-when-it-is-created",
+    "question": "Who is the case assigned to when it is created?",
+    "baselineResponse": "The assign case to me checkbox is selected by default, so the case is assigned to the user entering the HRA case details unless the option is changed.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-can-t-i-see-the-source-of-referral-field",
+    "question": "Why can’t I see the source of referral field?",
+    "baselineResponse": "This option is not displayed when the Referral Source is set to \"Self Referral\".",
+    "passingScore": 3
+  },
+  {
+    "id": "what-information-should-i-record-in-reasons-for-approach",
+    "question": "What information should I record in \"Reasons for Approach\"?",
+    "baselineResponse": "Record why the customer approached for assistance, any relevant homelessness or risk reason, further details, steps already taken, assistance that may help and whether the customer has been homeless before.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-additional-factors-page-used-for",
+    "question": "What is the \"Additional Factors\" page used for?",
+    "baselineResponse": "It records further information about the customer and their circumstances to support an accurate assessment and decision, including residential status and, where relevant, medical conditions and support received.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-know-when-an-assessment-topic-is-complete",
+    "question": "How do I know when an assessment topic is complete?",
+    "baselineResponse": "A green tick is displayed to the left of an assessment topic once its questions have been answered.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-can-t-i-generate-the-personalised-housing-plan-php",
+    "question": "Why can't I generate the Personalised Housing Plan (PHP)?",
+    "baselineResponse": "The PHP cannot be generated until the basic assessment is complete, a PHP review meeting is in place, the expected homelessness date is recorded, actions already taken and the customer’s wishes are completed, and at least one PHP action is recorded.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-can-i-find-missing-information-needed-for-the-php",
+    "question": "How can I find missing information needed for the PHP?",
+    "baselineResponse": "Missing key information is highlighted in red. Select the red text to go to the relevant area of Homelessness Reduction.",
+    "passingScore": 3
+  },
+  {
+    "id": "does-information-need-to-be-entered-again-in-the-php",
+    "question": "Does information need to be entered again in the PHP?",
+    "baselineResponse": "No. As the case assessments are completed, the system updates the customer’s PHP to reduce duplicate work.",
+    "passingScore": 3
+  },
+  {
+    "id": "do-i-have-to-complete-checklist-groups-in-order",
+    "question": "Do I have to complete checklist groups in order?",
+    "baselineResponse": "No. You can work through them in order or move to a particular group and return to an earlier group later. Completed checklist groups are shown with a green tick.",
+    "passingScore": 3
+  },
+  {
+    "id": "when-does-the-decisions-page-become-available",
+    "question": "When does the Decisions page become available?",
+    "baselineResponse": "The Decisions page is displayed once the checklists have been completed and saved. It can also be opened directly from the Decisions menu.",
+    "passingScore": 3
+  },
+  {
+    "id": "can-i-make-a-decision-without-using-the-guided-process",
+    "question": "Can I make a decision without using the guided process?",
+    "baselineResponse": "Yes. For a quick decision, select the required decision from the drop-down menu at the top of the Decisions screen. Alternatively, ignore the drop-down and follow the guided process.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-do-i-do-about-checking-section-8-grounds",
+    "question": "What do I do about checking Section 8 grounds?",
+    "baselineResponse": "Checklist 3a can be used to support officers working through Renters Rights Act cases. It surfaces the most common decision points and evidence prompts associated with the new Section 8 grounds, alongside the existing checklists for Prevention and Relief.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-do-i-do-about-the-duty-to-notify",
+    "question": "What do I do about the \"Duty to notify\"?",
+    "baselineResponse": "To support you in meeting this duty, \"Checklist 26a\" is used to record, for each child in the household, the relevant bodies (GP practice, health visiting service and education setting), whether consent to notify was given, and the outcome of each notification.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-aren-t-my-changes-updating-in-the-h-clic-report",
+    "question": "Why aren't my changes updating in the H-CLIC report?",
+    "baselineResponse": "Data changes can take up to 10 minutes to be reflected in this report.",
+    "passingScore": 3
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "how-do-i-add-a-new-filter-to-the-saved-filter-list",
+    "question": "How do I add a new filter to the saved filter list?",
+    "baselineResponse": "Relevant authenticated users can add a filter by navigating through to the Settings tab, which can be found via the cog menu item and then navigate to the filters section.  Clicking the add filter button will allow you to continue.  ",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-flag-a-tenancy-so-i-can-come-back-to-it-later",
+    "question": "How do I flag a tenancy, so I can come back to it later?",
+    "baselineResponse": "Once you have entered the tenancy, the tenancy will appear at the top of the recent tenancy button, with the option to pin it – using the pin icon.  Those pinned will appear in the pinned section for you to return to until unpinned.  You can have 15 pinned tenancies",
+    "passingScore": 3
+  },
+  {
+    "id": "how-can-i-check-if-the-risk-rules-are-standard-or-bespoke-for-my-organisation",
+    "question": "How can I check if the risk rules are standard or bespoke for my organisation?",
+    "baselineResponse": "Relevant users can access the risk rules through the risk rules menu.  From there you can see what rules have been set up in the system currently, including what the default values are",
+    "passingScore": 3
+  },
+  {
+    "id": "i-need-to-manage-saved-filters-my-team-uses-regularly-where-do-i-go-in-incomeanalytics",
+    "question": "I need to manage saved filters my team uses regularly — where do I go in IncomeAnalytics?",
+    "baselineResponse": "If you have the right permissions, go to Settings > Filters. This is the main area for managing reusable filters rather than just applying them temporarily on the Risk List.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-m-on-the-risk-list-and-i-ve-changed-the-filter-criteria-how-do-i-keep-this-filter-for-later",
+    "question": "I’m on the Risk List and I’ve changed the filter criteria — how do I keep this filter for later?",
+    "baselineResponse": "After updating the filter criteria on the Risk List, use the filter save option to store it for future use. Until you save it, IA treats it as your current working filter rather than a reusable saved filter.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-loaded-a-saved-filter-and-changed-it-how-do-i-keep-my-version-without-affecting-the-original",
+    "question": "I loaded a saved filter and changed it — how do I keep my version without affecting the original?",
+    "baselineResponse": "After making your changes, save the filter as a new version or use the rename/save options so you keep your updated version separate. This is the safest approach if you do not want to overwrite the original saved filter.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-can-apply-filters-on-the-page-but-where-do-i-go-if-i-want-to-manage-them-properly",
+    "question": "I can apply filters on the page, but where do I go if I want to manage them properly?",
+    "baselineResponse": "Applying filters on the page is useful for day-to-day work, but if you want to manage reusable filters properly, go to Settings > Filters. That is the better place for maintaining filters you expect to use again.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-can-another-user-see-the-settings-menu-but-i-can-t",
+    "question": "Why can another user see the Settings menu but I can’t?",
+    "baselineResponse": "The Settings area is permission-based. If you cannot see it, it usually means your user role does not include access to that part of IA.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-want-to-review-how-risk-is-being-assessed-in-our-system",
+    "question": "I want to review how risk is being assessed in our system?",
+    "baselineResponse": "Open Risk Rules from the main navigation. From there, you can review the different categories of rules used in IA, such as threshold, slope, arrangements and judgments, and additional rules.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-m-in-risk-rules-but-i-m-not-sure-where-to-start-and-navigate-to-it",
+    "question": "I’m in Risk Rules but I’m not sure where to start and navigate to it?",
+    "baselineResponse": "Start by selecting the category that best matches what you are trying to review. For example, use Threshold Rules or Slope Rules if you have been asked to review a specific type of rule, then work through the rules shown in that section.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-ve-opened-a-tenancy-where-should-i-go-first-if-i-want-a-quick-understanding-of-the-case",
+    "question": "I’ve opened a tenancy, where should I go first if I want a quick understanding of the case?",
+    "baselineResponse": "Start with Overview for the quickest summary of the tenancy. From there, move to Details, Actions, Notes, or Risk History depending on what you need to understand next.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-want-to-see-what-has-already-happened-on-a-tenancy-or-action-s-performed-on-it-where-should-i-look",
+    "question": "I want to see what has already happened on a tenancy or action's performed on it, where should I look?",
+    "baselineResponse": "Open the tenancy and go to Actions if you want to review activity or interventions linked to that case. If you also need supporting context, check Notes as well.",
+    "passingScore": 3
+  },
+  {
+    "id": "where-do-i-go-if-i-want-to-see-comments-or-case-context-on-a-tenancy",
+    "question": "Where do I go if I want to see comments or case context on a tenancy?",
+    "baselineResponse": "Open the tenancy record and go to Notes. This is the best place to look for additional case context and supporting information recorded against the tenancy.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-want-to-understand-how-a-tenancy-s-risk-has-changed-over-time-where-do-i-find-that",
+    "question": "I want to understand how a tenancy’s risk has changed over time — where do I find that?",
+    "baselineResponse": "Open the tenancy and go to Risk History. This section is the best place to review how the tenancy’s risk position has changed over time rather than only looking at the current status.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-keep-returning-to-the-same-tenancy-how-can-i-make-it-easier-to-find-again",
+    "question": "I keep returning to the same tenancy, how can I make it easier to find again?",
+    "baselineResponse": "Use the pin option for that tenancy so it is easier to return to later. This is better than relying only on recently viewed items if it is a case you know you will need to revisit.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-s-the-difference-between-a-recent-tenancy-and-a-pinned-tenancy",
+    "question": "What’s the difference between a recent tenancy and a pinned tenancy?",
+    "baselineResponse": "A recent tenancy is one you have opened recently, while a pinned tenancy is one you have deliberately marked so it stays easy to access. Recent is automatic, but pinned is intentional.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-need-reporting-rather-than-a-live-working-list",
+    "question": "I need reporting rather than a live working list?",
+    "baselineResponse": "Go to Reports from the main navigation. Use reports when you want a broader reporting view, trend analysis, or structured outputs rather than working directly from operational lists like the Risk List.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-m-not-sure-whether-i-should-use-the-risk-list-reports-or-open-a-tenancy-record-how-do-i-choose",
+    "question": "I’m not sure whether I should use the Risk List, Reports, or open a tenancy record, how do I choose?",
+    "baselineResponse": "Use Risk List when you are identifying and working through cases, Reports when you need analysis or structured reporting, and an individual tenancy record when you need detailed case-level information. A simple rule is: list for prioritising, report for analysing, tenancy for investigating.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-know-what-actions-have-been-taken-recently",
+    "question": "How do I know what actions have been taken recently?",
+    "baselineResponse": "Navigate to the Actioned List screen and filter.  The filter may be only showing today's actions and for Current tenancies only, so make sure that you check the filters and apply based on what you need",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-no-recommended-action-mean",
+    "question": "What does 'No Recommended Action' mean?",
+    "baselineResponse": "This means that there is no action that has been recommended within the Housing system.  You can still perform  some actions, such as SMS, Email, Add notes and Suspend",
+    "passingScore": 3
+  },
+  {
+    "id": "my-work-colleague-is-on-annual-leave-and-i-need-to-see-their-worklist-how-can-i-see-the-worklist-of-my-colleague",
+    "question": "My work colleague is on annual leave and I need to see their worklist.  How can I see the worklist of my colleague?",
+    "baselineResponse": "On the main summary screen, you can edit the worklist to include one or more users worklists.  To reset the filter afterwards, there will be a reset button on screen.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-create-a-new-email-template-that-is-a-variation-on-a-current-one-that-makes-it-easy-for-users-to-choose-between-the-two-quickly-on-the-email-creation-screen",
+    "question": "How do I create a new email template that is a variation on a current one that makes it easy for users to choose between the two quickly on the email creation screen?",
+    "baselineResponse": "The best way to do this is to navigate into the email templates, copy the information you want from the previous template into a new one and then apply additional changes.  Because these are similar templates, you can provide a Category that will allow similar templates to be grouped together.",
+    "passingScore": 3
+  },
+  {
+    "id": "as-this-integrates-with-our-housing-system-how-do-i-know-whether-the-data-is-up-to-date",
+    "question": "As this integrates with our housing system, how do I know whether the data is up to date?",
+    "baselineResponse": "There are several ways to see whether the information has been updated.   The first way is to look at the bottom where users should see a message stating 'Data Refresh…' and a datetime that will likely be in the last 24 hours.   For those that have access, there is the ability to view Scheduled Jobs to see what processes have happened and when.  This also allows for the ingests and processes to be restarted if needed.",
+    "passingScore": 3
+  },
+  {
+    "id": "when-i-do-a-search-i-often-get-additional-values-appearing-that-do-not-match-the-search-criteria-why-would-this-happen",
+    "question": "When I do a search, I often get additional values appearing that do not match the search criteria.   Why would this happen?",
+    "baselineResponse": "The search criteria looks not only for a match against tenancies, but also for tenants that have joint tenancies with that being searched.   Whilst information such as Name and Address are shown on the search screen, this search engine will bring out more than just those.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-analyse-why-the-risk-score-has-changed-from-one-day-to-another-for-a-tenancy",
+    "question": "How do I analyse why the risk score has changed from one day to another for a tenancy?",
+    "baselineResponse": "Open the tenancy and head to the Risk History tab.  Once there you can look at the range of dates available and open them up to see what the Risk score was calculated at previously in detail.  Users can then break this down further to see the exact score breakdown and why ",
+    "passingScore": 3
+  },
+  {
+    "id": "what-report-allows-me-to-see-the-difference-in-number-of-accounts-and-total-balance-between-days",
+    "question": "What report allows me to see the difference in number of accounts and total balance between days?",
+    "baselineResponse": "The Case Summary report will allow this by selecting a start and end date and filters.  Output can be limited by selecting Filter Owners and/or Filters.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-find-out-what-has-not-been-actioned-over-a-number-of-days-or-a-date-range-for-a-particular-filter-such-as-for-a-person-so-that-i-can-find-what-has-not-been-moved-forward-and-requires-activity",
+    "question": "How do I find out what has not been actioned over a number of days or a date range for a particular filter, such as for a person, so that I can find what has not been moved forward and requires activity?",
+    "baselineResponse": "In the reports section, users can review a range of reports including the ‘not actioned’ report which will allow a review of any tenancies that appear on a given filter and to check if there have been any actions against them over the given period",
+    "passingScore": 3
+  },
+  {
+    "id": "how-can-i-see-a-summary-of-activity-such-as-comments-actions-and-communications-for-a-user-over-a-period-of-time-such-as-today-or-the-last-week",
+    "question": "How can I see a summary of activity such as comments, actions and communications for a user over a period of time such as today or the last week",
+    "baselineResponse": "The User Activity reporting tool allows for analysis of a single users activity, such as suspend, comment, disregard, email, SMS and more.  This can be filted on past weeks and allows users to understand recent activity as totals and which tenancies had that activity",
+    "passingScore": 3
+  },
+  {
+    "id": "where-can-i-see-high-level-kpi-information-such-as-average-period-in-arrears-and-how-that-breakdown-across-the-different-areas-and-types-within-the-system",
+    "question": "Where can I see high level KPI information such as Average Period in Arrears and how that breakdown across the different areas and types within the system?",
+    "baselineResponse": "Users with access can view high level information such as average period in arrears, overall actions and breakdown information such as a breakdown of cases per action type, by using the dashboard facility.  This allows users to be able to filter based on a date range (such as Previous Months or Years)",
+    "passingScore": 3
+  },
+  {
+    "id": "how-would-i-create-a-profile-within-the-system-so-that-i-can-target-specific-criteria-such-as-tenancies-ending-in-the-next-month-that-have-specific-risk-alerts-associated-with-them-so-that-i-can-try-and-manage-these-ahead-of-time",
+    "question": "How would I create a profile within the system, so that I can target specific criteria such as tenancies ending in the next month that have specific risk alerts associated with them so that I can try and manage these ahead of time?",
+    "baselineResponse": "For those with profiling on, users can set up a profile with a linked risk score, that can be tailored to a wide range of potential filters and rules, including tenancy start and end dates, recovery groups, UDCs and more.  These profiles can be saved and used again and again via the Tenancy By Profile tile on the Summary screen and through the Search Results screen",
+    "passingScore": 3
+  }
+]

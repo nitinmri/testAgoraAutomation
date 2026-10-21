@@ -90,7 +90,7 @@ loginEntry: {
     },
   },
   docbot: {
-    url: 'https://docbot-dev.devtest.mrisoftware.com/?product=contractintelligence',
+    url: 'https://docbot-dev.devtest.mrisoftware.com/?product=repairs',
     loginEntry: {
       type: 'email',
       emailSelector: 'input[id="email"]',
@@ -98,11 +98,11 @@ loginEntry: {
     },
   },
   foundryprompts: {
-    url: 'https://dev.formsintelligence.mrisoftware.com/projects',
+    url: 'https://portal.qa.rentpayment-migration.com/pay/login.html?tm=900',
 loginEntry: {
         type: 'email',
-      emailSelector: 'input[id="email"]',
-      submitSelector: '[id="loginButton"]',
+      emailSelector: 'input[id="username"]',
+      submitSelector: 'button[id="next_button"]',
     },
   }
 } satisfies Record<string, { url: string; loginEntry: LoginEntry }>;

@@ -7,6 +7,9 @@ import elBroadcastGoldenQuestionRecords from './elBroadcastGoldenQuestions.json'
 import icGoldenQuestionRecords from './icGoldenQuestions.json'
 import contractIntelligenceGoldenQuestionRecords from './contractIntelligenceGoldenQuestions.json'
 import foundryPromptRecords from './foundry_test_prompts_automation.json'
+import homelessnessGoldenQuestionRecords from './homelessnessGoldenQuestions.json'
+import incomeAnalyticsGoldenQuestionRecords from './incomeAnalyticsGoldenQuestions.json'
+import repairsGoldenQuestionRecords from './repairsGoldenQuestions.json'
 export type GoldenQuestion = {
   id: string;
   question: string;
@@ -51,7 +54,10 @@ const goldenQuestionRecords = {
   elBroadcast:elBroadcastGoldenQuestionRecords,
   iCentral:icGoldenQuestionRecords,
   cIntelligence:contractIntelligenceGoldenQuestionRecords,
-  foundryPrompts:foundryPromptRecords
+  foundryPrompts:foundryPromptRecords,
+  homelessness: homelessnessGoldenQuestionRecords,
+  incomeanalytics:incomeAnalyticsGoldenQuestionRecords,
+  repairs:repairsGoldenQuestionRecords
 };
 
 export type GoldenQuestionProduct = keyof typeof goldenQuestionRecords;
