@@ -40,6 +40,10 @@ readonly formsintelligenceLogo='a[class="title-bar-link"]'
     await this.page.locator(entry.clientIdSubmitSelector).click();
     await this.page.locator(entry.emailSelector).fill(loginCreds.userName);
     await this.page.locator(entry.emailSubmitSelector).click();
+  } else if (entry.type === 'ssoThenUsername') {
+    await this.page.locator(entry.ssoButtonSelector).click();
+    await this.page.locator(entry.usernameSelector).fill(loginCreds.userName);
+    await this.page.locator(entry.usernameSubmitSelector).click();
   } else if (entry.type === 'usernamePassword') {
     await this.page.locator(entry.usernameField).fill(loginCreds.userName);
     await this.page.locator(entry.passwordField).fill(loginCreds.password);

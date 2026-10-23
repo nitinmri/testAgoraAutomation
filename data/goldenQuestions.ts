@@ -10,6 +10,9 @@ import foundryPromptRecords from './foundry_test_prompts_automation.json'
 import homelessnessGoldenQuestionRecords from './homelessnessGoldenQuestions.json'
 import incomeAnalyticsGoldenQuestionRecords from './incomeAnalyticsGoldenQuestions.json'
 import repairsGoldenQuestionRecords from './repairsGoldenQuestions.json'
+import engageATWorkGoldenQuestionRecords from './engageAtWorkGoldenQuestions.json'
+import saferCommunitiesGoldenQuestionRecords from './saferCommunitiesGoldenQuestions.json'
+import allocationsGoldenQuestionRecords from './allocationGoldenQuestions.json'
 export type GoldenQuestion = {
   id: string;
   question: string;
@@ -57,7 +60,10 @@ const goldenQuestionRecords = {
   foundryPrompts:foundryPromptRecords,
   homelessness: homelessnessGoldenQuestionRecords,
   incomeanalytics:incomeAnalyticsGoldenQuestionRecords,
-  repairs:repairsGoldenQuestionRecords
+  repairs:repairsGoldenQuestionRecords,
+  engageatwork:engageATWorkGoldenQuestionRecords,
+  safercommunities:saferCommunitiesGoldenQuestionRecords,
+  allocations:allocationsGoldenQuestionRecords
 };
 
 export type GoldenQuestionProduct = keyof typeof goldenQuestionRecords;

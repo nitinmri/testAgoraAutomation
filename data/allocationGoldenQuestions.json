@@ -1,0 +1,182 @@
+[
+  {
+    "id": "can-i-reset-a-shortlist",
+    "question": "Can I reset a shortlist?",
+    "baselineResponse": "Yes, a Shortlist can be reset if for example a bypass or rejection need undoing. It is possible to reset either a row or an entire Shortlist. To reset the whole shortlist, click the \"Reset shortlist\" button at the top of the list.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-preview-a-shortlist",
+    "question": "How do I preview a shortlist?",
+    "baselineResponse": "At any point of the Choice Based Letting cycle it is possible to check the Shortlist to see which applications will be included once it is processed. (Note: The Shortlist is likely to change depending upon who bids on the Advert). To do this, select \"Preview shortlist\" from the \"Actions\" dropdown field against the home advert and  a preview of the Advert Shortlist at that moment in time will be shown.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-a-warning-against-a-customer",
+    "question": "How do I add a warning against a customer?",
+    "baselineResponse": "On the \"Customer Details\" page, click on the circular warning icon at the top right. This will show you any warnings currently associated with the customer and create a new one by clicking on the \"Add warning\" button.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-enable-auto-bidding-for-an-applicant",
+    "question": "How do I enable auto-bidding for an applicant?",
+    "baselineResponse": "On the \"Application Summary\" page, first check the \"Activity\" section to see if auto-bidding is enabled or not. If it isn't, select \"Toggle autobid on\" from the \"Management\" dropdown field.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-has-an-auto-bid-not-been-placed-for-an-applicant",
+    "question": "Why has an auto-bid not been placed for an applicant?",
+    "baselineResponse": "There are a several reason you should check: \r\n1. Does the advert match the applicant's requirements?\r\n2. Has auto-bidding been enabled for this letting type? (you may need to check with MRI) \r\n 3. Are there are any bidding restrictions that may prevent the bid, e.g. a maximum number of bids per cycle?",
+    "passingScore": 3
+  },
+  {
+    "id": "can-i-delete-an-advert",
+    "question": "Can I delete an advert?",
+    "baselineResponse": "Yes, you can delete an advert by selecting the \"Delete\" from the \"Actions\" dropdown field against the home advert. You will be asked to provide a mandatory reason why you are doing this.",
+    "passingScore": 3
+  },
+  {
+    "id": "can-i-end-an-advert-early",
+    "question": "Can I end an advert early?",
+    "baselineResponse": "Yes, you can end an advert early by selecting the \"Shortlist now\" from the \"Actions\" dropdown field against the home advert. The advert will be closed (no longer advertised) and the shortlist will be created.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-do-i-do-if-i-exhaust-a-shortlist",
+    "question": "What do I do if I exhaust a shortlist?",
+    "baselineResponse": "If a shortlist is \"exhausted\" (all applicants have been processed as either unsuitable or they have rejected the Offer), go into the shortlist and choose how to process it by selecting an option from the \"Action\" dropdown at the top of the list:\r\n 1. Close shortlist and delete advert\r\n2. Close shortlist and retain advert (the advert will be kept so you can use it again) \r\n3. Close shortlist and mark advert as unsuccessful (the advert status will be changed to \"Unsuccessful\")",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-not-verified-mean",
+    "question": "What does an advert status of \"Not verified\" mean?",
+    "baselineResponse": "This means that the Advert has been created but has not been checked or Verified. Each advert must be set to Verified before it can be advertised.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-verified-mean",
+    "question": "What does an advert status of \"Verified\" mean?",
+    "baselineResponse": "Verified adverts are Adverts that have been marked as Verified by someone who has checked the advert to ensure the information is correct. The status will be Verified if waiting for the next cycle to start or awaiting shortlisting for direct nominations.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-advertised-mean",
+    "question": "What does an advert status of \"Advertised\" mean?",
+    "baselineResponse": "When Adverts are live and bids can be placed on them (for CBL) they are known as Advertised.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-shortlisted-mean",
+    "question": "What does an advert status of \"Shortlisted\" mean?",
+    "baselineResponse": "When an advert is Shortlisted it means it is finished its cycle and the Shortlist has been automatically generated. A direct let advert can also appear as Shortlisted when the \"Shortlist now\" option is run.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-allocated-mean",
+    "question": "What does an advert status of \"Allocated\" mean?",
+    "baselineResponse": "Allocated means that the Shortlist process has been completed and the property allocated to a successful Applicant.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-expired-mean",
+    "question": "What does an advert status of \"Expired\" mean?",
+    "baselineResponse": "Expired Adverts are properties that have attracted no bids during a CBL cycle such as hard to let properties.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-deleted-mean",
+    "question": "What does an advert status of \"Deleted\" mean?",
+    "baselineResponse": "Deleted Adverts have been deleted, a reason must be selected before the advert will be deleted.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-partially-completed-mean",
+    "question": "What does an advert status of \"Partially completed\" mean?",
+    "baselineResponse": "If an Advert has been started but not finished, it will show as being partially completed.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-advertised-vacancies-mean",
+    "question": "What does an advert status of \"Advertised Vacancies\" mean?",
+    "baselineResponse": "This is the same as Advertised, when adverts are live and bids can be placed on them (for CBL) they are known as Advertised.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-expired-with-no-bids-mean",
+    "question": "What does an advert status of \"Expired with no bids\" mean?",
+    "baselineResponse": "This is an Advert that has reached the end of its cycle and attracted no bids.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-shortlist-exhausted-mean",
+    "question": "What does an advert status of \"Shortlist exhausted\" mean?",
+    "baselineResponse": "This means that there are no more Applicants left to consider on the Shortlist.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-advert-status-of-unsuccessful-mean",
+    "question": "What does an advert status of \"Unsuccessful\" mean?",
+    "baselineResponse": "If you have exhausted your Shortlist or you have no applicants to consider as the Advert attracted no bids, you can choose to mark your Advert as unsuccessful.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-override-an-applicant-s-bedroom-requriement",
+    "question": "How do I override an applicant's bedroom requriement?",
+    "baselineResponse": "On the \"Application Summary\" page, go to the \"Policy\" section and click on the \"Override bedrooms\" button. Then select the revised number of required bedrooms, enter an override reason and click \"Save\". (Note: you must have the appropriate permissions to be able to do this).",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-override-an-applicant-s-need",
+    "question": "How do I override an applicant's Need?",
+    "baselineResponse": "On the \"Application Summary\" page, go to the \"Policy\" section and click on the \"Override need\" button. Then select the revised Need, enter an override reason and click \"Save\". (Note: you must have the appropriate permissions to be able to do this).",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-live-mean",
+    "question": "What does an application status of \"Live\" mean?",
+    "baselineResponse": "All Housing Register questions have been answered on the Application, you have completed the back-office verification and the Customer has been placed into a band. If an application is not Live a bid cannot be placed by the customer or on behalf of a customer.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-incomplete-mean",
+    "question": "What does an application status of \"Incomplete\" mean?",
+    "baselineResponse": "Some of the Housing Register questions have not been completed.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-signature-pending-mean",
+    "question": "What does an application status of \"Signature pending\" mean?",
+    "baselineResponse": "The Customer has not signed the Consent and Declaration page.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-closed-mean",
+    "question": "What does an application status of \"Closed\" mean?",
+    "baselineResponse": "The Application has been closed for one of the following reasons: Customers request, The Customer is deceased, The Customer is ineligible, The Customer has provided false information, The Customer has not responded to a review, The Customer has resolved their housing situation and no longer need to be on the register, Other reason provided by the Customer/LA.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-suspended-mean",
+    "question": "What does an application status of \"Suspended\" mean?",
+    "baselineResponse": "The Application has been suspended due to one of the following reasons: Outstanding debt, Unacceptable behaviour, Worsening circumstances, Other reason provided by the LA.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-allocated-mean",
+    "question": "What does an application status of \"Allocated\" mean?",
+    "baselineResponse": "The Customer has been allocated into a property and the shortlist has been closed. Having a status of allocated will mean the Customer is no longer able to bid on properties/appear on shortlists.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-pending-assessment-mean",
+    "question": "What does an application status of \"Pending assessment\" mean?",
+    "baselineResponse": "The Customer has completed all the housing register questions, provided all required proofs and signed the consent and declaration form and the application is ready for you to work on.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-an-application-status-of-requires-management-approval-mean",
+    "question": "What does an application status of \"Requires Management Approval\" mean?",
+    "baselineResponse": "The Customer has completed all the housing register questions, provided all required proofs and signed the consent and declaration form and the user has made a decision on the application. However, their manager will now need to approve the decision the user has made.",
+    "passingScore": 3
+  }
+]

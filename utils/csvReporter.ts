@@ -11,6 +11,8 @@ type Evaluation = {
   passed: boolean;
   review: string;
   score: number | BaselineAnswerScore;
+  latencyMs?: number;
+  totalTimeMs?: number;
 };
 
 type ReportRow = {
@@ -63,6 +65,8 @@ export default class CsvReporter implements Reporter {
       'score',
       'passed',
       'review',
+      'Latency (ms)',
+      'Total Time (ms)',
     ];
 
     const lines = [...this.rows.values()].map(({ evaluation }) =>
@@ -74,6 +78,8 @@ export default class CsvReporter implements Reporter {
         evaluation.score,
         evaluation.passed,
         evaluation.review,
+        evaluation.latencyMs,
+        evaluation.totalTimeMs,
       ]
         .map(csvCell)
         .join(','),

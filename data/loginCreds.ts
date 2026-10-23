@@ -20,11 +20,17 @@ type LoginEntry =
       emailSubmitSelector: string;
     }
   | {
+      type: 'ssoThenUsername';
+      ssoButtonSelector: string;
+      usernameSelector: string;
+      usernameSubmitSelector: string;
+    }
+  | {
       type: 'usernamePassword';
       usernameField: string;
       passwordField: string;
       submitSelector: string;
-    }
+    }  
   | { type: 'emailFallback' };
 
 const products = {
@@ -73,11 +79,11 @@ loginEntry: {
     },
   },
    icentral: {
-    url: 'https://dev.formsintelligence.mrisoftware.com/projects',
+    url: 'https://icdemo.ff.mrisoftware.net/index-oidc-landing.aspx',
 loginEntry: {
       type: 'email',
-      emailSelector: 'input[id="email"]',
-      submitSelector: '[id="loginButton"]',
+      emailSelector: 'input[type="email"]',
+      submitSelector: 'a[title="Proceed to Sign in"]',
     },
   },
   contractintelligence: {
@@ -90,31 +96,49 @@ loginEntry: {
     },
   },
   docbot: {
-    url: 'https://docbot-dev.devtest.mrisoftware.com/?product=repairs',
+    url: 'https://docbot-sandbox.devtest.mrisoftware.com/?product=allocation',
     loginEntry: {
       type: 'email',
       emailSelector: 'input[id="email"]',
       submitSelector: '[id="loginButton"]',
     },
   },
+  engageatwork: {
+    url: 'https://engage-atwork-back-office-staging.mriengage.com/admin',
+    loginEntry: {
+    type: 'ssoThenUsername',
+     ssoButtonSelector: 'div[class="form-submit sso-btn"] button',
+       usernameSelector: 'input[id="email"]',
+       usernameSubmitSelector: '[id="loginButton"]',
+    },
+  },
   foundryprompts: {
-    url: 'https://portal.qa.rentpayment-migration.com/pay/login.html?tm=900',
+    url: 'https://platform-ng-edge.dev.leverton.it/view/',
 loginEntry: {
-        type: 'email',
-      emailSelector: 'input[id="username"]',
-      submitSelector: 'button[id="next_button"]',
+     type: 'usernamePassword',
+      usernameField:'input[id="username"]',
+      passwordField:'input[id="password-field"]',
+      submitSelector: 'button[id="mriLogin"]',
     },
   }
 } satisfies Record<string, { url: string; loginEntry: LoginEntry }>;
 
 type Environment = keyof typeof products;
-const environmentName = (process.env.AGORA_ENV || 'docbot').toLowerCase();
+const environmentName = (process.env.AGORA_ENV || 'foundryprompts').toLowerCase();
 if (!Object.prototype.hasOwnProperty.call(products, environmentName)) {
   throw new Error(`Unsupported AGORA_ENV "${environmentName}". Configure its URL and login entry in data/loginCreds.ts.`);
 }
 const env = environmentName as Environment;
 const product = products[env];
-export const loginCreds = {
+export const loginCreds: {
+  environment: Environment;
+  Url: string;
+  loginEntry: LoginEntry;
+  clientID: string;
+  oktaUrl: string;
+  userName: string;
+  password: string;
+} = {
   environment: env,
   Url: product.url,
   loginEntry: product.loginEntry,
@@ -126,4 +150,3 @@ export const loginCreds = {
   userName: getRequiredEnv('AGORA_USERNAME'),
   password: getRequiredEnv('AGORA_PASSWORD'),
 };
-

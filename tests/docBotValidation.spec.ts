@@ -15,7 +15,7 @@ test.describe('DocBot golden questions for ara', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('repairs').entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('allocations').entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
         const docBot = new generalElements(page);

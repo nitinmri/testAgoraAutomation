@@ -17,6 +17,7 @@
     "docBot": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults && cross-env AGORA_ENV=docbot npx playwright test tests/docBotValidation.spec.ts --project=chromium --workers=6",
     "secureSign": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=secureSign npx playwright test tests/secureSignEvaludation.spec.ts --project=chromium --workers=6 && npm run allure",
     "contractintelligence": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=contractintelligence npx playwright test tests/contractintelligenceValidation.spec.ts --project=chromium --workers=6",
+     "engageAtWork": "npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=engageAtWork npx playwright test tests/engageAtWork.spec.ts --project=chromium --workers=6",
     "foundryPrompts":"npm run clear_cookies && npm run clear_allure && npm run clear_testResults &&  cross-env AGORA_ENV=foundryprompts npx playwright test tests/foundryPrompts.spec.ts --project=chromium"
   },
   "keywords": [],

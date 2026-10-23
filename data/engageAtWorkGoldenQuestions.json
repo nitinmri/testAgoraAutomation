@@ -1,0 +1,206 @@
+[
+  {
+    "id": "how-do-i-send-an-email-to-portal-users-from-the-back-office",
+    "question": "How do I send an email to Portal users from the Back Office?",
+    "baselineResponse": "Follow these steps: Navigate to the Send Email section under Communications. Select a client from the dropdown — the system will automatically validate if SMTP is configured. Choose a user group from the Select Group dropdown, apply any relevant filters (multi-select supported), and click Get Users. Select one or more users from the fetched list. Click Create Email, fill in the subject, compose your content using the rich text editor, optionally attach files, and hit Send Email.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-can-t-i-send-emails-from-the-communications-section",
+    "question": "Why can't I send emails from the Communications section?",
+    "baselineResponse": "The most common reason is that SMTP setup has not been completed for the selected client. SMTP must be configured in the Client Settings page before any email functionality becomes available. When you select a client, the system automatically checks SMTP status — if it's not configured, you'll be prompted to complete the setup first.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-save-an-email-as-a-template-for-future-use",
+    "question": "How do I save an email as a template for future use?",
+    "baselineResponse": "There are two ways: From the Create Email page: Check the \"Save for Later\" option while composing your email. You'll be required to provide an Email Title — the email content is then saved to the Saved Emails page. From the Saved Emails page directly: Create a new template by filling in the Title, Subject Line, and Content fields. Once saved, the template appears in the Email Template dropdown on the Create Email page, so you can reuse it for future communications without recomposing.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-enable-partial-payments-for-front-office-users",
+    "question": "How do I enable partial payments for Front Office users?",
+    "baselineResponse": "Go to Payment Setup under Integration Settings. Open the existing payment provider or create a new one by clicking Create New and selecting RentPayment as the provider. Under RentPayment Settings, enable the \"Enable Short Payment Memos\" toggle — this allows Front Office users to make partial payments on the Account Balances page. Note: Only one payment provider can be configured per client at any given time. The Client field is only accessible to Super Admins.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-pull-new-properties-or-sync-property-updates-from-pms",
+    "question": "How do I pull new properties or sync property updates from PMS?",
+    "baselineResponse": "Go to the Properties section and click the Sync button in the top-right corner. Select the client from the dropdown — only clients with a completed PMS Setup will appear here. Key things to note after sync: A new property that is Active in PMS will still appear as Inactive in BO after sync — a BO admin must manually activate it A new property that is Inactive in PMS will sync as Inactive in BO An existing Active BO property changed to Inactive in PMS will automatically become Inactive in BO after sync An existing Inactive BO property changed to Active in PMS will remain Inactive in BO until manually activated The PMS Property Status field shows \"–\" until the individual property is synced from its property page",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-reuse-or-copy-an-existing-branding-configuration-for-a-new-property",
+    "question": "How do I reuse or copy an existing branding configuration for a new property?",
+    "baselineResponse": "Portal Branding supports copying or duplicating existing brand templates — you do not need to recreate a brand from scratch for every new property. Simply find the existing branding template you want to reuse, use the copy/duplicate option, and then assign the duplicated template to the new property. This is especially useful for clients with large portfolios where multiple properties share the same brand identity, significantly reducing setup time for future configurations.",
+    "passingScore": 3
+  },
+  {
+    "id": "who-can-invite-update-and-disable-other-back-office-users",
+    "question": "Who can invite, update, and disable other Back Office users?",
+    "baselineResponse": "Permissions are role-based and follow a hierarchy: Invite Permissions: Super Admin → Can invite Super Admin, Support Service Admin, Client Admin, and Custom Roles Support Service Admin → Can invite Client Admin and Custom Roles only Client Admin → Can invite Client Admin and Custom Roles only Update Permissions: Super Admin → Can update all users below them, same-level users, and themselves Support Service Admin → Can update users below them only (not same role or themselves) Client Admin → Can update users below them, same-level users, and themselves Custom User → Cannot update anyone Disable Permissions: Super Admin → Can disable all BO users except themselves Support Service Admin → Can disable users below their level only (not themselves) Client Admin → Can disable users at and below their level (not themselves) Note: No role can delete users — only deactivation is supported.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-view-and-export-tenant-login-history",
+    "question": "How do I view and export tenant login history?",
+    "baselineResponse": "The Tenant Login History section allows Back Office admins to monitor and export tenant sign-in activity: View and download login history in CSV format The export includes the latest 50,000 records — if your data exceeds this limit, submit a request to the Support team for full access Search and filter records by username and contact email to narrow down results quickly Use this section to audit access, investigate login issues, or verify tenant activity",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-manage-tenant-users-from-the-back-office",
+    "question": "How do I manage tenant users from the Back Office?",
+    "baselineResponse": "From the Back Office, you can manage tenant users in the following ways: View and download tenant user details in Excel format Activate or deactivate a portal tenant user — making a user inactive prevents them from logging into the Front Office View whether a user is a Tenant Portal Administrator or an invited user via the Tenant Portal Admin column Re-invite a user if the initial invitation or registration email failed — the Reinvite button is enabled only for users who have never logged in; for users who have logged in at least once, it will be disabled If a user invitation remains incomplete (entry not created in DB), the admin can re-enter details and reinvite from the FO as well",
+    "passingScore": 3
+  },
+  {
+    "id": "how-can-i-resend-or-forward-an-invoice-email-after-it-has-already-been-sent",
+    "question": "How can I resend or forward an invoice email after it has already been sent?",
+    "baselineResponse": "Two options are available under the Actions menu in the invoice tracking table: Resend — Sends the email again to all users in the original recipient list, plus any new users added to the lease since the initial send Forward — Sends the email to a new set of recipients not in the original list. All forwarded recipients are tracked in the Forwarded To column Additionally, BO Admin users can Download PDF — this retrieves real-time outstanding account balance data for the selected invoice directly from the tracking table. Restriction: If the client is marked as inactive after the page was previously published, the system will not allow resending, forwarding, or downloading the invoice PDF.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-difference-between-remittance-address-pms-integration-and-remittance-address-manual-entry-and-which-should-i-choose",
+    "question": "What is the difference between \"Remittance Address – PMS Integration\" and \"Remittance Address – Manual Entry\", and which should I choose?",
+    "baselineResponse": "Both options control what appears in the \"Invoiced By\" section of the printed or downloaded invoice PDF. They are mutually exclusive — you configure one or the other depending on your client's setup. Remittance Address – PMS Integration Remittance Address – Manual Entry Which should I choose? If your PMX building settings already have the correct Remit To address → use PMS Integration for automatic, always-accurate data If your remittance address is not in PMX, or you need a different address on the invoice → use Manual Entry for full control If neither is configured and Print Invoice is enabled, the \"Invoiced By\" section on the PDF will be blank",
+    "passingScore": 3
+  },
+  {
+    "id": "what-pmx-version-does-a-client-need-to-use-the-apply-credits-feature-in-engage-work",
+    "question": "What PMX version does a client need to use the Apply credits feature in Engage @Work?",
+    "baselineResponse": "PMX version X.7.7.0",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-configure-which-lease-contacts-are-visible-to-tenants-on-the-portal",
+    "question": "How do I configure which lease contacts are visible to tenants on the portal?",
+    "baselineResponse": "In Umbraco, go to Portal Settings > Integration Settings > Contact Type Selection. You'll see a list of lease contact types (sourced from PMX via CONTACTTYPE codelist) with checkboxes to enable visibility for tenants. Contact types default to not displayed on first load — clients must proactively select and save the ones they want shown. Tenants can then view them under Contact > Key Contacts on the front-end portal. Important: If a contact type is marked inactive in PMX, it will still appear in the back office due to an API limitation — ensure inactive types are not selected if they shouldn't be shown.",
+    "passingScore": 3
+  },
+  {
+    "id": "a-tenant-made-multiple-short-payments-under-the-same-category-on-the-same-lease-why-did-only-one-memo-note-land-in-pmx",
+    "question": "A tenant made multiple short payments under the same category on the same lease — why did only one memo note land in PMX?",
+    "baselineResponse": "This is a known RentPayment limitation. When multiple short payments share the same category (e.g., RENT) under the same lease, RentPayment consolidates them into a single line and carries only one memo note. Additionally, if any one of those transactions was paid in full (memo = null), RentPayment treats all notes as null and sends none to PMX. To ensure memo notes are preserved per transaction, the transactions must be on different lease IDs — in that case RentPayment treats them as separate payments and all notes are passed through correctly.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-are-the-prerequisites-before-setting-up-a-new-client-and-inviting-back-office-users",
+    "question": "What are the prerequisites before setting up a new client and inviting Back Office users?",
+    "baselineResponse": "Two things must be done first before creating a client and inviting users: Localization settings must be configured under the Portal Settings page. Failing to do so may cause issues on the Account Balances page in the Front Office. All 3 email templates must be set up under the Email Templates section in the Back Office. Contact US, Maintenance Request, and Tenant Welcome Activation Only after these are in place should you proceed with client creation and user invitations.",
+    "passingScore": 3
+  },
+  {
+    "id": "a-property-was-activated-in-pms-but-it-s-still-showing-as-inactive-in-the-back-office-after-syncing-why",
+    "question": "A property was activated in PMS but it's still showing as Inactive in the Back Office after syncing — why?",
+    "baselineResponse": "This is by design. The sync with PMS does not automatically activate a property in the Back Office, even if it is Active in PMS. The rule is: If a property is newly Active in PMS → after sync, BO status remains Inactive until a BO admin manually activates it. If a property is Active in BO but changed to Inactive in PMS → after sync, BO status automatically updates to Inactive. A BO admin must manually toggle the Active switch on the property page to make it visible in the Front Office.",
+    "passingScore": 3
+  },
+  {
+    "id": "can-a-client-have-more-than-one-front-office-portal-and-how-does-that-work",
+    "question": "Can a client have more than one Front Office portal, and how does that work?",
+    "baselineResponse": "Yes, as of November 2025 the system supports multiple Front Office portals per client using the same MRI Client ID. The first portal created with that ID becomes the Parent Portal. Any additional portals created with the same ID are Child Portals. Child Portals automatically inherit the Payload Back Office configuration from the Parent Portal — Back Office users will not see or be able to edit the \"Payload Back Office\" tab when setting up a Child Portal.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-configure-which-income-categories-show-up-on-the-account-balances-page-in-the-front-office-and-how-do-i-enable-the-apply-credit-button",
+    "question": "How do I configure which income categories show up on the Account Balances page in the Front Office, and how do I enable the Apply Credit button?",
+    "baselineResponse": "This is managed under Income Category Management in the Back Office. The categories are pulled directly from PMX. For each category: Selecting Visible makes it appear on the Account Balances page in the Front Office for applicable leases. Selecting Allow Non-Cash Credits adds an Apply Credit button on the Account Balances page for leases where credit is available for that category in PMX. Both options can be enabled together. Super Admins can select the client; Client Admins see their own data automatically.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-smtp-authentication-options-are-available-for-email-communication-and-which-fields-are-mandatory",
+    "question": "What SMTP authentication options are available for email communication, and which fields are mandatory?",
+    "baselineResponse": "The Back Office supports three authentication types for SMTP: None, Default Basic Authentication, and OAuth 2.0. For Basic Auth, fields 1–5 (SMTP Server, Port, Security Options, Email, Password) are mandatory. If a BO user fills in any one of these fields, all five become required. Note: MRI domain email addresses are not permitted in the Email field — the system will show a validation error. For OAuth 2.0, additional fields are required: Token Endpoint, Client ID, Client Secret, Scope, and Refresh Token — all sourced from the email provider (e.g., Google OAuth).",
+    "passingScore": 3
+  },
+  {
+    "id": "what-file-types-and-size-limits-apply-when-uploading-to-the-media-library-document-library-and-attachment-library",
+    "question": "What file types and size limits apply when uploading to the Media Library, Document Library, and Attachment Library?",
+    "baselineResponse": "Each library has different rules: Media Library — accepts .svg, .jpg, .jpeg, and .png only. No explicit size limit documented. Document Library — accepts .doc, .docx, .pdf, .csv, .txt, .png, .jpeg, and .jpg, with a maximum file size of 20 MB. Attachment Library — accepts .pdf, .docx, .xlsx, .png, .jpg, .jpeg, .txt, and .zip, with a maximum file size of 20 MB. Blocked extensions include .exe, .msi, .bat, .js, .vbs, .dll, .docm, .xlsm, and others. ZIP files are allowed but are scanned — if any blocked file type is found inside the ZIP, the entire upload is rejected.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-published-a-news-article-and-want-to-send-another-email-notification-after-updating-the-content-why-isn-t-a-second-email-going-out",
+    "question": "I published a news article and want to send another email notification after updating the content — why isn't a second email going out?",
+    "baselineResponse": "Once an email notification has been sent for a news article, any subsequent changes to the article content or publish date will not trigger another email. This is by design. The system will display a notification message on the article indicating that an email has already been sent. If you need to communicate the update, you would need to create a new article. Also note: the email notification feature is only available for clients with SMTP setup completed — for all others, the option remains disabled.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-difference-between-a-news-article-and-an-announcement-and-where-does-each-appear-in-the-front-office",
+    "question": "What is the difference between a News Article and an Announcement, and where does each appear in the Front Office?",
+    "baselineResponse": "When creating a new publication, you can select either News Article or Announcement as the Publication Type: A News Article appears on the News page in the Front Office. If Pin to Homepage is enabled, it will also display on the homepage. It supports the full range of fields including sections, images, documents, and detailed content. An Announcement is displayed just below the header on the homepage of the application. Only a limited set of fields apply when Announcement is selected as the type.",
+    "passingScore": 3
+  },
+  {
+    "id": "if-i-leave-the-end-date-blank-on-a-news-article-when-will-it-stop-showing-in-the-front-office",
+    "question": "If I leave the End Date blank on a news article, when will it stop showing in the Front Office?",
+    "baselineResponse": "If the End Date is left blank, the news article will remain visible in the Front Office indefinitely — until it is either manually deleted or unpublished from the Back Office. If you want the article to automatically stop displaying after a certain date, you must set an End Date at the time of creation or editing.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-scheduled-a-news-article-for-a-future-publish-date-with-email-notifications-enabled-when-will-the-email-be-sent-to-tenants",
+    "question": "I scheduled a news article for a future publish date with email notifications enabled — when will the email be sent to tenants?",
+    "baselineResponse": "The timing depends on the publish date selected: If the publish date is set to today's date, the email notification is sent immediately upon publishing. If the publish date is set to a future date, the email will be sent by the daily scheduled job on that selected publish date — not at the time you click Publish. Either way, the email goes to the tenant users of the selected client-properties associated with the article.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-difference-between-a-tenant-portal-administrator-and-an-invited-user",
+    "question": "What is the difference between a Tenant Portal Administrator and an Invited User?",
+    "baselineResponse": "Tenant Portal Administrator (self-registered user): Designated as a Tenant Portal Admin in PMX (the Property Management Source system) Can register themselves directly using their Reference Number or Occupant ID — no invitation needed Has the highest level of tenant access Cannot be updated, disabled, or managed by other front office users via the User Management page Invited User: Created by an existing front office user who clicks \"Add New User\" on the User Management page Receives an account registration link via email to set their password and create their profile Their access (roles, buildings, leases) is defined and constrained by the user who invited them Can only be granted access equal to or lower than the inviting user's access level Can be edited, copied, or deactivated by users with equal or higher access through User Management The key takeaway: a Tenant Portal Admin is sourced from PMX and is essentially the \"top-level\" tenant user — they're self-sufficient and untouchable from User Management. Invited users are downstream, created and governed by someone with existing access, and always limited to at most the same permissions as whoever invited them.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-are-invoices-not-being-fetched-even-though-i-ve-configured-the-directpay-page",
+    "question": "Why are invoices not being fetched even though I've configured the DirectPay page?",
+    "baselineResponse": "For invoice fetching to work, all of the following conditions must be met simultaneously: The DirectPay page must be in Published status. The Client must be active. The Property must be active. The property must have Rent Payment configured as its payment provider. The Overdue Amount must be greater than zero. If any one of these conditions is not satisfied, the system will not fetch invoices. Additionally, invoices are only pulled for dates on or after the Start Date configured on the page.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-does-the-na-status-mean-in-the-invoice-tracking-table-and-how-did-it-get-there",
+    "question": "What does the \"NA\" status mean in the Invoice Tracking Table, and how did it get there?",
+    "baselineResponse": "\"NA\" means the Start Date was changed after invoices were already fetched but before emails were sent. When the Start Date is moved forward, any invoices that now fall outside the new date range (between the old and new start dates) are marked as NA — they were fetched under the previous configuration but are no longer eligible under the current one. If the Start Date is later moved back to include those invoices again, their status changes from NA back to NO, and they become eligible for email sending on the next job run.",
+    "passingScore": 3
+  },
+  {
+    "id": "i-enabled-send-email-but-no-emails-are-going-out-what-fields-am-i-missing",
+    "question": "I enabled \"Send Email\" but no emails are going out — what fields am I missing?",
+    "baselineResponse": "When \"Send Email\" is enabled, three fields become mandatory: Email From — the client's email address used as the sender. Subject Line — will be appended with the invoice ID when sent. Content — the email body, limited to 250 characters. If any of these are left blank, the email will not trigger. Also confirm that the page is in Published status and that the daily scheduled job has run.",
+    "passingScore": 3
+  },
+  {
+    "id": "a-new-tenant-user-was-added-to-a-lease-after-the-initial-email-was-sent-will-they-receive-the-overdue-notification",
+    "question": "A new tenant user was added to a lease after the initial email was sent — will they receive the overdue notification?",
+    "baselineResponse": "Not automatically. Each invoice is eligible for only one email notification triggered by the daily scheduled job. However, if a BO user performs a Resend action from the Actions menu in the Invoice Tracking Table, the system will include any new users added to the lease since the original send in the updated recipient list. Alternatively, the Forward option can be used to send the email to a completely new set of recipients.",
+    "passingScore": 3
+  },
+  {
+    "id": "can-i-attach-the-invoice-as-a-pdf-to-the-email-sent-to-tenants",
+    "question": "Can I attach the invoice as a PDF to the email sent to tenants?",
+    "baselineResponse": "Yes, but only under specific conditions: The PDF View must first be enabled under the Invoice Printing Options section. Once PDF View is enabled, an additional option becomes visible to attach the invoice as a PDF to the email. This option is optional — it does not need to be turned on. When enabled, the email is sent with the invoice attached as a PDF document. Additionally, BO Admin users can download invoice PDFs directly from the Invoice Tracking Table at any time — the downloaded PDF pulls real-time outstanding balance data.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-sales-variance-warning-and-how-do-i-enable-it",
+    "question": "What is the Sales Variance Warning, and how do I enable it?",
+    "baselineResponse": "The Sales Variance Warning alerts Front Office users when a sales entry falls outside an acceptable range. To enable it, toggle the Sales Variance Active switch to ON in the Back Office configuration. Once enabled, a mandatory Variance Percentage % field appears — the value you enter defines the upper and lower limits around expected sales. If a tenant's sales entry exceeds either limit, they'll see a warning message on the Front Office. This helps flag potentially incorrect entries before submission.",
+    "passingScore": 3
+  },
+  {
+    "id": "why-can-t-i-see-or-change-the-client-field-when-configuring-the-sales-outstanding-or-other-pages",
+    "question": "Why can't I see or change the Client field when configuring the Sales Outstanding or other pages?",
+    "baselineResponse": "The Client field is only visible and editable for Super-Admin users. If you are a Client Admin, your respective client is automatically pre-selected and locked — you cannot change it. This is by design to ensure Client Admins can only manage their own client's configuration without accidentally modifying another client's setup.",
+    "passingScore": 3
+  },
+  {
+    "id": "can-i-display-a-custom-message-to-tenants-on-the-sales-outstanding-page-in-the-front-office",
+    "question": "Can I display a custom message to tenants on the Sales Outstanding page in the Front Office?",
+    "baselineResponse": "Yes. Use the Sales Information Text field in the Back Office configuration. Whatever text you enter here will appear as an informational message on the Sales page in the Front Office portal. If you leave this field blank, no message will be displayed — the page will simply show the sales data without any additional context or instructions.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-s-the-difference-between-save-draft-and-publish-changes-and-how-do-i-know-when-the-page-was-last-published",
+    "question": "What's the difference between Save Draft and Publish Changes, and how do I know when the page was last published?",
+    "baselineResponse": "Save Draft saves all your current edits without making them visible in the Front Office. This lets you work on the configuration over time or get approval before going live. Publish Changes pushes all saved configuration to the Front Office portal immediately, making it visible to tenant users. The Published Date field shows the date when the page was last published, so you can always confirm when the most recent update went live. This holds true for all publishable pages.",
+    "passingScore": 3
+  }
+]

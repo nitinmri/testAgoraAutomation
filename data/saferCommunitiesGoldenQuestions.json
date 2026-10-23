@@ -1,0 +1,182 @@
+[
+  {
+    "id": "how-do-i-log-a-new-anti-social-behaviour-incident",
+    "question": "How do I log a new anti-social behaviour incident?",
+    "baselineResponse": "A case can either be created from the Anti-Social Behaviour module dashboard page by clicking the 'Create case' button at the top of the screen or from the customer record page by clicking the 'Create ASB case' button below the customers details.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-log-a-domestic-abuse-incident",
+    "question": "How do I log a domestic abuse incident?",
+    "baselineResponse": "A case can either be created from the Domestic Abuse module dashboard page by clicking the 'Create case' button at the top of the screen or from the customer record page by clicking the 'Create DA case' button below the customers details.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-create-a-case-from-an-incident",
+    "question": "How do I create a case from an incident?",
+    "baselineResponse": "A case is created by default when the 1st incident has been created.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-find-an-existing-case",
+    "question": "How do I find an existing case?",
+    "baselineResponse": "Use the quick search for a known customer or case reference, or open the All Cases view and filter the case data. You can filter the results and select the hyperlinked case reference to open the case overview. Recently viewed cases may also be available from the dashboard.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-assign-or-reassign-a-case-to-another-officer",
+    "question": "How do I assign or reassign a case to another officer?",
+    "baselineResponse": "Open the case overview and update the assigned case officer or associated officers using the case assignment controls. Select the correct officer and save the change. Check that the new owner can see the case and that any relevant outstanding actions are assigned appropriately.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-make-a-case-sensitive-or-restrict-who-can-see-it",
+    "question": "How do I make a case sensitive or restrict who can see it?",
+    "baselineResponse": "On the case overview screen, set the sensitivity type drop-down to what is required. Only users with the relevant permission to view this sensitivity type are able to see the case. You can also apply 'Associated officers' to a case. These are people who may not normally have access to cases of this type but for this instance are able to.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-a-note-to-a-case",
+    "question": "How do I add a note to a case?",
+    "baselineResponse": "Open the case and use the officer sidebar to add a note. Enter the note details, select any relevant people if required, and save. Review the note after saving to make sure the correct people and information are attached.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-an-action-to-a-case",
+    "question": "How do I add an action to a case?",
+    "baselineResponse": "Open the case and go to the actions area in the officer sidebar. Add the action, assign it to the appropriate officer, set the target or achieve-by date and enter any required details. Save the action and confirm that it appears in the case action list.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-apply-an-action-template-to-a-case",
+    "question": "How do I apply an action template to a case?",
+    "baselineResponse": "Open the case actions area and select the required action template. The configured actions will be added to the case with their dependencies and target-date rules. Review the generated actions, assignments and dates before continuing, particularly where the template contains linked or recurring actions.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-configure-an-action-template",
+    "question": "How do I configure an action template?",
+    "baselineResponse": "Open Configuration and go to Action Templates. Create or edit a template, add the required actions, set assignments, target times and any linked-date or dependency rules, then save it. Templates can also be configured with recurring actions and SLA triggers where those features are enabled.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-make-an-action-start-after-a-previous-action-is-completed",
+    "question": "How do I make an action start after a previous action is completed?",
+    "baselineResponse": "Edit the action template and configure the action’s SLA trigger or dependency so that its timing is based on completion of the selected previous action. You can also block an action from being worked on until the chosen earlier action is complete.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-create-a-recurring-action",
+    "question": "How do I create a recurring action?",
+    "baselineResponse": "Edit the relevant action template and add or update the action as recurring. Set the required cadence and save the template. When the template is applied, the recurring action is generated automatically according to that configuration.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-change-an-action-due-date-or-sla",
+    "question": "How do I change an action due date or SLA?",
+    "baselineResponse": "Open the action and update its achieve-by date or time. Where SLA override reasons are configured, select the reason for the manual change.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-complete-an-action",
+    "question": "How do I complete an action?",
+    "baselineResponse": "Open the action from the case or your action list, enter the completion information and mark it as complete. Confirm the status and achieve-by information in the final check window. If the action is part of a linked template, completing it may make a dependent action available or recalculate later dates.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-record-a-risk-assessment",
+    "question": "How do I record a risk assessment?",
+    "baselineResponse": "Open the case and go to the risk assessment area. Select the appropriate assessment, complete each required question and record the resulting risk information. The latest risk rating can then be used in case oversight and dashboard information.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-record-a-referral-to-another-agency",
+    "question": "How do I record a referral to another agency?",
+    "baselineResponse": "Open the case and add the referral in the referrals area. Record the agency, referral details, date and current status, then save it. Safer Communities records and tracks the referral, but it does not by itself send or manage the referral in a third-party agency system.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-upload-evidence-to-a-case",
+    "question": "How do I upload evidence to a case?",
+    "baselineResponse": "Open the case evidence area and choose to upload a document or file. Select the configured evidence type or category, add a description and any relevant people or dates, then upload and save. Check the file is visible on the case and apply the appropriate access controls for sensitive material.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-add-audio-evidence-or-a-voice-note",
+    "question": "How do I add audio evidence or a voice note?",
+    "baselineResponse": "Open the evidence or notes area and upload or capture the supported audio file. Add the evidence details and save it to the case. Where audio transcription is available, use it to create a text version for review.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-generate-a-letter-for-a-case",
+    "question": "How do I generate a letter for a case?",
+    "baselineResponse": "Open the case letters area, select the appropriate configured letter template and choose the recipient or relevant person. Generate the letter, review the merged case and customer details, make any permitted amendments, and save the final letter to the case before issuing it.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-record-an-incident-location-using-what3words-or-a-map",
+    "question": "How do I record an incident location using What3Words or a map?",
+    "baselineResponse": "Open the incident or case location and mapping page. Search for or select the location, then add the What3Words reference, area or linked tenancy where applicable. Confirm the map point is accurate and save it. The location can then be used in case mapping and hotspot analysis.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-suspend-a-case",
+    "question": "How do I suspend a case?",
+    "baselineResponse": "Open the case and select the option to suspend it. Choose a configured suspension reason, enter any required notes and the relevant date, then save. Review outstanding actions and ownership so that the case remains appropriately monitored while suspended.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-close-a-case",
+    "question": "How do I close a case?",
+    "baselineResponse": "Open the case and select Close Case. Complete any mandatory closure information, choose the configured closure reason and confirm the closure date. Review outstanding actions, evidence, risk information and communications before saving. The closed case remains available for reporting and may be reopened if needed.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-reopen-a-closed-case",
+    "question": "How do I reopen a closed case?",
+    "baselineResponse": "Open the closed case and select Reopen Case. Choose the configured reopen reason, record why the case is being reopened and save the change. Review the assigned officer, risk assessment and actions because these may need updating for the resumed case.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-does-a-customer-report-an-incident-through-the-portal",
+    "question": "How does a customer report an incident through the portal?",
+    "baselineResponse": "The customer registers for or signs in to the customer portal, selects the option to report an ASB or Domestic Abuse incident, completes the incident details and uploads any supporting evidence. After submission, the customer can use the portal to track the incident or case.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-report-on-safer-communities-cases-or-export-the-data",
+    "question": "How do I report on Safer Communities cases or export the data?",
+    "baselineResponse": "Use the All Cases report for a filterable case list, or use the Analytics module and its standard datasets for configurable reporting. If your organisation needs scheduled extracts for an external reporting tool such as Power BI, use the DEX data extract service.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-create-a-new-safer-communities-user-and-assign-their-permissions",
+    "question": "How do I create a new Safer Communities user and assign their permissions?",
+    "baselineResponse": "Open User Management and create the new user. Assign the permissions and role appropriate to the person’s responsibilities, then save the user record.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-configure-incident-categories-and-incident-issues",
+    "question": "How do I configure incident categories and incident issues?",
+    "baselineResponse": "Open Configuration for the relevant Anti-Social Behaviour or Domestic Abuse pathway. Go to Incident Categories or Incident Issues, add or update the required values, and save the changes.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-configure-the-reasons-available-when-a-case-is-suspended-closed-or-reopened",
+    "question": "How do I configure the reasons available when a case is suspended, closed or reopened?",
+    "baselineResponse": "Open Configuration for the relevant Anti-Social Behaviour or Domestic Abuse pathway. Update the Suspension Reasons, Closure Reasons or Reopen Case Reasons list as required, then save the changes. The configured values are presented to officers when they suspend, close or reopen a case.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-record-a-child-s-relationship-and-vulnerability-information-on-a-case",
+    "question": "How do I record a child’s relationship and vulnerability information on a case?",
+    "baselineResponse": "Open the relevant child page on the case and record the child’s relationship using the configured Child Relations values. Add the applicable vulnerability level using the configured Child Vulnerability Levels, then save the information. Review the linked safeguarding and risk information to ensure the case record is complete.",
+    "passingScore": 3
+  },
+  {
+    "id": "how-do-i-review-the-audit-history-of-a-case",
+    "question": "How do I review the audit history of a case?",
+    "baselineResponse": "Users with the necessary permission can click on the 'Events' tab on the 'Case overview' page to see a full audit log of changes and access across an entire case.",
+    "passingScore": 3
+  }
+]

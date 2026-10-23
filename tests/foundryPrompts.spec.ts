@@ -15,17 +15,17 @@ test.describe('this suite automates the foundry prompts', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('foundryPrompts').slice(2,4).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('foundryPrompts').slice(4,8).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
-      const { actualAnswer, evaluation } = await retryOnExecutionError(async () => {
+      const { actualAnswer, evaluation, latencyMs, totalTimeMs } = await retryOnExecutionError(async () => {
         const askAgora = new generalElements(page);
-        await askAgora.OpenAskAgoraForFormsIntelligence();
+        await askAgora.openAskAgora()
         await takeScreenshot('ask-agora-open');
         await page.waitForTimeout(1000)
-        const actualAnswer = await askAgora.askQuestion(goldenQuestion.question);
+        const { answer: actualAnswer, latencyMs, totalTimeMs } = await askAgora.askQuestionWithLatency(goldenQuestion.question);
         await takeScreenshot('answer-rendered');
         const evaluation = await evaluateBaselineAnswer(goldenQuestion, actualAnswer);
-        return { actualAnswer, evaluation };
+        return { actualAnswer, evaluation, latencyMs, totalTimeMs };
       }, async () => {
         if (!page.isClosed()) await restoreOrLogin(page);
       });
@@ -34,6 +34,8 @@ test.describe('this suite automates the foundry prompts', () => {
       console.log(`Expected response: ${goldenQuestion.expectedAnswer}`);
       console.log(`Received response: ${actualAnswer}`);
       console.log(`Score: ${evaluation.score}`);
+      console.log(`Generation start latency: ${latencyMs.toFixed(2)} ms`);
+      console.log(`Total generation time: ${totalTimeMs.toFixed(2)} ms`);
       console.log('Token usage:', evaluation.usage);
       await testInfo.attach('answer-evaluation.json', {
         body: JSON.stringify(
@@ -48,6 +50,8 @@ test.describe('this suite automates the foundry prompts', () => {
             review: evaluation.review,
             evidence: evaluation.evidence,
             tokenUsage: evaluation.usage ?? null,
+            latencyMs,
+            totalTimeMs,
           },
           null,
           2,
