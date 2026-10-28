@@ -1,4 +1,15 @@
-[
+[{
+    "id": "what-is-the-sales-variance-warning-and-how-do-i-enable-it",
+    "question": "What is the Sales Variance Warning, and how do I enable it?",
+    "baselineResponse": "The Sales Variance Warning alerts Front Office users when a sales entry falls outside an acceptable range. To enable it, toggle the Sales Variance Active switch to ON in the Back Office configuration. Once enabled, a mandatory Variance Percentage % field appears — the value you enter defines the upper and lower limits around expected sales. If a tenant's sales entry exceeds either limit, they'll see a warning message on the Front Office. This helps flag potentially incorrect entries before submission.",
+    "passingScore": 3
+  },
+  {
+    "id": "what-is-the-difference-between-a-tenant-portal-administrator-and-an-invited-user",
+    "question": "What is the difference between a Tenant Portal Administrator and an Invited User?",
+    "baselineResponse": "Tenant Portal Administrator (self-registered user): Designated as a Tenant Portal Admin in PMX (the Property Management Source system) Can register themselves directly using their Reference Number or Occupant ID — no invitation needed Has the highest level of tenant access Cannot be updated, disabled, or managed by other front office users via the User Management page Invited User: Created by an existing front office user who clicks \"Add New User\" on the User Management page Receives an account registration link via email to set their password and create their profile Their access (roles, buildings, leases) is defined and constrained by the user who invited them Can only be granted access equal to or lower than the inviting user's access level Can be edited, copied, or deactivated by users with equal or higher access through User Management The key takeaway: a Tenant Portal Admin is sourced from PMX and is essentially the \"top-level\" tenant user — they're self-sufficient and untouchable from User Management. Invited users are downstream, created and governed by someone with existing access, and always limited to at most the same permissions as whoever invited them.",
+    "passingScore": 3
+  },
   {
     "id": "how-do-i-send-an-email-to-portal-users-from-the-back-office",
     "question": "How do I send an email to Portal users from the Back Office?",
@@ -143,12 +154,7 @@
     "baselineResponse": "The timing depends on the publish date selected: If the publish date is set to today's date, the email notification is sent immediately upon publishing. If the publish date is set to a future date, the email will be sent by the daily scheduled job on that selected publish date — not at the time you click Publish. Either way, the email goes to the tenant users of the selected client-properties associated with the article.",
     "passingScore": 3
   },
-  {
-    "id": "what-is-the-difference-between-a-tenant-portal-administrator-and-an-invited-user",
-    "question": "What is the difference between a Tenant Portal Administrator and an Invited User?",
-    "baselineResponse": "Tenant Portal Administrator (self-registered user): Designated as a Tenant Portal Admin in PMX (the Property Management Source system) Can register themselves directly using their Reference Number or Occupant ID — no invitation needed Has the highest level of tenant access Cannot be updated, disabled, or managed by other front office users via the User Management page Invited User: Created by an existing front office user who clicks \"Add New User\" on the User Management page Receives an account registration link via email to set their password and create their profile Their access (roles, buildings, leases) is defined and constrained by the user who invited them Can only be granted access equal to or lower than the inviting user's access level Can be edited, copied, or deactivated by users with equal or higher access through User Management The key takeaway: a Tenant Portal Admin is sourced from PMX and is essentially the \"top-level\" tenant user — they're self-sufficient and untouchable from User Management. Invited users are downstream, created and governed by someone with existing access, and always limited to at most the same permissions as whoever invited them.",
-    "passingScore": 3
-  },
+  
   {
     "id": "why-are-invoices-not-being-fetched-even-though-i-ve-configured-the-directpay-page",
     "question": "Why are invoices not being fetched even though I've configured the DirectPay page?",
@@ -177,12 +183,6 @@
     "id": "can-i-attach-the-invoice-as-a-pdf-to-the-email-sent-to-tenants",
     "question": "Can I attach the invoice as a PDF to the email sent to tenants?",
     "baselineResponse": "Yes, but only under specific conditions: The PDF View must first be enabled under the Invoice Printing Options section. Once PDF View is enabled, an additional option becomes visible to attach the invoice as a PDF to the email. This option is optional — it does not need to be turned on. When enabled, the email is sent with the invoice attached as a PDF document. Additionally, BO Admin users can download invoice PDFs directly from the Invoice Tracking Table at any time — the downloaded PDF pulls real-time outstanding balance data.",
-    "passingScore": 3
-  },
-  {
-    "id": "what-is-the-sales-variance-warning-and-how-do-i-enable-it",
-    "question": "What is the Sales Variance Warning, and how do I enable it?",
-    "baselineResponse": "The Sales Variance Warning alerts Front Office users when a sales entry falls outside an acceptable range. To enable it, toggle the Sales Variance Active switch to ON in the Back Office configuration. Once enabled, a mandatory Variance Percentage % field appears — the value you enter defines the upper and lower limits around expected sales. If a tenant's sales entry exceeds either limit, they'll see a warning message on the Front Office. This helps flag potentially incorrect entries before submission.",
     "passingScore": 3
   },
   {

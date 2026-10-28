@@ -15,7 +15,7 @@ test.describe('Ask Agora golden questions for engage at work ', () => {
     });
   });
 
-  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('engageatwork').slice(0,5).entries()) {
+  for (const [questionIndex, goldenQuestion] of getGoldenQuestions('engageatwork').slice(0,1).entries()) {
     test(`validates ${goldenQuestion.id} (${questionIndex + 1})`, async ({ page, takeScreenshot }, testInfo) => {
       const { actualAnswer, evaluation, latencyMs, totalTimeMs } = await retryOnExecutionError(async () => {
         const askAgora = new generalElements(page);

@@ -38,7 +38,7 @@ export default defineConfig({
     screenshot: 'off',
      video:'retain-on-failure', 
    viewport:{width: 1920, height: 1080},
- headless: true, // Set to false if you want to see the browser UI during tests
+ headless: false, // Set to false if you want to see the browser UI during tests
  ignoreHTTPSErrors: true, // for self-signed certs
  // proxy: { server: 'http://proxy.com:3128' }, // if needed
 
